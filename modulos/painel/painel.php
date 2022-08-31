@@ -8,7 +8,7 @@ include_once '../../config.php';
 <?php include_once path('template/head.php'); ?>
 
 <body id="page-top">
-
+gnvbnbvnbv
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
