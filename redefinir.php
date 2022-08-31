@@ -69,7 +69,7 @@
                 <input class="form-control form-control-user" type="text" name="email" placeholder="Insira o endereço de email.." aria-describedby="emailHelp">
 
             </div>
-            <input class="inputSubmit  btn-user " type="submit" name="submit" value="Entrar">
+            <input class="inputSubmit  btn-user " type="submit" name="submit" value="Enviar">
 
         </form>
         <hr>
