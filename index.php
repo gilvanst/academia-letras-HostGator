@@ -20,7 +20,7 @@
             font-family: Arial, Helvetica, sans-serif;
             
         }
-aaaaaaa
+
         .bodyf {
             background-color: rgba(0, 0, 0, 0.6);
             position: absolute;
