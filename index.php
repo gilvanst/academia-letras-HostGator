@@ -12,7 +12,10 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="js/demo/password.js" rel="stylesheet">
+    <link href="css/password.css" rel="stylesheet">
 
+    
 
     <title>Tela De Login</title>
     <style>
@@ -60,11 +63,13 @@
         </div>
         <form class="user" action="modulos/login/AcessoLogin.php" method="POST">
             <div class="form-group">
-                <input class="form-control form-user" type="text" name="email" placeholder="Email" required>
+                <label for="email" class="text-gray-700">Email</label>
+                <input class="form-control form-user" type="text" name="email" placeholder="Ex:email@email.com" required>
             </div>
             <div class="form-group">
-                <input class="form-control form-user" type="password" name="senha" minlength="3" placeholder="Senha" required>
-
+                <label for="Senha" class="text-gray-700">Senha</label>
+                <input class="form-control form-user" type="password" name="senha" minlength="3" placeholder="Digite sua senha"  required>
+                <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho">
             </div>
 
             <input class="inputSubmit btn-user" type="submit" name="submit" value="Entrar">
