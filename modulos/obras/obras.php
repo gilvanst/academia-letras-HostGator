@@ -66,23 +66,20 @@ if (empty($_SESSION['usuario'])) {
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $pdo = Banco::conectar();
                                             $sql = 'SELECT * FROM  obra ';
+                                            $obras = retornaDados($sql);
 
-                                            foreach ($pdo->query($sql) as $row) { ?>
+                                            foreach ($obras as $obra) { ?>
                                                 <tr>
-                                                    <th scope="row"><?= $row['idObra'] ?></th>
-                                                    <td><?= $row['tituloObra'] ?></td>
-                                                    <td><?= $row['autoresObra'] ?></td>
-                                                    <td><?= $row['generoObra'] ?></td>
+                                                    <th scope="row"><?= $obra['idObra'] ?></th>
+                                                    <td><?= $obra['tituloObra'] ?></td>
+                                                    <td><?= $obra['autoresObra'] ?></td>
+                                                    <td><?= $obra['generoObra'] ?></td>
                                                     <td width='250' class="text-center">
-                                                        <a class="btn btn-sm btn-primary " href="visualizar.php?idObra=<?= $row['idObra'] ?>">Ver</a>
+                                                        <a class="btn btn-sm btn-primary " href="visualizar.php?idObra=<?= $obra['idObra'] ?>">Ver</a>
                                                     </td>
                                                 </tr>
-                                            <?php }
-
-                                            Banco::desconectar();
-                                            ?>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>

@@ -114,7 +114,7 @@ if (empty($_SESSION['usuario'])) {
 
                         <div class="form-gorup">
                             <label for="sinopse">Sinopse</label>
-                            <textarea class="form-control" type="sinopse" id="sinopse" name="sinopseObra" value="<?php echo $obra; ?>"></textarea>
+                            <textarea class="form-control" type="sinopse" id="sinopse" name="sinopseObra" value="<?php echo $sinopse; ?>"></textarea>
                         </div>
 
                         <input type="hidden" id="id" name="idObra" value="<?php echo $id; ?>">
