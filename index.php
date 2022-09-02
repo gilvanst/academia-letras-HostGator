@@ -34,7 +34,7 @@
             color: white;
 
         }
-awsdsd
+
         .inputSubmit {
             background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
             border: none;
