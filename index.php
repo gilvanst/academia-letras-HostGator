@@ -54,15 +54,15 @@
 
 <body class="bg-gradient-primary">
     <div class="bodyf">
-        <div class="text-center">
+        <div class="text-center text-gray-700">
             <h1>Login</h1>
         </div>
         <form class="user" action="modulos/login/AcessoLogin.php" method="POST">
             <div class="form-group">
-                <input class="form-control form-user" type="text" name="email" placeholder="Email">
+                <input class="form-control form-user" type="text" name="email" placeholder="Email" required>
             </div>
             <div class="form-group">
-                <input class="form-control form-user" type="password" name="senha" placeholder="Senha">
+                <input class="form-control form-user" type="password" name="senha" placeholder="Senha" required>
 
             </div>
 

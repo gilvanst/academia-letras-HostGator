@@ -61,7 +61,7 @@
 <body class="bg-gradient-primary">
     <div class="bodyf">
         <div class="text-center">
-            <h1 class="h4 text-gray-900 mb-2">Esqueceu sua senha?</h1>
+            <h1 class="h4 text-gray-700 mb-2">Esqueceu sua senha?</h1>
             <p class="mb-4">Digite aqui seu email para recuperarmos sua senha!!</p>
         </div>
         <form action="#" class="user" method="POST">
