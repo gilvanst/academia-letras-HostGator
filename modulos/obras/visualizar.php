@@ -2,34 +2,19 @@
 <html lang="pt-br">
 
 <?php
-include '../../config.php';
+    include '../../config.php';
 
-if (empty($_SESSION['usuario'])) {
-    header('Location: ' . arquivo('index.php'));
-    exit;
-}
+    if (empty($_SESSION['usuario'])) {
+        header('Location: ' . arquivo('index.php'));
+        exit;
+    }
 
-if (!empty($_GET['idObra'])) {
-    $id = $_GET['idObra'];
-}
+    if (!empty($_GET['idObra'])) {
+        $id = $_GET['idObra'];
+    }
 
-$pdo = Banco::conectar();
-$sql = 'SELECT * FROM obra where idObra = ' . $id . '';
-
-foreach ($pdo->query($sql) as $row) {
-    $titulo  = $row['tituloObra'];
-    $autores = $row['autoresObra'];
-    $sinopse = $row['sinopseObra'];
-    $imagem  = $row['imagemObra'];
-    $isbn    = $row['isbnObra'];
-    $ano     = $row['anoObra'];
-    $paginas = $row['paginasObra'];
-    $pdf     = $row['pdfObra'];
-    $link    = $row['linkObra'];
-    $genero  = $row['generoObra'];
-}
-
-Banco::desconectar();
+    $sql = 'SELECT * FROM obra where idObra = ' . $id . '';
+    $obra = retornaDado($sql);
 ?>
 
 <?php include_once path('template/head.php'); ?>
@@ -56,12 +41,12 @@ Banco::desconectar();
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="display-4 text-center"><?= $titulo ?></h1>
+                    <h1 class="display-4 text-center"><?= $obra['tituloObra'] ?></h1>
 
                     <div class="media">
-                    <img src="../../img/<?= $imagem ?>" download class=" align-self-start mr-3 rounded" width="200px" height="288px" alt="Capa do livro" >
+                    <img src="../../img/<?= $obra['imagemObra'] ?>" download class=" align-self-start mr-3 rounded" width="200px" height="288px" alt="Capa do livro" >
                         <div class="media-body ">
-                            <p>Ano de publicação: <?= $ano ?></p>
+                            <p>Ano de publicação: <?= $obra['anoObra'] ?></p>
                             <p>Gênero:<?= $genero ?></p>
                             <p>Páginas: <?= $paginas ?></p>
                             <p>Autores: <?= $autores ?></p>
