@@ -98,7 +98,7 @@ if (empty($_SESSION['usuario'])) {
                         <div class="form-row">
                             <div class="form-gorup col-md-6">
                                 <label for="imagem">Capa do livro</label>
-                                <input class="form-control-file" type="file" id="imagem" name="imagemObra" value="<?php echo $imagem; ?>">
+                                <input class="form-control-file" type="file" id="imagem" name="imagem" value="<?php echo $imagem; ?>">
                             </div>
 
                             <div class="form-gorup col-md-6">
@@ -114,7 +114,7 @@ if (empty($_SESSION['usuario'])) {
 
                         <div class="form-gorup">
                             <label for="sinopse">Sinopse</label>
-                            <textarea class="form-control" type="sinopse" id="sinopse" name="sinopseObra" value="<?php echo $sinopse; ?>"></textarea>
+                            <textarea class="form-control" type="sinopse" id="sinopse" name="sinopseObra" value="<?php echo $sinopse; ?>"><?= $sinopse?></textarea>
                         </div>
 
                         <input type="hidden" id="id" name="idObra" value="<?php echo $id; ?>">

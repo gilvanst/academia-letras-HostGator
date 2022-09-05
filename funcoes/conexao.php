@@ -33,9 +33,14 @@
     {
         // Verificar se existe a imagem dentro da pasta
         $imagem = path("img/{$arquivo}");
+        // Verificar se existe o pdf dentro da pasta
+        $pdf = path("pdf/{$arquivo}");
 
         // Apaga a imagem caso seja encontrada
         if(is_file($imagem))
             unlink($imagem);
+        // Apaga o pdf caso seja encontrada
+        if(is_file($pdf ))
+            unlink($pdf);
     }
 ?>

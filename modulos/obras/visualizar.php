@@ -47,29 +47,29 @@
                     <img src="../../img/<?= $obra['imagemObra'] ?>" download class=" align-self-start mr-3 rounded" width="200px" height="288px" alt="Capa do livro" >
                         <div class="media-body ">
                             <p>Ano de publicação: <?= $obra['anoObra'] ?></p>
-                            <p>Gênero:<?= $genero ?></p>
-                            <p>Páginas: <?= $paginas ?></p>
-                            <p>Autores: <?= $autores ?></p>
-                            <p>Arquivo para leitura: <a href="../../pdf/<?= $pdf ?>"download> <?= $pdf ?></a></p>
-                            <p>Link para compra: <a href="<?=$link ?>"><?= $link ?></a></p>
-                            <p>isbn: <?= $isbn ?></p>
+                            <p>Gênero:<?= $obra['generoObra'] ?></p>
+                            <p>Páginas: <?= $obra['paginasObra'] ?></p>
+                            <p>Autores: <?= $obra['autoresObra'] ?></p>
+                            <p>Arquivo para leitura: <a href="../../pdf/<?= $obra['pdfObra'] ?>"download> <?= $obra['pdfObra'] ?></a></p>
+                            <p>Link para compra: <a href="<?=$obra['linkObra'] ?>"><?= $obra['linkObra'] ?></a></p>
+                            <p>isbn: <?= $obra['isbnObra'] ?></p>
 
 
                         </div>
                     </div>
                     <div class="text-justify mt-5">
-                        <p><?= $sinopse ?></p>
+                        <p><?= $obra['sinopseObra'] ?></p>
                         <i>Autores:</i>
-                        <i><?= $autores ?></i>
+                        <i><?= $obra['autoresObra'] ?></i>
                     </div>
 
 
 
 
                     <div class="text-right my-3">
-                        <a class="btn btn-sm btn-warning" href="alterar.php?idObra=<?= $row['idObra'] ?>">Alterar</a>
-                        <a class="btn btn-sm btn-danger" href="delete.php?idObra=<?= $row['idObra'] ?>." onclick="return confirm('Deseja realmente apagar o registro?')">Excluir</a>
-                        <a class="btn btn-sm btn-primary " href="obras.php?idObra=<?= $row['idObra'] ?>">Voltar</a>
+                        <a class="btn btn-sm btn-warning" href="alterar.php?idObra=<?= $obra['idObra'] ?>">Alterar</a>
+                        <a class="btn btn-sm btn-danger" href="delete.php?idObra=<?= $obra['idObra'] ?>." onclick="return confirm('Deseja realmente apagar o registro?')">Excluir</a>
+                        <a class="btn btn-sm btn-primary " href="obras.php?idObra=<?= $obra['idObra'] ?>">Voltar</a>
                     </div>
                 </div>
                 <!-- End of Main Content -->
