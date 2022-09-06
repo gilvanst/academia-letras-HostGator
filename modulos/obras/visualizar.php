@@ -2,19 +2,20 @@
 <html lang="pt-br">
 
 <?php
-    include '../../config.php';
+include '../../config.php';
 
-    if (empty($_SESSION['usuario'])) {
-        header('Location: ' . arquivo('index.php'));
-        exit;
-    }
+if (empty($_SESSION['usuario'])) {
+    header('Location: ' . arquivo('index.php'));
+    exit;
+}
 
-    if (!empty($_GET['idObra'])) {
-        $id = $_GET['idObra'];
-    }
+if (!empty($_GET['idObra'])) {
+    $id = $_GET['idObra'];
+}
 
-    $sql = 'SELECT * FROM obra where idObra = ' . $id . '';
-    $obra = retornaDado($sql);
+$sql = 'SELECT * FROM obra where idObra ';
+$obra = retornaDado($sql);
+
 ?>
 
 <?php include_once path('template/head.php'); ?>
@@ -44,14 +45,14 @@
                     <h1 class="display-4 text-center"><?= $obra['tituloObra'] ?></h1>
 
                     <div class="media">
-                    <img src="../../img/<?= $obra['imagemObra'] ?>" download class=" align-self-start mr-3 rounded" width="200px" height="288px" alt="Capa do livro" >
+                        <img src="../../img/<?= $obra['imagemObra'] ?>" download class=" align-self-start mr-3 rounded" width="200px" height="288px" alt="Capa do livro">
                         <div class="media-body ">
                             <p>Ano de publicação: <?= $obra['anoObra'] ?></p>
                             <p>Gênero:<?= $obra['generoObra'] ?></p>
                             <p>Páginas: <?= $obra['paginasObra'] ?></p>
                             <p>Autores: <?= $obra['autoresObra'] ?></p>
-                            <p>Arquivo para leitura: <a href="../../pdf/<?= $obra['pdfObra'] ?>"download> <?= $obra['pdfObra'] ?></a></p>
-                            <p>Link para compra: <a href="<?=$obra['linkObra'] ?>"><?= $obra['linkObra'] ?></a></p>
+                            <p>Arquivo para leitura: <a href="../../pdf/<?= $obra['pdfObra'] ?>" download> <?= $obra['pdfObra'] ?></a></p>
+                            <p>Link para compra: <a href="<?= $obra['linkObra'] ?>"><?= $obra['linkObra'] ?></a></p>
                             <p>isbn: <?= $obra['isbnObra'] ?></p>
 
 

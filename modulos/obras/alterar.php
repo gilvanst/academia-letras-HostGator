@@ -9,6 +9,13 @@ if (empty($_SESSION['usuario'])) {
     exit;
 }
 
+if (!empty($_GET['idObra'])) {
+    $id = $_GET['idObra'];
+}
+
+$sql = 'SELECT * FROM obra where idObra =';
+$obra = retornaDado($sql);
+
 ?>
 
 <?php include_once path('template/head.php'); ?>
@@ -38,86 +45,63 @@ if (empty($_SESSION['usuario'])) {
                     <h1 class="display-4 text-center">Alterar Cadastro</h1>
 
 
-                    <?php
-                    if (!empty($_GET['idObra'])) {
-                        $id = $_GET['idObra'];
-                    }
-
-                    $pdo = Banco::conectar();
-                    $sql = 'SELECT * FROM obra where idObra =  ' . $id . '';
-
-                    foreach ($pdo->query($sql) as $row) {
-                        $id      = $row['idObra'];
-                        $titulo  = $row['tituloObra'];
-                        $autores = $row['autoresObra'];
-                        $sinopse = $row['sinopseObra'];
-                        $imagem  = $row['imagemObra'];
-                        $isbn    = $row['isbnObra'];
-                        $ano     = $row['anoObra'];
-                        $paginas = $row['paginasObra'];
-                        $pdf     = $row['pdfObra'];
-                        $link    = $row['linkObra'];
-                        $genero  = $row['generoObra'];
-                    }
-                    Banco::desconectar();
-                    ?>
 
                     <form action="update.php" method="POST">
                         <div class="form-group">
                             <label for="titulo">Titulo</label>
-                            <input class="form-control" type="text" id="titulo" name="tituloObra" value="<?php echo $titulo; ?>">
+                            <input class="form-control" type="text" id="titulo" name="tituloObra" value="<?php echo $obra['tituloObra']; ?>">
                         </div>
 
                         <div class="form-group ">
                             <label for="autores">Autores</label>
-                            <input class="form-control" type="text" id="autores" name="autoresObra" value="<?php echo $autores; ?>">
+                            <input class="form-control" type="text" id="autores" name="autoresObra" value="<?php echo $obra['autoresObra']; ?>">
                         </div>
 
                         <div class="form-group ">
                             <label for="genero">Gênero</label>
-                            <input class="form-control" type="text" id="genero" name="generoObra" value="<?php echo $genero; ?>">
+                            <input class="form-control" type="text" id="genero" name="generoObra" value="<?php echo $obra['generoObra']; ?>">
                         </div>
 
                         <div class="form-group ">
                             <label for="isbn">Isbn</label>
-                            <input class="form-control" type="text" id="isbn" name="isbnObra" value="<?php echo $isbn; ?>">
+                            <input class="form-control" type="text" id="isbn" name="isbnObra" value="<?php echo $obra['isbnObra']; ?>">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="ano">Ano de publicação</label>
-                                <input class="form-control " type="number" id="ano" name="anoObra" value="<?php echo $ano; ?>">
+                                <input class="form-control " type="number" id="ano" name="anoObra" value="<?php echo $obra['anoObra']; ?>">
                             </div>
 
                             <div class="form-group col-md-6 ">
                                 <label for="paginas">Quantidade de páginas</label>
-                                <input class="form-control " type="number" id="paginas" name="paginasObra" value="<?php echo $paginas; ?>">
+                                <input class="form-control " type="number" id="paginas" name="paginasObra" value="<?php echo $obra['paginasObra']; ?>">
                             </div>
 
                         </div>
                         <div class="form-row">
                             <div class="form-gorup col-md-6">
                                 <label for="imagem">Capa do livro</label>
-                                <input class="form-control-file" type="file" id="imagem" name="imagem" value="<?php echo $imagem; ?>">
+                                <input class="form-control-file" type="file" id="imagem" name="imagem" value="<?php echo $obra['imagemObra']; ?>">
                             </div>
 
                             <div class="form-gorup col-md-6">
                                 <label for="pdf">Arquivo de leitura</label>
-                                <input class="form-control-file" type="file" id="pdf" name="pdfObra" value="<?php echo $pdf; ?>">
+                                <input class="form-control-file" type="file" id="pdf" name="pdfObra" value="<?php echo $obra['pdfObra']; ?>">
                             </div>
                         </div>
 
                         <div class="form-gorup">
                             <label for="link">Link da obra</label>
-                            <input class="form-control" type="text" id="link" name="linkObra" value="<?php echo $link; ?>">
+                            <input class="form-control" type="text" id="link" name="linkObra" value="<?php echo $obra['linkObra']; ?>">
                         </div>
 
                         <div class="form-gorup">
                             <label for="sinopse">Sinopse</label>
-                            <textarea class="form-control" type="sinopse" id="sinopse" name="sinopseObra" value="<?php echo $sinopse; ?>"><?= $sinopse?></textarea>
+                            <textarea class="form-control" type="sinopse" id="sinopse" name="sinopseObra" value="<?php echo $obra['sinopseObra']; ?>"><?= $obra['sinopseObra'] ?></textarea>
                         </div>
 
-                        <input type="hidden" id="id" name="idObra" value="<?php echo $id; ?>">
+                        <input type="hidden" id="id" name="idObra" value="<?php echo $obra['idObra']; ?>">
 
                         <div class="text-right my-3">
                             <input class="btn btn-primary" type="submit" value="Alterar">

@@ -2,8 +2,22 @@
 <html lang="pt-br">
 
 <?php
-include_once '../../config.php';
+include '../../config.php';
+
+if (empty($_SESSION['usuario'])) {
+    header('Location: ' . arquivo('index.php'));
+    exit;
+}
+
+if (!empty($_GET['id'])) {
+    $id = $_GET['id'];
+}
+
+$sql = 'SELECT * FROM usuario where id ';
+$obra = retornaDado($sql);
+
 ?>
+
 
 <?php include_once path('template/head.php'); ?>
 
@@ -27,21 +41,25 @@ include_once '../../config.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Meu perfil</h1>
-                    </div>
+
+                    <h1 class="display-4 ">Meu perfil</h1>
 
                     
 
+                        
+                        <h2>Nome: <?= $obra['nome']?></h2>
+                        
+                 
 
 
-                    
+
+
+
                 </div>
                 <!-- End of Content Wrapper -->
-                
+
             </div>
-            
+
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -58,7 +76,7 @@ include_once '../../config.php';
             <!-- Logout Modal-->
             <?php include path('template/logout.php'); ?>
 
-        <?php include path('template/importacoes-js.php'); ?>
+            <?php include path('template/importacoes-js.php'); ?>
 </body>
 
 </html>
