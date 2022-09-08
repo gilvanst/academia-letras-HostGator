@@ -68,7 +68,7 @@
             <div class="form-group">
                 <label for="Senha" class="text-gray-700">Senha</label>
                 <input class="form-control form-user" type="password" name="senha" minlength="3" placeholder="Digite sua senha"  required>
-                <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho">
+                
             </div>
 
             <input class="inputSubmit btn-user" type="submit" name="submit" value="Entrar">
