@@ -23,5 +23,5 @@ if (!empty($_POST)) {
     $q->execute(array($nome, $email, $telefone, $senha, $id));
     Banco::desconectar();
 
-    header("Location: usuarios.php");
+    header("Location: usuarios.php?id=$id");
 }

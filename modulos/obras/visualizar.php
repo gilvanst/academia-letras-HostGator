@@ -13,8 +13,22 @@ if (!empty($_GET['idObra'])) {
     $id = $_GET['idObra'];
 }
 
-$sql = 'SELECT * FROM obra where idObra ';
+$sql = 'SELECT * FROM obra where idObra= '. $id . ' ';
 $obra = retornaDado($sql);
+
+foreach (retornaDado($sql) as $row) {
+    $id = $obra['idObra'];
+    $titulo = $obra['tituloObra'];
+    $autores = $obra['autoresObra'];
+    $sinopse = $obra['sinopseObra'];
+    $imagem = $obra['imagemObra'];
+    $isbn = $obra['isbnObra'];
+    $ano = $obra['anoObra'];
+    $paginas = $obra['paginasObra'];
+    $pdf = $obra['pdfObra'];
+    $link = $obra['linkObra'];
+    $genero = $obra['generoObra'];
+}
 
 ?>
 

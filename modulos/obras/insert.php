@@ -24,13 +24,14 @@ $ano = $_POST['anoObra'];
 $paginas = $_POST['paginasObra'];
 $link = $_POST['linkObra'];
 $genero = $_POST['generoObra'];
+$usuario = $_SESSION['usuario'];
 
 $pdo = Banco::conectar();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$sql = "INSERT INTO obra (tituloObra, autoresObra, sinopseObra, imagemObra, isbnObra, anoObra, paginasObra, pdfObra, linkObra, generoObra) VALUES (?,?,?,?,?,?,?,?,?,?)";
+$sql = "INSERT INTO obra (tituloObra, autoresObra, sinopseObra, imagemObra, isbnObra, anoObra, paginasObra, pdfObra, linkObra, generoObra, id_usuario) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 $q = $pdo->prepare($sql);
-$q->execute(array($titulo, $autores, $sinopse, $imagem, $isbn, $ano, $paginas, $pdf, $link, $genero));
+$q->execute(array($titulo, $autores, $sinopse, $imagem, $isbn, $ano, $paginas, $pdf, $link, $genero, $usuario));
 
 $id = $pdo->lastInsertId();
 
