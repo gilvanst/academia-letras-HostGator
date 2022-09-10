@@ -66,20 +66,24 @@ if (empty($_SESSION['usuario'])) {
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $sql = 'SELECT * FROM  obra ';
-                                            $obras = retornaDados($sql);
-
-                                            foreach ($obras as $obra) { ?>
+                                            $pdo = Banco::conectar();
+                                            $id_usuario = usuario()['id'];
+                                           
+                                            
+                                            $sql = "SELECT * FROM  obra WHERE id_usuario = $id_usuario ";
+                                            foreach ($pdo->query($sql) as $row) { ?>
                                                 <tr>
-                                                    <th scope="row"><?= $obra['idObra'] ?></th>
-                                                    <td><?= $obra['tituloObra'] ?></td>
-                                                    <td><?= $obra['autoresObra'] ?></td>
-                                                    <td><?= $obra['generoObra'] ?></td>
+                                                    <th scope="row"><?= $row['idObra'] ?></th>
+                                                    <td><?= $row['tituloObra'] ?></td>
+                                                    <td><?= $row['autoresObra'] ?></td>
+                                                    <td><?= $row['generoObra'] ?></td>
                                                     <td width='250' class="text-center">
-                                                        <a class="btn btn-sm btn-primary " href="visualizar.php?idObra=<?= $obra['idObra'] ?>">Ver</a>
+                                                        <a class="btn btn-sm btn-primary " href="visualizar.php?idObra=<?= $row['idObra'] ?>">Ver</a>
                                                     </td>
                                                 </tr>
-                                            <?php } ?>
+                                            <?php }
+                                            Banco::desconectar();
+                                             ?>
                                         </tbody>
                                     </table>
                                 </div>
