@@ -11,6 +11,11 @@ if (empty($_SESSION['usuario'])) {
 
 if (!empty($_GET['IdPub'])) {
     $id = $_GET['IdPub'];
+
+}else
+{
+    header('Location: publicacao.php');
+    exit;
 }
 
 $pdo = Banco::conectar();
