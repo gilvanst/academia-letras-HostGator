@@ -4,7 +4,7 @@ session_start();
 include '../../funcoes/conexao.php';
 
 if (empty($_POST['email']) && empty($_POST['senha'])) {
-    header('Location: ../../index.php');
+    header('Location: ../../login.php');
     exit;
 }
 

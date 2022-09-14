@@ -74,7 +74,7 @@
         </form>
         <hr>
         <div class="text-center">
-            <a class="small" href="index.php">Lembrou a senha? Conecte-se</a>
+            <a class="small" href="login.php">Lembrou a senha? Conecte-se</a>
         </div>
 
     </div>

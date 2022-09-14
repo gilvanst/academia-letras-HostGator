@@ -5,7 +5,7 @@
 include '../../config.php';
 
 if (empty($_SESSION['usuario'])) {
-    header('Location: ' . arquivo('index.php'));
+    header('Location: ' . arquivo('login.php'));
     exit;
 }
 
