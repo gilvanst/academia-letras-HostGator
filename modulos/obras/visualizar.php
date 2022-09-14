@@ -13,7 +13,7 @@ if (!empty($_GET['idObra'])) {
     $id = $_GET['idObra'];
 }
 
-$sql = 'SELECT * FROM obra where idObra= '. $id . ' ';
+$sql = 'SELECT * FROM obra where idObra= ' . $id . ' ';
 $obra = retornaDado($sql);
 
 foreach (retornaDado($sql) as $row) {
