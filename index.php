@@ -10,7 +10,7 @@ include 'config.php';
 	<div id="page-wrapper">
 
 		<?php include_once path('template/template-site/navbar.php'); ?>
-
+fdsdf
 
 
 		<!-- Banner -->
