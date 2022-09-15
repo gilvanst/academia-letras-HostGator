@@ -15,6 +15,8 @@ include 'config.php';
 
 		<!-- Banner -->
 		<!-- Main -->
+	
+	
 		<section id="main">
 			<div class="container">
 				<div class="row gtr-200">
