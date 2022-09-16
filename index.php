@@ -5,12 +5,20 @@ include 'config.php';
 ?>
 
 <?php include_once path('template/template-site/head.php'); ?>
+<header id="header">
+	<div class="logo container">
+		<div>
+			<h1><a href="<?= arquivo('index.php')?>" id="logo"></a></h1>
+			<p> Academia Araçatubense de Letras</p>
+		</div>
+	</div>
+</header>
 
 <body class="homepage is-preload">
 	<div id="page-wrapper">
 
 		<?php include_once path('template/template-site/navbar.php'); ?>
-fdsdf
+
 
 
 		<!-- Banner -->
