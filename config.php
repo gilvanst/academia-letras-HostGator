@@ -5,15 +5,15 @@
     // Include dos arquivos comuns
     include_once path('funcoes/conexao.php');
     include_once path('funcoes/banco.php');
+    session_start();
 
-  
 
     // Funções
     function arquivo($file)
     {
         return ROOT_PATH . $file;
     }
-    
+
     function path($file)
     {
         return ROOT_DIR . '/' . $file;
@@ -22,7 +22,7 @@
     function usuario()
     {
         // Retorna o usuário logado;
-        
+
         $id = $_SESSION['usuario'];
 
         $sql = "SELECT * FROM usuario WHERE id = $id";
