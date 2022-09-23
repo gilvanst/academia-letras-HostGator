@@ -1,6 +1,7 @@
 <?php
 include '../../config.php';
 
+
 if (!empty($_POST)) {
     $id = $_POST['idAcad'];
     $nome = $_POST['nomeAcad'];

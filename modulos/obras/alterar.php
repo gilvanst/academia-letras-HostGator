@@ -4,6 +4,7 @@
 <?php
 
 include '../../config.php';
+include_once '../login/sessao.php';
 if (!empty($_GET['idObra'])) {
     $id = $_GET['idObra'];
 }

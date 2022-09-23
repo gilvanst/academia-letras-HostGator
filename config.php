@@ -6,12 +6,7 @@
     include_once path('funcoes/conexao.php');
     include_once path('funcoes/banco.php');
 
-    session_start();
-    if (empty($_SESSION['usuario'])) {
-        header('Location: ' . arquivo('login.php'));
-        exit;
-    }
-    
+  
 
     // Funções
     function arquivo($file)
