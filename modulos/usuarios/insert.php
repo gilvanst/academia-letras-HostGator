@@ -1,6 +1,10 @@
 <?php
 include '../../config.php';
 
+$sqlEmail = "SELECT * FROM usuario WHERE email = {$_POST['email']}";
+$usuarioEmail = retornaDado($sqlEmail);
+
+if ($usuarioEmail != )
 
 if (!empty($_POST)) {
     $nome = $_POST['nome'];
@@ -10,10 +14,10 @@ if (!empty($_POST)) {
     $csenha   = $_POST['csenha']; /* Variavel criada para verficação de senha*/
 
     /*Verificando se as senhas são iguais e criando uma frase de verificação*/
-if ($senha != $csenha) {
-      header("Location: inserir.php?msg=Senhas não conferem&nome={$nome}");
-      exit();
-}
+    if ($senha != $csenha) {
+        header("Location: inserir.php?msg=Senhas não conferem&nome={$nome}");
+        exit();
+    }
 /*fim da verificação*/
 
     $pdo = Banco::conectar();
