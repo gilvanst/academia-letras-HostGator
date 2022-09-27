@@ -1,15 +1,16 @@
 <?php
     include '../../config.php';
 
+    /* Faz a merda do select e verifica se o email já existe no banco de dados esse inferno */
 
-
-    $sqlEmail = "SELECT * FROM usuario WHERE email = {$_POST['email']}";
+    $sqlEmail = "SELECT * FROM usuario WHERE email = '{$_POST['email']}' ";
     $usuarioEmail = retornaDado($sqlEmail);
 
-    if ($usuarioEmail->rowCount() == 1) {
-        header("Location: inserir.php?msg=Email já cadastrado&email={$email}");
+    if (!empty($usuarioEmail['id']) ) {
+        header("Location: inserir.php?msg=Email já existe porra! Bota outro seu burro!&email={$email}");
         exit();
     }
+     /* Fim da verificação*/
 
     if (!empty($_POST)) {
         $nome = $_POST['nome'];
@@ -20,7 +21,7 @@
 
         /*Verificando se as senhas são iguais e criando uma frase de verificação*/
         if ($senha != $csenha) {
-            header("Location: inserir.php?msg=Senhas não conferem&nome={$nome}");
+            header("Location: inserir.php?msg=As senhas não estão iguais! Acéfalo.&nome={$nome}");
             exit();
         }
         /*fim da verificação*/
