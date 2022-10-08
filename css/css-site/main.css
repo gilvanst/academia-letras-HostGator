@@ -1792,7 +1792,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		text-decoration: none;
 		background: #006599;
-		color: rgb(0, 0, 0);
+		color: rgb(248, 248, 248);
 		border: 0;
 		line-height: 1em;
 		border-radius: 8px;
@@ -2533,12 +2533,12 @@ input, select, textarea {
 			}
 
 				#banner .content .button:hover {
-					color: #e4e7e5;
+					color: #ffffff;
 					border-color: rgba(87, 93, 89, 0.75);
 				}
 
 				#banner .content .button:active {
-					color: #fff;
+					color: rgb(255, 255, 255);
 					border-color: #616763;
 				}
 
@@ -2783,7 +2783,7 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background-color: rgba(21, 38, 23, 0.8);
+				background-color: #006599;
 				background-image: url("images/overlay.png");
 			}
 
@@ -2829,7 +2829,7 @@ input, select, textarea {
 						position: absolute;
 						left: 0;
 						top: 0;
-						background: #b1ddab;
+						background:  #e6d70a;
 						width: 44px;
 						height: 44px;
 						content: '\f0c9';
@@ -2840,7 +2840,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:active:before {
-						background-color: #a1cd9b;
+						background-color:  #e6d70a;
 					}
 
 			#navPanel {
@@ -2864,8 +2864,8 @@ input, select, textarea {
 				top: 0;
 				width: 275px;
 				z-index: 10002;
-				background-color: #353c37;
-				background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+				background-color: #000000;
+				background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 				background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 				background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 				background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
@@ -2890,9 +2890,9 @@ input, select, textarea {
 					height: 44px;
 					line-height: 44px;
 					padding: 0 1em 0 1em;
-					color: #888;
+					color: rgb(190, 33, 33);
 					color: rgba(255, 255, 255, 0.5);
-					border-top: solid 2px rgba(87, 93, 89, 0.15);
+					border-top: solid 2px rgba(0, 0, 0, 0.15);
 					font-size: 0.8em;
 				}
 
@@ -2926,7 +2926,7 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #fff;
+					color: rgb(255, 255, 255);
 				}
 
 			body.navPanel-visible #page-wrapper {
