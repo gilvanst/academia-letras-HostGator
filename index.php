@@ -61,7 +61,7 @@
 								</div>
 							</div>
 						</section>
-						<center><a href="left-sidebar.html" class="button">Continue lendo</a></center>
+						<center><a href="<?= arquivo("modulos/modulos-site/colecao.php") ?>" class="button">Continue lendo</a></center>
 					</div>
 					<div class="col-12">
 						<section class="box features">
