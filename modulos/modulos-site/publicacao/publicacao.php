@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <?php
-include '../../config.php';
+include '../../../config.php';
 ?>
 
 <?php include_once path('template/template-site/head.php'); ?>
