@@ -61,7 +61,7 @@
 								</div>
 							</div>
 						</section>
-						<center><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>" class="button">Continue lendo</a></center>
+						<center><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>" class="button">Ver mais</a></center>
 					</div>
 					<div class="col-12">
 						<section class="box features">
@@ -90,7 +90,7 @@
 								</div>
 							</div>
 						</section>
-						<center><a href="left-sidebar.html" class="button">Continue lendo</a></center>
+						<center><a href="left-sidebar.html" class="button">Ver mais</a></center>
 					</div>
 						<!-- Blog -->
 						<div class="col-12">
@@ -119,7 +119,7 @@
 								<?php } ?>
 									</div>
 									</div>
-									<center><a href="left-sidebar.html" class="button">Continue lendo</a></center>
+									<center><a href="left-sidebar.html" class="button">Ver mais</a></center>
 								</div>
 							</div>
 						</section>
