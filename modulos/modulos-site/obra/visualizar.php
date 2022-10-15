@@ -4,9 +4,8 @@
         <?php
         include '../../../config.php';
         ?>
-
-        <link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
-
+            <link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
+       
         <?php include_once path('template/template-site/head.php'); ?>
         <?php
         $sql = "SELECT * FROM obra ORDER BY idObra ASC";
@@ -40,16 +39,15 @@
                                                 <div class="container-fluid ">
 
                                                     <div class="media">
-                                                        <img class="align-self-start mr-3 rounded " width="200px" height="288px" src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="capa do livro" />
+                                                        <img class="align-self-start mr-2 rounded " width="200px" height="288px" src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="capa do livro" />
 
-                                                        <div class="media-body col-2">
-                                                            <p>Ano de publicação: <?= $obra['anoObra'] ?></p>
-                                                            <p>Gênero:<?= $obra['generoObra'] ?></p>
-                                                            <p>Páginas: <?= $obra['paginasObra'] ?></p>
-                                                            <p>Autores: <?= $obra['autoresObra'] ?></p>
-                                                            <p>Arquivo para leitura: <a href="<?= arquivo('pdf/' . $obra['imagemObra']) ?>" download> <?= $obra['pdfObra'] ?></a></p>
-                                                            <p>Link para compra: <a href="<?= $obra['linkObra'] ?>"><?= $obra['linkObra'] ?></a></p>
-                                                            <p>isbn: <?= $obra['isbnObra'] ?></p>
+                                                        <div class="media-body">
+                                                            <p class="mb-4">Ano de publicação: <?= $obra['anoObra'] ?></p>
+                                                            <p class="mb-4">Gênero:<?= $obra['generoObra'] ?></p>
+                                                            <p class="mb-4">Páginas: <?= $obra['paginasObra'] ?></p>
+                                                            <p class="mb-4">Arquivo para leitura: <a href="<?= arquivo('pdf/' . $obra['pdfObra']) ?>" download> <?= $obra['pdfObra'] ?></a></p>
+                                                            <p class="mb-4">Link para compra: <a href="<?= $obra['linkObra'] ?>"><?= $obra['linkObra'] ?></a></p>
+                                                            <p class="mb-4">isbn: <?= $obra['isbnObra'] ?></p>
 
 
                                                         </div>
