@@ -3,15 +3,35 @@
         <html>
         <?php
         include '../../../config.php';
+        
+        
+        if (!empty($_GET['idObra'])) {
+            $id = $_GET['idObra'];
+            
+            
+        }
+            $sql = 'SELECT * FROM obra  where idObra= ' . $id .'';
+            $obra = retornaDado($sql);
+        
+        
+        foreach (retornaDado($sql) as $row) {
+            $id = $obra['idObra'];
+            $titulo = $obra['tituloObra'];
+            $autores = $obra['autoresObra'];
+            $sinopse = $obra['sinopseObra'];
+            $imagem = $obra['imagemObra'];
+            $isbn = $obra['isbnObra'];
+            $ano = $obra['anoObra'];
+            $paginas = $obra['paginasObra'];
+            $pdf = $obra['pdfObra'];
+            $link = $obra['linkObra'];
+            $genero = $obra['generoObra']; 
+        } 
         ?>
-            <link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
-       
-        <?php include_once path('template/template-site/head.php'); ?>
-        <?php
-        $sql = "SELECT * FROM obra ORDER BY idObra ASC";
-        $obras = retornaDados($sql);
+        <link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
 
-        foreach ($obras as $obra) { ?>
+        <?php include_once path('template/template-site/head.php'); ?>
+        
 
             <header id="header">
                 <div class="logo container">
@@ -60,7 +80,6 @@
                                                     </div>
                                                 </div>
 
-                                            <?php } ?>
 
                                             </div>
                                         </div>

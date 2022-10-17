@@ -37,10 +37,10 @@ include '../../../config.php';
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
 											<section class="box feature">
-												<a href="visualizar.php" class="image featured">
+												<a href="visualizar.php?idObra=<?= $obra['idObra'] ?>" class="image featured">
 													<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
+													
 												</a>
-
 												<h3><a href="#"><?= $obra['tituloObra'] ?></a></h3>
 
 												<p>
