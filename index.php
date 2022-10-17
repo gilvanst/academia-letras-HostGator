@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <?php
-	include 'config.php';
+include 'config.php';
 ?>
 
 <?php include_once path('template/template-site/head.php'); ?>
@@ -36,27 +36,26 @@
 							<div>
 								<div class="row">
 									<?php
-										$sql = "SELECT * FROM obra ORDER BY idObra DESC LIMIT 4";
-										$obras = retornaDados($sql);
+									$sql = "SELECT * FROM obra ORDER BY idObra DESC LIMIT 4";
+									$obras = retornaDados($sql);
 
-										foreach($obras as $obra)
-										{ ?>
-											<div class="col-3 col-6-medium col-12-small">
-												<!-- Feature -->
-												<section class="box feature">
-													<a href="modulos/modulos-site/obra/visualizar.php?idObra=<?=$obra['idObra'] ?>" class="image featured">
-														<img  src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
-													</a>
+									foreach ($obras as $obra) { ?>
+										<div class="col-3 col-6-medium col-12-small">
+											<!-- Feature -->
+											<section class="box feature">
+												<a href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>" class="image featured">
+													<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
+												</a>
 
-													<h3><a href="#"><?= $obra['tituloObra'] ?></a></h3>
+												<h3><a href="#"><?= $obra['tituloObra'] ?></a></h3>
 
-													<p>
-														<?= substr($obra['sinopseObra'], 0, 200) ?>...
-													</p>
-												</section>
-											</div>
+												<p>
+													<?= substr($obra['sinopseObra'], 0, 200) ?>...
+												</p>
+											</section>
+										</div>
 
-										<?php } ?>
+									<?php } ?>
 
 								</div>
 							</div>
@@ -68,92 +67,77 @@
 							<h2 class="major"><span>Publicações</span></h2>
 							<div>
 								<div class="row">
-								<?php
-										$sql = "SELECT * FROM publicacoes ORDER BY idPub DESC LIMIT 4";
-										$publicacoes = retornaDados($sql);
+									<?php
+									$sql = "SELECT * FROM publicacoes ORDER BY idPub DESC LIMIT 4";
+									$publicacoes = retornaDados($sql);
 
-										foreach($publicacoes as $publicacao)
-										{ ?>
-											<div class="col-3 col-6-medium col-12-small">
-												<!-- Feature -->
-												<section class="box feature">
-													<h3><a href="#"><?= $publicacao['tituloPub'] ?></a></h3>
+									foreach ($publicacoes as $publicacao) { ?>
+										<div class="col-3 col-6-medium col-12-small">
+											<!-- Feature -->
+											<section class="box feature">
+												<h3><a href="#"><?= $publicacao['tituloPub'] ?></a></h3>
 
-													<p>
-														<?= substr($publicacao['textoPub'], 0, 200) ?>...
-													</p>
-												</section>
-											</div>
+												<p>
+													<?= substr($publicacao['textoPub'], 0, 200) ?>...
+												</p>
+											</section>
+										</div>
 
-										<?php } ?>
+									<?php } ?>
 
 								</div>
 							</div>
 						</section>
 						<center><a href="left-sidebar.html" class="button">Ver mais</a></center>
 					</div>
-						<!-- Blog -->
-						<div class="col-12">
+					<!-- Blog -->
+					<div class="col-12">
 						<section class="box blog">
 							<h2 class="major"><span>Notícias</span></h2>
 							<div>
 								<div class="row">
-								<?php
-										$sql = "SELECT * FROM eventos ORDER BY idEve DESC LIMIT 1";
-										$eventos = retornaDados($sql);
+									<?php
+									$sql = "SELECT * FROM eventos ORDER BY idEve DESC LIMIT 1";
+									$eventos = retornaDados($sql);
 
-										foreach($eventos as $evento)
-										{ ?>
-											<div class="col-3 col-6-medium col-12-small">
-												<!-- Feature -->
-												<section class="box feature">
-													<h3><a href="#"><?= $evento['nomeEve'] ?></a></h3>
-													<h3><?= $evento['localEve']?></h3>
-                                                    <h3><?= $evento['dataEve']?>/<?= $evento['horaEve']?></h3>
-													<p>
-														<?= substr($evento['descricaoEve'], 0, 200) ?>...
-													</p>
-												</section>
-											</div>
+									foreach ($eventos as $evento) { ?>
+										<div class="col-3 col-6-medium col-12-small">
+											<!-- Feature -->
+											<section class="box feature">
+												<h3><a href="#"><?= $evento['nomeEve'] ?></a></h3>
+												<h3><?= $evento['localEve'] ?></h3>
+												<h3><?= $evento['dataEve'] ?>/<?= $evento['horaEve'] ?></h3>
+												<p>
+													<?= substr($evento['descricaoEve'], 0, 200) ?>...
+												</p>
+											</section>
+										</div>
 
-								<?php } ?>
-									</div>
-									</div>
-									<center><a href="left-sidebar.html" class="button">Ver mais</a></center>
+									<?php } ?>
 								</div>
 							</div>
-						</section>
-
+							<center><a href="left-sidebar.html" class="button">Ver mais</a></center>
 					</div>
 				</div>
-			</div>
 		</section>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="container">
-				<div class="row gtr-200">
+	</div>
+	</div>
+	</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<div class="row gtr-200">
+				<?php include_once path('template/template-site/contato.php'); ?>
 
 
-					<?php include_once path('template/template-site/contato.php'); ?>
-					<div class="col-12">
-
-						<!-- About -->
-						<section>
-							<h2 class="major"><span>Desenvolvedores</span></h2>
-							<p>
-								Gilvan Santos <br>
-								Bruno Corrêa <br>
-								Caique Pollachini <br>
-								Kenjhon Leandro <br>
-							</p>
-						</section>
-					</div>
-
-				</div>
-
+				
 			</div>
-		</footer>
+
+		</div>
+	</footer>
 
 	</div>
 

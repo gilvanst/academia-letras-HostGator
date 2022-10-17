@@ -31,7 +31,16 @@
     <!-- Copyright -->
     <div id="copyright">
         <ul class="menu">
-            <li><a href="<?= arquivo('login.php')?>">Administrador </a></li>
+            <li><a href="<?= arquivo('login.php') ?>">Administrador </a></li>
         </ul>
+    </div>
+    <div id="copyright">
+
+        <footer>
+
+            <span>Academia Araçatubense De Letras &copy; 2022</span>
+        </<footer>
+
+
     </div>
 </div>
