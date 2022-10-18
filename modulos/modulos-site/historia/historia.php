@@ -27,7 +27,7 @@ include '../../../config.php';
                             <article class="box page-content">
 
                                 <section>
-                                    <h3>More intriguing information</h3>
+                                    <h3>Quem somos?</h3>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
                                         justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
@@ -76,22 +76,7 @@ include '../../../config.php';
             <div class="container">
                 <div class="row gtr-200">
                     <?php include_once path('template/template-site/contato.php'); ?>
-                    <div class="col-12">
-
-                        <!-- About -->
-                        <section>
-                            <h2 class="major"><span>Desenvolvedores</span></h2>
-                            <p>
-                                Gilvan Santos <br>
-                                Bruno Corrêa <br>
-                                Caique Pollachini <br>
-                                Kenjhon Leandro <br>
-                            </p>
-                        </section>
-
-                    </div>
-
-
+                
                 </div>
         </footer>
 

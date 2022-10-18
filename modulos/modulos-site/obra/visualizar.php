@@ -94,20 +94,7 @@
                         <div class="container">
                             <div class="row gtr-200">
                                 <?php include_once path('template/template-site/contato.php'); ?>
-                                <div class="col-12">
-
-                                    <!-- About -->
-                                    <section>
-                                        <h2 class="major"><span>Desenvolvedores</span></h2>
-                                        <p>
-                                            Gilvan Santos <br>
-                                            Bruno Corrêa <br>
-                                            Caique Pollachini <br>
-                                            Kenjhon Leandro <br>
-                                        </p>
-                                    </section>
-
-                                </div>
+                               
 
                             </div>
 

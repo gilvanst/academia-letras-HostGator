@@ -60,39 +60,15 @@ include '../../../config.php';
 			<div class="container">
 				<div class="row gtr-200">
 				<?php include_once path('template/template-site/contato.php'); ?>
-					<div class="col-12">
-
-						<!-- About -->
-						<section>
-							<h2 class="major"><span>Desenvolvedores</span></h2>
-							<p>
-								Gilvan Santos <br>
-								Bruno Corrêa <br>
-								Caique Pollachini <br>
-								Kenjhon Leandro <br>
-							</p>
-						</section>
-
-					</div>
 					
-				</div>
-
-				
+				</div>		
 
 			</div>
 		</footer>
 
 	</div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
+	<?php include_once path('template/template-site/ikportacoes-js.php'); ?>
 </body>
 
 </html>

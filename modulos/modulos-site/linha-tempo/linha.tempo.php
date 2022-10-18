@@ -33,30 +33,10 @@ include '../../../config.php';
             <div class="container">
                 <div class="row gtr-200">
                     <?php include_once path('template/template-site/contato.php'); ?>
-                    <div class="col-12">
-
-                        <!-- About -->
-                        <section>
-                            <h2 class="major"><span>Desenvolvedores</span></h2>
-                            <p>
-                                Gilvan Santos <br>
-                                Bruno Corrêa <br>
-                                Caique Pollachini <br>
-                                Kenjhon Leandro <br>
-                            </p>
-                        </section>
-
-                    </div>
+                    
                 </div>
 
-                <!-- Copyright -->
-                <div id="copyright">
-                    <ul class="menu">
-                        <li>&copy; Untitled. All rights reserved</li>
-                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    </ul>
-                </div>
-
+                
             </div>
         </footer>
 
