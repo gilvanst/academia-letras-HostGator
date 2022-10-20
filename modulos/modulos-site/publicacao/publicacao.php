@@ -28,7 +28,7 @@ include '../../../config.php';
 							<div>
 								<div class="row">
 								<?php
-										$sql = "SELECT * FROM publicacoes ORDER BY idPub DESC ";
+										$sql = "SELECT * FROM publicacoes ORDER BY idPub ASC ";
 										$publicacoes = retornaDados($sql);
 
 										foreach($publicacoes as $publicacao)
@@ -36,7 +36,8 @@ include '../../../config.php';
 											<div class="col-3 col-6-medium col-12-small">
 												<!-- Feature -->
 												<section class="box feature">
-													<h3><a href="#"><?= $publicacao['tituloPub'] ?></a></h3>
+													<h3><a href="visualizar.php?idPub=<?= $pub['idPub']?>">
+													<?= $publicacao['tituloPub'] ?></a></h3>
 
 													<p>
 														<?= substr($publicacao['textoPub'], 0, 200) ?>...
@@ -68,7 +69,7 @@ include '../../../config.php';
 
 	</div>
 
-	<?php include_once path('template/template-site/ikportacoes-js.php'); ?>
+	<?php include_once path('template/template-site/importacoes-js.php'); ?>
 </body>
 
 </html>

@@ -47,7 +47,7 @@ include 'config.php';
 													<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
 												</a>
 
-												<h3><a href="#"><?= $obra['tituloObra'] ?></a></h3>
+												<h3><a href="visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
 
 												<p>
 													<?= substr($obra['sinopseObra'], 0, 200) ?>...

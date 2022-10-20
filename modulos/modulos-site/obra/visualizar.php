@@ -66,10 +66,10 @@
                                                             <p class="mb-4">Gênero:<?= $obra['generoObra'] ?></p>
                                                             <p class="mb-4">Páginas: <?= $obra['paginasObra'] ?></p>
                                                             <p class="mb-4">Arquivo para leitura: <a href="<?= arquivo('pdf/' . $obra['pdfObra']) ?>" download> <?= $obra['pdfObra'] ?></a></p>
-                                                            <p class="mb-4">Link para compra: <a href="<?= $obra['linkObra'] ?>"><?= $obra['linkObra'] ?></a></p>
+                                                            <p class="mb-4">Link para compra: <a href="<?= $obra['linkObra'] ?>"><?= substr($obra['linkObra'], 0, 50 ) ?>...</a></p>
                                                             <p class="mb-4">isbn: <?= $obra['isbnObra'] ?></p>
 
-
+                                                            
                                                         </div>
 
                                                     </div>
