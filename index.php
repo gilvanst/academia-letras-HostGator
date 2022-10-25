@@ -30,6 +30,23 @@ include 'config.php';
 				<div class="row gtr-200">
 					<div class="col-12">
 
+					<article class="box page-content">
+
+					<?php
+					$sql = "SELECT * FROM historia ORDER BY idHis ";
+					$historias = retornaDados($sql);
+
+					foreach ($historias as $historia) { ?>
+                        <section>
+							    <h3>Quem somos?</h3>
+								<p> <?=$historia['texto']?></p>
+                              
+								<center><a href="left-sidebar.html" class="button">Ver mais</a></center>
+                        </section>
+
+                    </article>
+					<?php } ?>
+
 						<!-- Features -->
 						<section class="box features">
 							<h2 class="major"><span>Coleção</span></h2>
@@ -47,7 +64,7 @@ include 'config.php';
 													<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
 												</a>
 
-												<h3><a href="visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
+												<h3><a href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
 
 												<p>
 													<?= substr($obra['sinopseObra'], 0, 200) ?>...

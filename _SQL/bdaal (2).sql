@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20-Out-2022 às 22:29
+-- Tempo de geração: 25-Out-2022 às 22:38
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -50,6 +50,24 @@ CREATE TABLE `eventos` (
   `descricaoEve` varchar(300) NOT NULL,
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `historia`
+--
+
+CREATE TABLE `historia` (
+  `idHis` int(11) NOT NULL,
+  `texto` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `historia`
+--
+
+INSERT INTO `historia` (`idHis`, `texto`) VALUES
+(1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quo incidunt, aliquam odio accusantium repellendus reiciendis minima tempora eveniet qui illum nostrum eos labore laudantium vel ducimus expedita! Consequuntur, cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quo incidunt, aliquam odio accusantium repellendus reiciendis minima tempora eveniet qui illum nostrum eos labore laudantium vel ducimus expedita! Consequuntur, cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quo incidunt, aliquam odio accusantium repellendus reiciendis minima tempora eveniet qui illum nostrum eos labore laudantium vel ducimus expedita! Consequuntur, cumque!');
 
 -- --------------------------------------------------------
 
@@ -146,6 +164,12 @@ ALTER TABLE `eventos`
   ADD PRIMARY KEY (`idEve`);
 
 --
+-- Índices para tabela `historia`
+--
+ALTER TABLE `historia`
+  ADD PRIMARY KEY (`idHis`);
+
+--
 -- Índices para tabela `obra`
 --
 ALTER TABLE `obra`
@@ -178,6 +202,12 @@ ALTER TABLE `academicos`
 --
 ALTER TABLE `eventos`
   MODIFY `idEve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `historia`
+--
+ALTER TABLE `historia`
+  MODIFY `idHis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `obra`

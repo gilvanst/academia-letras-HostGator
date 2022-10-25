@@ -28,7 +28,7 @@ include '../../../config.php';
 							<div>
 								<div class="row">
 								<?php
-										$sql = "SELECT * FROM publicacoes ORDER BY idPub ASC ";
+										$sql = "SELECT * FROM publicacoes ORDER BY IdPub ASC ";
 										$publicacoes = retornaDados($sql);
 
 										foreach($publicacoes as $publicacao)
@@ -36,7 +36,7 @@ include '../../../config.php';
 											<div class="col-3 col-6-medium col-12-small">
 												<!-- Feature -->
 												<section class="box feature">
-													<h3><a href="visualizar.php?idPub=<?= $pub['idPub']?>">
+													<h3><a href="visualizar.php?IdPub=<?=$publicacao['IdPub']?>">
 													<?= $publicacao['tituloPub'] ?></a></h3>
 
 													<p>
