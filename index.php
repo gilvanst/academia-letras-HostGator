@@ -38,10 +38,8 @@ include 'config.php';
 
 					foreach ($historias as $historia) { ?>
                         <section>
-							    <h3>Quem somos?</h3>
+							    <h3><a href="<?= arquivo("modulos/modulos-site/historia/historia.php") ?>" class="button2">Quem somos?</a></h3>
 								<p> <?=$historia['texto']?></p>
-                              
-								<center><a href="left-sidebar.html" class="button">Ver mais</a></center>
                         </section>
 
                     </article>
@@ -49,7 +47,7 @@ include 'config.php';
 
 						<!-- Features -->
 						<section class="box features">
-							<h2 class="major"><span>Coleção</span></h2>
+							<h2 class="major"><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>"><span>Coleção</span></a></h2>
 							<div>
 								<div class="row">
 									<?php
@@ -77,11 +75,10 @@ include 'config.php';
 								</div>
 							</div>
 						</section>
-						<center><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>" class="button">Ver mais</a></center>
 					</div>
 					<div class="col-12">
 						<section class="box features">
-							<h2 class="major"><span>Publicações</span></h2>
+							<h2 class="major"><a href="<?= arquivo("modulos/modulos-site/publicacao/publicacao.php") ?>"><span>Publicações</span></a></h2>
 							<div>
 								<div class="row">
 									<?php
@@ -105,12 +102,11 @@ include 'config.php';
 								</div>
 							</div>
 						</section>
-						<center><a href="left-sidebar.html" class="button">Ver mais</a></center>
 					</div>
 					<!-- Blog -->
 					<div class="col-12">
 						<section class="box blog">
-							<h2 class="major"><span>Notícias</span></h2>
+							<h2 class="major"><a href="<?= arquivo("modulos/modulos-site/noticias/noticias.php") ?>"><span>Notícias</span></a></h2>
 							<div>
 								<div class="row">
 									<?php
@@ -133,7 +129,6 @@ include 'config.php';
 									<?php } ?>
 								</div>
 							</div>
-							<center><a href="left-sidebar.html" class="button">Ver mais</a></center>
 					</div>
 				</div>
 		</section>
