@@ -75,6 +75,7 @@ include 'config.php';
 								</div>
 							</div>
 						</section>
+						<center><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>" class="button">Continue lendo</a></center>
 					</div>
 					<div class="col-12">
 						<section class="box features">

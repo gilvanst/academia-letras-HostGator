@@ -54,7 +54,7 @@ foreach (retornaDado($sql) as $row) {
                                         <div class="container-fluid ">
 
                                             <div class="media">
-                                                <img class="align-self-start mr-2 rounded " width="200px" height="288px" src="<?= arquivo('img/' . $evento['imagemEve']) ?>" />
+                                             <img class="align-self-start mr-2 rounded " width="200px" height="288px" src="<?= arquivo('img/' . $evento['imagemEve']) ?>" />
 
                                                 <div class="media-body">
                                                     <p class="mb-4">Evento: <?= $evento['nomeEve'] ?></p>

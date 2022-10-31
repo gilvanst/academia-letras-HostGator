@@ -44,6 +44,7 @@ include '../../../config.php';
 														<?= substr($evento['descricaoEve'], 0, 200) ?>...
 													</p>
 												</section>
+												
 											</div>
 
 								<?php } ?>

@@ -1,6 +1,11 @@
 <?php
     include '../../config.php';
-
+   
+    $nome       = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $email      = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+    $telefone   = filter_input(INPUT_POST, "telefone", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $senha   = filter_input(INPUT_POST, "senha", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    
     /* Faz a merda do select e verifica se o email já existe no banco de dados esse inferno */
 
     $sqlEmail = "SELECT * FROM usuario WHERE email = '{$_POST['email']}' ";

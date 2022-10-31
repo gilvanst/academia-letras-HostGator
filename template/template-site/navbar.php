@@ -20,9 +20,9 @@
 			</ul>
 		</li>
 
-		<li class="<?= $pagina_atual == 'colecao.php' ? 'current' : '' ?>"><a href="<?= arquivo('modulos/modulos-site/obra/colecao.php')?>">coleção</a></li>
+		<li class="<?= $pagina_atual == 'colecao.php' ? 'current' : '' ?>"><a href="<?= arquivo('modulos/modulos-site/obra/colecao.php')?>">obras</a></li>
 		<li class="<?= $pagina_atual == 'publicacao.php' ? 'current' : '' ?>"><a href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php')?>">publicações</a></li>
-		<li class="<?= $pagina_atual == 'noticias.php' ? 'current' : '' ?>"><a href="<?= arquivo('modulos/modulos-site/noticias/noticias.php')?>">notícias</a></li>
+		<li class="<?= $pagina_atual == 'noticias.php' ? 'current' : '' ?>"><a href="<?= arquivo('modulos/modulos-site/noticias/noticias.php')?>">notícias e eventos</a></li>
 
 	</ul>
 </nav>
