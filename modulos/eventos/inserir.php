@@ -45,6 +45,11 @@ if (empty($_SESSION['usuario'])) {
 
                         <form action="insert.php" method="POST">
 
+                            <div class="form-group ">
+                                <label for="imagem">Capa da obra</label>
+                                <input type="file" class="form-control-file" id="imagem" name="imagem">
+                            </div>
+
                             <div class="form-group">
                                 <label for="nome">Nome</label>
                                 <input class="form-control" type="text" id="nome" name="nomeEve">
@@ -60,8 +65,8 @@ if (empty($_SESSION['usuario'])) {
                                     <label for="data">Data</label>
                                     <input class="form-control" type="date" id="data" name="dataEve">
                                 </div>
-                            
-                           
+
+
                                 <div class="form-group col-md-6">
                                     <label for="hora">Hora</label>
                                     <input class="form-control" type="time" id="hora" name="horaEve">
