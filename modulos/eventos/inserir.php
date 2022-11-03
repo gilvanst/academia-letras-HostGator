@@ -47,7 +47,7 @@ if (empty($_SESSION['usuario'])) {
 
                             <div class="form-group ">
                                 <label for="imagem">Capa da obra</label>
-                                <input type="file" class="form-control-file" id="imagem" name="imagem">
+                                <input type="file" class="form-control-file" id="imagem" name="imagemEve">
                             </div>
 
                             <div class="form-group">

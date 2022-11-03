@@ -81,8 +81,8 @@ if (empty($_SESSION['usuario'])) {
                                                     <td ><?= $row['horaEve'] ?></td>
                                                     <td ><?= $row['descricaoEve'] ?></td>
                                                     <td width='250' class="text-center">
-                                                        <a class="btn btn-sm btn-warning" href="alterar.php?idEve=<?= $row['idEve'] ?>">Alterar</a>
-                                                        <a class="btn btn-sm btn-danger" href="delete.php?idEve=<?=  $row['idEve'] ?>." onclick="return confirm('Deseja realmente apagar o registro?')">Excluir</a>
+                                                        <a class="btn btn-sm btn-primary " href="visualizar.php?idEve=<?= $row['idEve'] ?>">Ver</a>
+                                                    
                                                     </td>
                                                 </tr>
                                             <?php }

@@ -10,6 +10,8 @@ if (!empty($_POST)) {
     $hora      = $_POST['horaEve'];
     $descricao = $_POST['descricaoEve'];
 
+    $imagem  = $_POST['imagemEve'];
+
 
 
     $pdo = Banco::conectar();
@@ -23,8 +25,9 @@ if (!empty($_POST)) {
     }
 
     
-    $sql .= "localEve = :local, 
-            dataEve = :data, 
+    $sql .= "localEve = :local,
+            dataEve = :data,
+            horaEve = :hora, 
         WHERE 
             idEve = :id";
 
@@ -35,6 +38,7 @@ if (!empty($_POST)) {
         ':descricao' => $descricao,
         ':local' => $local,
         ':data' => $data,
+        ':hora' => $hora,
         ':id' => $id
     ];
 
@@ -48,5 +52,5 @@ if (!empty($_POST)) {
 
     Banco::desconectar();
 
-    header("Location: eventos.php?idEve=$id");
+    header("Location: visualizar.php?idEve=$id");
 }

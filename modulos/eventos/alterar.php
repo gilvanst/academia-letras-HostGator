@@ -58,28 +58,32 @@ if (empty($_SESSION['usuario'])) {
                     ?>
 
                     <form action="update.php" method="POST">
+                        <div class="form-group ">
+                            <label for="imagem">Capa da obra</label>
+                            <input type="file" class="form-control-file" id="imagem" name="imagemEve">
+                        </div>
                         <div class="form-group">
                             <label for="nome">Nome do Evento</label>
-                            <input class="form-control" type="text" id="nome" name="nomEve" value="<?php echo $nome; ?>">
+                            <input class="form-control" type="text" id="nome" name="nomeEve" value="<?php echo $nome; ?>">
                         </div>
 
                         <div class="form-group ">
                             <label for="local">Local</label>
                             <input class="form-control" type="text" id="local" name="localEve" value="<?php echo $local; ?>">
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-gorup col-md-6">
                                 <label for="data">Data</label>
                                 <input class="form-control" type="date" id="data" name="dataEve" value="<?php echo $data; ?>">
                             </div>
-                            
+
                             <div class="form-gorup col-md-6">
                                 <label for="horaEve">Hora</label>
                                 <input class="form-control" type="time" id="hora" name="horaEve" value="<?php echo $hora; ?>">
                             </div>
                         </div>
-                            
+
                         <div class="form-gorup">
                             <label for="descricao">Descrição</label>
                             <input class="form-control" type="text" id="descricao" name="descricaoEve" value="<?php echo $descricao; ?>">

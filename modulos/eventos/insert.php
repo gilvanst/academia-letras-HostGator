@@ -2,13 +2,13 @@
 include '../../config.php';
 
 $pasta_upload = '../../img/'; // ESPECIFICANDO O LOCAL EM QUE AS IMAGENS VÃO SER SALVAR
-$extensao = substr($_FILES['imagem']['name'], -4); // PEGANDO A EXTESÃO DA IMAGEM
+$extensao = substr($_FILES['imagemEve']['name'], -4); // PEGANDO A EXTESÃO DA IMAGEM
 $nome_imagem = $_POST['tituloEve'] . date('dmYhmis') . $extensao; // JUNTA O NOME DO TITULO COM A EXTENSÃO
 $imagem_final = $pasta_upload . $nome_imagem;
 
 
 
-$imagem = move_uploaded_file($_FILES['imagem']['tmp_name'], $imagem_final) ? $nome_imagem : '';
+$imagem = move_uploaded_file($_FILES['imagemEve']['tmp_name'], $imagem_final) ? $nome_imagem : '';
 $nome = $_POST['nomeEve'];
 $local = $_POST['localEve'];
 $data = $_POST['dataEve'];
@@ -27,7 +27,7 @@ $id = $pdo->lastInsertId();
 Banco::desconectar();
 
 if(!empty($id)){
-    header("Location: eventos.php?idEve=$id");
+    header("Location: visualizar.php?idEve=$id");
 }else{
     header('Location: inserir.php');
 }
