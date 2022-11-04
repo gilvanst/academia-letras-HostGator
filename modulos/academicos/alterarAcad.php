@@ -37,7 +37,7 @@ if (empty($_SESSION['usuario'])) {
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h1 class="display-4 text-center">Alterar Cadastro</h1>
-                    
+
 
                     <?php
                     if (!empty($_GET['idAcad'])) {
@@ -48,15 +48,23 @@ if (empty($_SESSION['usuario'])) {
                     $sql = 'SELECT * FROM academicos where idAcad = ' . $id . '';
 
                     foreach ($pdo->query($sql) as $row) {
-                        $id = $row['idAcad'];
-                        $nome = $row['nomeAcad'];
+                        $id      = $row['idAcad'];
+                        $nome    = $row['nomeAcad'];
                         $cadeira = $row['cadeiraAcad'];
                         $posicao = $row['posicaoAcad'];
+                        $sobre   = $row['sobreAcad'];
+                        $foto    = $row['fotoAcad'];
                     }
                     Banco::desconectar();
                     ?>
 
                     <form action="updateAcad.php" method="POST">
+
+                        <div class="form-group">
+                            <label for="foto">Foto</label><br>
+                            <input class="form-control-file" type="file" id="file" name="fotoAcad" value="<?php echo $foto; ?>">
+                        </div>
+
                         <div class="form-group">
                             <label for="nome">Nome</label><br>
                             <input class="form-control" type="text" id="nome" name="nomeAcad" value="<?php echo $nome; ?>">
@@ -71,7 +79,11 @@ if (empty($_SESSION['usuario'])) {
                             <label for="posicao">Posição</label><br>
                             <input class="form-control" type="text" id="posicao" name="posicaoAcad" value="<?php echo $posicao; ?>">
                         </div>
-                        
+                        <div class="form-gorup">
+                            <label for="sobre">Informações sobre o acadêmico</label>
+                            <textarea class="form-control" type="text" id="sobre" name="sobreAcad" value="<?php echo $sobre; ?>"></textarea>
+                        </div>
+
                         <input type="hidden" id="id" name="idAcad" value="<?php echo $id; ?>">
 
                         <div class="text-right my-3">

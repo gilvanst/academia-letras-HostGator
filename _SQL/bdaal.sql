@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Nov-2022 às 20:41
+-- Tempo de geração: 04-Nov-2022 às 21:08
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -32,8 +32,16 @@ CREATE TABLE `academicos` (
   `nomeAcad` varchar(150) NOT NULL,
   `cadeiraAcad` varchar(10) NOT NULL,
   `posicaoAcad` varchar(50) NOT NULL,
-  `id_usuario` int(11) NOT NULL
+  `sobreAcad` text NOT NULL,
+  `fotoAcad` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `academicos`
+--
+
+INSERT INTO `academicos` (`idAcad`, `nomeAcad`, `cadeiraAcad`, `posicaoAcad`, `sobreAcad`, `fotoAcad`) VALUES
+(18, 'alsdls', '12', 'aldsçlasçldaç', 'aç,dsalçdsçlss', '');
 
 -- --------------------------------------------------------
 
@@ -152,7 +160,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `telefone`, `senha`) VALUES
-(15, 'adm@adm', 'adm@adm', 123, '123'),
+(15, 'adm', 'adm@adm', 123, '123'),
 (16, 'adm', 'adm1@adm', 123, '123'),
 (23, 'gilvan', 'adm5@adm', 123, '123');
 
@@ -204,7 +212,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `academicos`
 --
 ALTER TABLE `academicos`
-  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `eventos`

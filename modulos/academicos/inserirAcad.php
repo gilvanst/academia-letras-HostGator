@@ -5,97 +5,101 @@
 include '../../config.php';
 include_once '../login/sessao.php';
 
-if (empty($_SESSION['usuario'])) {
-    header('Location: ' . arquivo('login.php'));
-    exit;
-}
 
 ?>
 
 <?php include_once path('template/head.php'); ?>
 
 
-<body>
 
 
 
 
-    <body id="page-top">
+<body id="page-top">
 
-        <!-- Page Wrapper -->
-        <div id="wrapper">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
 
-            <!-- Sidebar -->
-            <?php include_once path('template/sidebar.php'); ?>
-            <!-- End of Sidebar -->
+        <!-- Sidebar -->
+        <?php include_once path('template/sidebar.php'); ?>
+        <!-- End of Sidebar -->
 
-            <!-- Content Wrapper -->
-            <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
 
-                <!-- Main Content -->
-                <div id="content">
+            <!-- Main Content -->
+            <div id="content">
 
-                    <!-- Topbar -->
-                    <?php include_once path('template/navbar.php'); ?>
-                    <!-- End of Topbar -->
+                <!-- Topbar -->
+                <?php include_once path('template/navbar.php'); ?>
+                <!-- End of Topbar -->
 
-                    <!-- Begin Page Content -->
-                    <div class="container-fluid">
-                        <h1 class="display-4 text-center">Alterar Cadastro</h1>
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <h1 class="display-4 text-center">Alterar Cadastro</h1>
 
-                        <form action="insertAcad.php" method="POST">
+                    <form action="insertAcad.php" method="POST">
+                        <div class="form-group col-md-6">
+                            <label for="image">Foto</label>
+                            <input type="file" class="form-control-file" id="image" name="fotoAcad">
+                        </div>
 
-                            <div class="form-group">
-                                <label for="nome">Nome</label>
-                                <input class="form-control" type="text" id="nome" name="nomeAcad">
-                            </div>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input class="form-control" type="text" id="nome" name="nomeAcad">
+                        </div>
 
-                            <div class="form-group">
-                                <label for="cadeira">Cadeira</label>
-                                <input class="form-control" type="number" id="cadeira" name="cadeiraAcad">
-                            </div>
+                        <div class="form-group">
+                            <label for="cadeira">Cadeira</label>
+                            <input class="form-control" type="number" id="cadeira" name="cadeiraAcad">
+                        </div>
 
-                            <div class="form-group">
-                                <label for="posicao">Posição</label>
-                                <input class="form-control" type="text" id="posicao" name="posicaoAcad">
-                            </div>
+                        <div class="form-group">
+                            <label for="posicao">Posição</label>
+                            <input class="form-control" type="text" id="posicao" name="posicaoAcad">
+                        </div>
+                        <div class="form-group">
+                            <label for="sobre">sobre o acadêmico</label>
+                            <textarea class="form-control" type="text" id="sobre" name="sobreAcad"></textarea>
+                        </div>
 
-                            <div class="text-right my-3">
-                                <input class="btn btn-primary" type="submit" value="Inserir">
-                                <a class="btn btn-info " href="academicos.php">Voltar</a>
-                            </div>
+                        <div class="text-right my-3">
+                            <input class="btn btn-primary" type="submit" value="Inserir">
+                            <a class="btn btn-info " href="academicos.php">Voltar</a>
+                        </div>
+
+                    </form>
 
 
-    </body>
 
 
-    </div>
-    <!-- End of Main Content -->
+                </div>
+                <!-- End of Main Content -->
 
-    <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span>Academia Araçatubense De Letras &copy; 2022</span>
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Academia Araçatubense De Letras &copy; 2022</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+
             </div>
+            <!-- End of Content Wrapper -->
+
         </div>
-    </footer>
-    <!-- End of Footer -->
+        <!-- End of Page Wrapper -->
 
-    </div>
-    <!-- End of Content Wrapper -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+        <!-- Logout Modal-->
+        <?php include path('template/logout.php'); ?>
 
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-    <!-- Logout Modal-->
-    <?php include path('template/logout.php'); ?>
-
-    <?php include path('template/importacoes-js.php'); ?>
+        <?php include path('template/importacoes-js.php'); ?>
 </body>
 
 

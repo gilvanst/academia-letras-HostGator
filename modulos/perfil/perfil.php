@@ -14,7 +14,7 @@ if (!empty($_GET['id'])) {
 }
 
 $sql = 'SELECT * FROM usuario where id ';
-$obra = retornaDado($sql);
+$perfil = retornaDado($sql);
 
 ?>
 
@@ -40,22 +40,56 @@ $obra = retornaDado($sql);
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+             
 
-                    <h1 class="display-4 ">Meu perfil</h1>
+                    <div class="container">
 
-                    
+                        <div class="row">
+                            
+                            <div class="col-sm ">
+                                <div class="d-flex mb-3">
+                                    
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Meus dados</h5>
+                                            <img class="img-profile rounded-circle mb-5 " src="<?= arquivo('img/undraw_profile.svg') ?>">
+                                            
+                                            <h6 class="card-title">Nome: <?= $perfil['nome'] ?></h6>
+                                            <h6 class="card-title">Email: <?= $perfil['email'] ?></h6>
+                                            <h6 class="card-title">Telefone:<?= $perfil['telefone'] ?></h6>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                            <a href="../usuarios/alterar.php?id=<?= $perfil['id'] ?>" class="btn btn-primary">alterar</a>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </div>
+                            <div class="col-sm">
+                                <div class="d-flex mb-3">
+
+                                    <div class="card" style="width: 50rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Publicações</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Alguma coisa aqui</li>
+                                            <li class="list-group-item">Aqui tbm</li>
+                                            <li class="list-group-item">E aqui</li>
+                                        </ul>
+                                        <div class="card-body">
+                                            <a href="#" class="card-link"> link</a>
+                                            <a href="#" class="card-link"> link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
                         
-                        <h2>Nome: <?= $obra['nome']?></h2>
                         
-                 
-
-
-
-
-
-                </div>
+                    </div>
                 <!-- End of Content Wrapper -->
 
             </div>
