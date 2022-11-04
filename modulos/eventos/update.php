@@ -10,14 +10,14 @@ if (!empty($_POST)) {
     $hora      = $_POST['horaEve'];
     $descricao = $_POST['descricaoEve'];
 
-    $imagem  = $_POST['imagemEve'];
+    $imagem    = $_POST['imagemEve'];
 
 
 
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "UPDATE eventos SET 
-            nomeEve = :nome, 
+            nomeEve      = :nome, 
             descricaoEve = :descricao,";
 
     if(!empty($imagem)){
@@ -26,10 +26,10 @@ if (!empty($_POST)) {
 
     
     $sql .= "localEve = :local,
-            dataEve = :data,
-            horaEve = :hora, 
+            dataEve   = :data,
+            horaEve   = :hora, 
         WHERE 
-            idEve = :id";
+            idEve     = :id";
 
     $q   = $pdo->prepare($sql);
 

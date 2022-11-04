@@ -9,7 +9,7 @@ include '../../../config.php';
 <header id="header">
 	<div class="logo container">
 		<div>
-			<h1><a href="<?= arquivo('index.php')?>" id="logo"></a></h1>
+			<h1><a href="<?= arquivo('index.php') ?>" id="logo"></a></h1>
 			<p> Coleção</p>
 		</div>
 	</div>
@@ -24,22 +24,21 @@ include '../../../config.php';
 		<section id="main">
 			<div class="container">
 				<div class="row">
-				<div class="col-12">
-					<section class="box features">
-						<div>
-							<div class="row">
-								<?php
+					<div class="col-12">
+						<section class="box features">
+							<div>
+								<div class="row">
+									<?php
 									$sql = "SELECT * FROM obra ORDER BY idObra ASC";
 									$obras = retornaDados($sql);
 
-									foreach($obras as $obra)
-									{ ?>
+									foreach ($obras as $obra) { ?>
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
 											<section class="box feature">
 												<a href="visualizar.php?idObra=<?= $obra['idObra'] ?>" class="image featured">
 													<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
-													
+
 												</a>
 												<h3><a href="visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
 
@@ -51,9 +50,10 @@ include '../../../config.php';
 
 									<?php } ?>
 
+								</div>
 							</div>
-						</div>
-					</section>
+							
+						</section>
 					</div>
 				</div>
 			</div>
@@ -63,8 +63,8 @@ include '../../../config.php';
 		<footer id="footer">
 			<div class="container">
 				<div class="row gtr-200">
-				<?php include_once path('template/template-site/contato.php'); ?>
-					
+					<?php include_once path('template/template-site/contato.php'); ?>
+
 				</div>
 
 			</div>

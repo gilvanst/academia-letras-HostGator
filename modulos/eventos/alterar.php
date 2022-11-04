@@ -2,12 +2,27 @@
 <html lang="pt-br">
 
 <?php
-include '../../config.php';
-include_once '../login/sessao.php';
-if (empty($_SESSION['usuario'])) {
-    header('Location: ' . arquivo('login.php'));
-    exit;
-}
+        include '../../config.php';
+        include_once '../login/sessao.php';
+
+
+        if (!empty($_GET['idEve'])) {
+            $id = $_GET['idEve'];
+        }
+
+        $pdo = Banco::conectar();
+        $sql = 'SELECT * FROM eventos where idEve = ' . $id . '';
+
+        foreach ($pdo->query($sql) as $row) {
+            $id        = $row['idEve'];
+            $nome      = $row['nomeEve'];
+            $local     = $row['localEve'];
+            $data      = $row['dataEve'];
+            $hora      = $row['horaEve'];
+            $descricao = $row['descricaoEve'];
+        }
+    Banco::desconectar();
+
 
 ?>
 
@@ -38,58 +53,39 @@ if (empty($_SESSION['usuario'])) {
                     <h1 class="display-4 text-center">Alterar Cadastro</h1>
 
 
-                    <?php
-                    if (!empty($_GET['idEve'])) {
-                        $id = $_GET['idEve'];
-                    }
-
-                    $pdo = Banco::conectar();
-                    $sql = 'SELECT * FROM eventos where idEve = ' . $id . '';
-
-                    foreach ($pdo->query($sql) as $row) {
-                        $id = $row['idEve'];
-                        $nome = $row['nomeEve'];
-                        $local = $row['localEve'];
-                        $data = $row['dataEve'];
-                        $hora = $row['horaEve'];
-                        $descricao = $row['descricaoEve'];
-                    }
-                    Banco::desconectar();
-                    ?>
-
                     <form action="update.php" method="POST">
                         <div class="form-group ">
                             <label for="imagem">Capa da obra</label>
-                            <input type="file" class="form-control-file" id="imagem" name="imagemEve">
+                            <input type="file" class="form-control-file" id="imagem" name="imagemEve"><?=$row['imagemEve']?>
                         </div>
                         <div class="form-group">
                             <label for="nome">Nome do Evento</label>
-                            <input class="form-control" type="text" id="nome" name="nomeEve" value="<?php echo $nome; ?>">
+                            <input class="form-control" type="text" id="nome" name="nomeEve" value="<?php echo $row['nomeEve'] ?>">
                         </div>
 
                         <div class="form-group ">
                             <label for="local">Local</label>
-                            <input class="form-control" type="text" id="local" name="localEve" value="<?php echo $local; ?>">
+                            <input class="form-control" type="text" id="local" name="localEve" value="<?php echo $row['localEve'] ?>">
                         </div>
 
                         <div class="form-row">
                             <div class="form-gorup col-md-6">
                                 <label for="data">Data</label>
-                                <input class="form-control" type="date" id="data" name="dataEve" value="<?php echo $data; ?>">
+                                <input class="form-control" type="date" id="data" name="dataEve" value="<?php echo $row['dataEve']; ?>">
                             </div>
 
                             <div class="form-gorup col-md-6">
                                 <label for="horaEve">Hora</label>
-                                <input class="form-control" type="time" id="hora" name="horaEve" value="<?php echo $hora; ?>">
+                                <input class="form-control" type="time" id="hora" name="horaEve" value="<?php echo $row['horaEve'] ?>">
                             </div>
                         </div>
 
                         <div class="form-gorup">
                             <label for="descricao">Descrição</label>
-                            <input class="form-control" type="text" id="descricao" name="descricaoEve" value="<?php echo $descricao; ?>">
+                            <input class="form-control" type="text" id="descricao" name="descricaoEve" value="<?php echo $row['descricaoEve']; ?>">
                         </div>
 
-                        <input type="hidden" id="id" name="idEve" value="<?php echo $id; ?>">
+                        <input type="hidden" id="id" name="idEve" value="<?php echo $row['idEve']; ?>">
 
                         <div class="text-right my-3">
                             <input class="btn btn-primary" type="submit" value="Alterar">

@@ -52,10 +52,8 @@ foreach (retornaDado($sql) as $row) {
                                     <div class="row">
 
                                         <div class="container-fluid ">
-
+                                        <img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" class="img-fluid" alt="Imagem responsiva">
                                             <div class="media">
-                                             <img class="align-self-start mr-2 rounded " width="200px" height="288px" src="<?= arquivo('img/' . $evento['imagemEve']) ?>" />
-
                                                 <div class="media-body">
                                                     <p class="mb-4">Evento: <?= $evento['nomeEve'] ?></p>
                                                     <p class="mb-4">Local: <?= $evento['localEve'] ?></p>
