@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Nov-2022 às 21:08
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.1.6
+-- Tempo de geração: 05-Nov-2022 às 02:17
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,7 +41,9 @@ CREATE TABLE `academicos` (
 --
 
 INSERT INTO `academicos` (`idAcad`, `nomeAcad`, `cadeiraAcad`, `posicaoAcad`, `sobreAcad`, `fotoAcad`) VALUES
-(18, 'alsdls', '12', 'aldsçlasçldaç', 'aç,dsalçdsçlss', '');
+(18, 'Testinho', '12', 'aldsçlasçldaç', '', ''),
+(19, 'Djavan', '235', '365', 'Teste', ''),
+(20, 'Testinho', '1512', 'Te', 'asdasd', 'Testinho0511202212114039.jpg');
 
 -- --------------------------------------------------------
 
@@ -212,7 +214,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `academicos`
 --
 ALTER TABLE `academicos`
-  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de tabela `eventos`

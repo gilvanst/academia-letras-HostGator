@@ -6,10 +6,7 @@ $extensao = substr($_FILES['fotoAcad']['name'], -4); // PEGANDO A EXTESÃO DA IM
 $nome_imagem = $_POST['nomeAcad'] . date('dmYhmis') . $extensao; // JUNTA O NOME DO TITULO COM A EXTENSÃO
 $imagem_final = $pasta_upload . $nome_imagem;
 
-
-
 $imagem = move_uploaded_file($_FILES['fotoAcad']['tmp_name'], $imagem_final) ? $nome_imagem : '';
-
 
 $nome = $_POST['nomeAcad'];
 $cadeira = $_POST['cadeiraAcad'];

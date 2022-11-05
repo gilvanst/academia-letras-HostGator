@@ -13,7 +13,7 @@ $pdf_final = $pasta_upload . $nome_pdf;
 
 
 $imagem = move_uploaded_file($_FILES['imagem']['tmp_name'], $imagem_final) ? $nome_imagem : '';
- $pdf = move_uploaded_file($_FILES['pdfObra']['tmp_name'], $pdf_final) ? $nome_pdf : '';
+$pdf = move_uploaded_file($_FILES['pdfObra']['tmp_name'], $pdf_final) ? $nome_pdf : '';
 
 
 $titulo = $_POST['tituloObra'];

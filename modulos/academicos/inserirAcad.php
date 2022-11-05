@@ -38,7 +38,7 @@ include_once '../login/sessao.php';
                 <div class="container-fluid">
                     <h1 class="display-4 text-center">Alterar Cadastro</h1>
 
-                    <form action="insertAcad.php" method="POST">
+                    <form action="insertAcad.php" enctype="multipart/form-data" method="POST">
                         <div class="form-group col-md-6">
                             <label for="image">Foto</label>
                             <input type="file" class="form-control-file" id="image" name="fotoAcad">

@@ -58,8 +58,14 @@ Banco::desconectar();
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h1 class="display-4 text-center"><?= $titulo ?></h1>
-                    <div class="text-justify">
-                        <p><?= $texto ?></p>
+                    <div>
+                        <?php
+                            if($genero == 'Poemas'){ ?>
+                                <p class="text-center"><?= nl2br($texto) ?></p>
+                            <?php }else{ ?>  
+                                <p class="text-justify"><?= nl2br($texto) ?></p>
+                            <?php } ?>  
+                                
                         <i>Autores:</i>
                         <i><?= $autores ?></i>
                     </div>
