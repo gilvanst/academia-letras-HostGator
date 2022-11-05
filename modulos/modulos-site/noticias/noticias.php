@@ -25,7 +25,7 @@ include '../../../config.php';
 				</div>
 						<!-- Blog -->
 					<div class="col-12">
-						<section class="box blog">
+						<section class="box features">
 							<div>
 								<div class="row">
 								<?php
@@ -37,7 +37,7 @@ include '../../../config.php';
 											<div class="col-3 col-6-medium col-12-small">
 												<!-- Feature -->
 												<section class="box feature">
-													<h3><a href="visualizar.php?idEve=<?= $evento['idEve'] ?>"><?= $evento['nomeEve'] ?></a></h3>
+													<h3><a class="titulo-hover" href="visualizar.php?idEve=<?= $evento['idEve'] ?>"><?= $evento['nomeEve'] ?></a></h3>
 													<h3><?= $evento['localEve']?></h3>
                                                     <h3><?= $evento['dataEve']?>/<?= $evento['horaEve']?></h3>
 													<p>

@@ -1835,6 +1835,10 @@ input, select, textarea {
 	.button2:hover {
 		color: #006599;
 	}
+
+	.titulo-hover:hover {
+		color: #006599;
+	}
 	
 	#letra{ 
 		color: rgb(250, 250, 250);
@@ -2450,7 +2454,7 @@ input, select, textarea {
 
 	.dropotron {
 		list-style: none;
-		background: #1f7bc7;
+		background: #006599;
 		color: rgb(255, 255, 255);
 		border-radius: 6px;
 		line-height: 2.75em;
@@ -2462,7 +2466,7 @@ input, select, textarea {
 		text-align: left;
 		min-width: 14em;
 		margin-top: -1em;
-		box-shadow: 0 1em 2em 0 #1f7bc7;
+		box-shadow: 0 1em 2em 0 #006599;
 	}
 
 		.dropotron li {
@@ -2573,7 +2577,7 @@ input, select, textarea {
 
 	#main {
 		background: #fff;
-		border-top: solid 5px #1f7bc7;
+		border-top: solid 5px #006599;
 		border-bottom: solid 5px #c1cac5;
 		border-top-width: 35px;
 		border-bottom-width: 10px;
