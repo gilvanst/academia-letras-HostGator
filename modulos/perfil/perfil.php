@@ -42,32 +42,35 @@ $perfil = retornaDado($sql);
                 <!-- Begin Page Content -->
              
 
-                    <div class="container">
+                    <div class="container-fluid">
 
-                        <div class="row">
-                            
-                            <div class="col-sm ">
-                                <div class="d-flex mb-3">
-                                    
-                                    <div class="card">
+                        <div class="row g-4">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3">
+                                <div class="d-flex">
+                                    <div class="card w-100">
                                         <div class="card-body">
                                             <h5 class="card-title">Meus dados</h5>
-                                            <img class="img-profile rounded-circle mb-5 " src="<?= arquivo('img/undraw_profile.svg') ?>">
+
+                                            <div class="text-center">
+                                                <img class="img-profile rounded-circle mb-3 col-6" src="<?= arquivo('img/undraw_profile.svg') ?>">
+                                            </div>
                                             
-                                            <h6 class="card-title">Nome: <?= $perfil['nome'] ?></h6>
-                                            <h6 class="card-title">Email: <?= $perfil['email'] ?></h6>
-                                            <h6 class="card-title">Telefone:<?= $perfil['telefone'] ?></h6>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="../usuarios/alterar.php?id=<?= $perfil['id'] ?>" class="btn btn-primary">alterar</a>
+                                            <h4 class="text-center mb-0"><?= $perfil['nome'] ?></h4>
+                                            <p class="text-small text-muted text-center"><?= $perfil['email'] ?> - <?= $perfil['telefone'] ?></p>
+
+                                            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                            <div class="text-right">
+                                                <a href="../usuarios/alterar.php?id=<?= $perfil['id'] ?>" class="btn btn-primary btn-sm">Alterar</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="col-sm">
-                                <div class="d-flex mb-3">
 
-                                    <div class="card" style="width: 50rem;">
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <div class="d-flex mb-3">
+                                    <div class="card w-100">
                                         <div class="card-body">
                                             <h5 class="card-title">Publicações</h5>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

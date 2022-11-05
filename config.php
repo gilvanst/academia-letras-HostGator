@@ -5,6 +5,8 @@
     // Include dos arquivos comuns
     include_once path('funcoes/conexao.php');
     include_once path('funcoes/banco.php');
+    include_once path('funcoes/funcoes.php');
+
     session_start();
 
 

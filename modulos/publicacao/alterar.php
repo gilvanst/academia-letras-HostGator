@@ -75,7 +75,7 @@ if (empty($_SESSION['usuario'])) {
 
                         <div class="form-gorup text-justify ">
                             <label for="texto">Texto</label>
-                            <input class="form-control" type="text" id="texto" name="textoPub" value="<?php echo $texto; ?>">
+                            <textarea class="form-control" type="text" id="texto" name="textoPub" ><?php echo $texto; ?></textarea>
                         </div>
                         
                         <input type="hidden" id="id" name="IdPub" value="<?php echo $id; ?>">
