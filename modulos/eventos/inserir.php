@@ -43,7 +43,7 @@ if (empty($_SESSION['usuario'])) {
                     <div class="container-fluid">
                         <h1 class="display-4 text-center">Cadastrar evento</h1>
 
-                        <form action="insert.php" method="POST">
+                        <form action="insert.php" enctype="multipart/form-data" method="POST">
 
                             <div class="form-group ">
                                 <label for="imagem">Capa da obra</label>

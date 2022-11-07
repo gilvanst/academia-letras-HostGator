@@ -10,7 +10,20 @@ if (!empty($_POST)) {
     $hora      = $_POST['horaEve'];
     $descricao = $_POST['descricaoEve'];
 
-    $imagem    = $_POST['imagemEve'];
+    $imagem    = '';
+
+    // foto e PDF
+    if (!empty($_FILES['imagemEve'])) {
+        $pasta_upload = '../../img/'; // ESPECIFICANDO O LOCAL EM QUE AS IMAGENS VÃO SER SALVAR
+        $extensao = substr($_FILES['imagemEve']['name'], -4); // PEGANDO A EXTESÃO DA IMAGEM
+        $nome_imagem = $_POST['nomeEve'] . date('dmYhmis') . $extensao; // JUNTA O NOME DO TITULO COM A EXTENSÃO
+        $imagem_final = $pasta_upload . $nome_imagem;
+
+        $imagem = move_uploaded_file($_FILES['imagemEve']['tmp_name'], $imagem_final) ? $nome_imagem : '';
+
+        $academico = retornaDado("SELECT imagemEve FROM eventos WHERE idEve = $id");
+        apagaArquivo($academico['imagemEve']);
+    }
 
 
 
@@ -20,14 +33,14 @@ if (!empty($_POST)) {
             nomeEve      = :nome, 
             descricaoEve = :descricao,";
 
-    if(!empty($imagem)){
+    if (!empty($imagem)) {
         $sql .= "imagemEve = :imagem, ";
     }
 
-    
+
     $sql .= "localEve = :local,
             dataEve   = :data,
-            horaEve   = :hora, 
+            horaEve   = :hora 
         WHERE 
             idEve     = :id";
 
@@ -42,11 +55,11 @@ if (!empty($_POST)) {
         ':id' => $id
     ];
 
-    if(!empty($imagem)){
-       $dados[':imagem'] = $imagem;
+
+    if (!empty($imagem)) {
+        $dados[':imagem'] = $imagem;
     }
 
-    
 
     $q->execute($dados);
 

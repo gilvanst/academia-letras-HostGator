@@ -55,7 +55,7 @@ foreach (retornaDado($sql) as $row) {
                 <div class="container-fluid">
                     <h1 class="display-4 text-center"><?= $evento['nomeEve'] ?></h1>
 
-                    <img src="..." class="img-fluid" alt="foto para o evento">
+                    <img src="../../img/<?= $acad['imagemEve'] ?>" download class=" align-self-start mr-3 rounded" width="200px" height="288px" >
 
                     <div class="text-left my-3 ">
                         <p>local: <?= $evento['localEve']?></p>

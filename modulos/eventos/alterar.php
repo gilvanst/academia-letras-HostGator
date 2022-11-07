@@ -53,7 +53,7 @@
                     <h1 class="display-4 text-center">Alterar Cadastro</h1>
 
 
-                    <form action="update.php" method="POST">
+                    <form action="update.php" enctype="multipart/form-data" method="POST">
                         <div class="form-group ">
                             <label for="imagem">Capa da obra</label>
                             <input type="file" class="form-control-file" id="imagem" name="imagemEve"><?=$row['imagemEve']?>
