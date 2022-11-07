@@ -75,8 +75,8 @@ if (empty($_SESSION['usuario'])) {
                                                     <td><?= $row['cadeiraAcad'] ?></td>
                                                     <td><?= $row['posicaoAcad'] ?></td>
                                                     <td width='250' class="text-center">
-                                                        <a class="btn btn-sm btn-warning" href="alterarAcad.php?idAcad=<?= $row['idAcad'] ?>">Alterar</a>
-                                                        <a class="btn btn-sm btn-danger" href="deleteAcad.php?idAcad=<?=  $row['idAcad'] ?>." onclick="return confirm('Deseja realmente apagar o registro?')">Excluir</a>
+                                                        <a class="btn btn-sm btn-primary " href="visualizar.php?idAcad=<?= $row['idAcad'] ?>">Ver</a>
+                                                    
                                                     </td>
                                                 </tr>
                                             <?php }
