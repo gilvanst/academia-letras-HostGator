@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Nov-2022 às 02:17
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.0.13
+-- Tempo de geração: 07-Nov-2022 às 21:54
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,15 +36,6 @@ CREATE TABLE `academicos` (
   `fotoAcad` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `academicos`
---
-
-INSERT INTO `academicos` (`idAcad`, `nomeAcad`, `cadeiraAcad`, `posicaoAcad`, `sobreAcad`, `fotoAcad`) VALUES
-(18, 'Testinho', '12', 'aldsçlasçldaç', '', ''),
-(19, 'Djavan', '235', '365', 'Teste', ''),
-(20, 'Testinho', '1512', 'Te', 'asdasd', 'Testinho0511202212114039.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -60,14 +51,6 @@ CREATE TABLE `eventos` (
   `descricaoEve` varchar(300) NOT NULL,
   `imagemEve` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `eventos`
---
-
-INSERT INTO `eventos` (`idEve`, `nomeEve`, `localEve`, `dataEve`, `horaEve`, `descricaoEve`, `imagemEve`) VALUES
-(12, 'algo', 'lasalkf', '3442-02-23', '23:32:00', 'adlçklçz,xckçz,xmckçmk,dmcçsjmkvçsdçfndfskmdkcn kfnv', ''),
-(14, 'dia do bolo', 'casa da mãe joana', '2022-11-12', '20:00:00', 'comparecer para comer muitos bolos e afins', '');
 
 -- --------------------------------------------------------
 
@@ -220,7 +203,7 @@ ALTER TABLE `academicos`
 -- AUTO_INCREMENT de tabela `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `idEve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idEve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `historia`
