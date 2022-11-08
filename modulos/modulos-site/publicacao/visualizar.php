@@ -16,6 +16,7 @@ foreach (retornaDado($sql) as $row) {
     $autores = $publicacao['autoresPub'];
     $genero = $publicacao['generoPub'];
     $texto = $publicacao['textoPub'];
+    $poema = $publicacao['poema'];
 }
 ?>
 <link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
@@ -43,18 +44,18 @@ foreach (retornaDado($sql) as $row) {
                 <div class="row">
                     <div class="col-12">
 
-                        <div class=>
-                            <h1 class="mb-4">Gênero:<?= $publicacao['generoPub'] ?></h1>
-                            <p><?= $publicacao['textoPub'] ?></p>
+                    <div>
+                        <?php
+                            if($poema == 'Sim'){ ?>
+                                <p class="text-center"><?= nl2br($publicacao['textoPub']) ?></p>
+                            <?php }else{ ?>  
+                                <p class="text-justify"><?= nl2br($publicacao['textoPub']) ?></p>
+                            <?php } ?>  
+                                
+                        <i>Autores:</i>
+                        <i><?= $publicacao['generoPub'] ?></i>
 
-                        </div>
-
-
-                        <div class="text-justify mt-5">
-                            <i>Autores:</i>
-                            <i><?= $publicacao['autoresPub'] ?></i>
-                        </div>
-
+                    </div>
 
                     </div>
                 </div>
