@@ -47,7 +47,7 @@ include 'config.php';
 
 						<!-- Features -->
 						<section class="box features">
-							<h2 class="major"><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>"><span>Coleção</span></a></h2>
+							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>"><span>Coleção</span></a></h2>
 							<div>
 								<div class="row">
 									<?php
@@ -62,7 +62,7 @@ include 'config.php';
 													<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
 												</a>
 
-												<h3><a href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
+												<h3><a class="titulo-hover" href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
 
 												<p>
 													<?= substr($obra['sinopseObra'], 0, 200) ?>...
@@ -75,11 +75,10 @@ include 'config.php';
 								</div>
 							</div>
 						</section>
-						<center><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>" class="button">Continue lendo</a></center>
 					</div>
 					<div class="col-12">
 						<section class="box features">
-							<h2 class="major"><a href="<?= arquivo("modulos/modulos-site/publicacao/publicacao.php") ?>"><span>Publicações</span></a></h2>
+							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/publicacao/publicacao.php") ?>"><span>Publicações</span></a></h2>
 							<div>
 								<div class="row">
 									<?php
@@ -90,7 +89,7 @@ include 'config.php';
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
 											<section class="box feature">
-												<h3><a href="#"><?= $publicacao['tituloPub'] ?></a></h3>
+												<h3><a class="titulo-hover" href="#"><?= $publicacao['tituloPub'] ?></a></h3>
 
 												<p>
 													<?= substr($publicacao['textoPub'], 0, 200) ?>...
@@ -107,7 +106,7 @@ include 'config.php';
 					<!-- Blog -->
 					<div class="col-12">
 						<section class="box blog">
-							<h2 class="major"><a href="<?= arquivo("modulos/modulos-site/noticias/noticias.php") ?>"><span>Notícias</span></a></h2>
+							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/noticias/noticias.php") ?>"><span>Notícias</span></a></h2>
 							<div>
 								<div class="row">
 									<?php
@@ -118,7 +117,7 @@ include 'config.php';
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
 											<section class="box feature">
-												<h3><a href="#"><?= $evento['nomeEve'] ?></a></h3>
+												<h3><a class="titulo-hover" href="#"><?= $evento['nomeEve'] ?></a></h3>
 												<h3><?= $evento['localEve'] ?></h3>
 												<h3><?= $evento['dataEve'] ?>/<?= $evento['horaEve'] ?></h3>
 												<p>

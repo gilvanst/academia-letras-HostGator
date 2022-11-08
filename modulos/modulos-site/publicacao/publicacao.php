@@ -36,7 +36,7 @@ include '../../../config.php';
 											<div class="col-3 col-6-medium col-12-small">
 												<!-- Feature -->
 												<section class="box feature">
-													<h3><a href="visualizar.php?IdPub=<?=$publicacao['IdPub']?>">
+													<h3><a class="titulo-hover" href="visualizar.php?IdPub=<?=$publicacao['IdPub']?>">
 													<?= $publicacao['tituloPub'] ?></a></h3>
 
 													<p>
