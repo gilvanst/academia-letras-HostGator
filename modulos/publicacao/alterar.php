@@ -37,7 +37,7 @@ if (empty($_SESSION['usuario'])) {
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h1 class="display-4 text-center">Alterar Cadastro</h1>
-                    
+
 
                     <?php
                     if (!empty($_GET['IdPub'])) {
@@ -48,11 +48,12 @@ if (empty($_SESSION['usuario'])) {
                     $sql = 'SELECT * FROM publicacoes where IdPub = ' . $id . '';
 
                     foreach ($pdo->query($sql) as $row) {
-                        $id = $row['IdPub'];
-                        $titulo = $row['tituloPub'];
+                        $id      = $row['IdPub'];
+                        $titulo  = $row['tituloPub'];
                         $autores = $row['autoresPub'];
-                        $genero = $row['generoPub'];
-                        $texto = $row['textoPub'];
+                        $genero  = $row['generoPub'];
+                        $texto   = $row['textoPub'];
+                        $poema   = $row['poema'];
                     }
                     Banco::desconectar();
                     ?>
@@ -73,11 +74,20 @@ if (empty($_SESSION['usuario'])) {
                             <input class="form-control" type="text" id="genero" name="generoPub" value="<?php echo $genero; ?>">
                         </div>
 
+                        <div class="form-group mt-2">
+                            <label for="poema">É um poema?</label>
+                            <select class="custom-select" name="poema" value="">
+                                <option selected><?php echo $poema ?></option>
+                                <option>Sim</option>
+                                <option>Não</option>
+                            </select>
+                        </div>
+
                         <div class="form-gorup text-justify ">
                             <label for="texto">Texto</label>
-                            <textarea class="form-control" type="text" id="texto" name="textoPub" ><?php echo $texto; ?></textarea>
+                            <textarea class="form-control" type="text" id="texto" name="textoPub"><?php echo $texto; ?></textarea>
                         </div>
-                        
+
                         <input type="hidden" id="id" name="IdPub" value="<?php echo $id; ?>">
 
                         <div class="text-right my-3">

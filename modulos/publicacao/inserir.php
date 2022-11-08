@@ -60,6 +60,13 @@ if (empty($_SESSION['usuario'])) {
                                 <input class="form-control" type="text" id="genero" name="generoPub">
                             </div>
                             <div class="form-group">
+                                <label for="poema">É um poema?</label>
+                                <select class="custom-select" name="poema">
+                                    <option >Sim</option>
+                                    <option selected>Não</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="texto">Texto</label>
                                 <textarea class="form-control" id="texto" name="textoPub"></textarea>
                             </div>

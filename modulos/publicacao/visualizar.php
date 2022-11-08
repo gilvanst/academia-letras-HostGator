@@ -23,11 +23,12 @@ $pdo = Banco::conectar();
 $sql = 'SELECT * FROM publicacoes where IdPub = '. $id . '';
 
 foreach ($pdo->query($sql) as $row) {
-    $id = $row['IdPub'];
-    $titulo = $row['tituloPub'];
+    $id      = $row['IdPub'];
+    $titulo  = $row['tituloPub'];
     $autores = $row['autoresPub'];
-    $genero = $row['generoPub'];
-    $texto = $row['textoPub'];
+    $genero  = $row['generoPub'];
+    $texto   = $row['textoPub'];
+    $poema   = $row['poema'];
 }
 
 Banco::desconectar();
@@ -60,7 +61,7 @@ Banco::desconectar();
                     <h1 class="display-4 text-center"><?= $titulo ?></h1>
                     <div>
                         <?php
-                            if($genero == 'Poemas'){ ?>
+                            if($poema == 'Sim'){ ?>
                                 <p class="text-center"><?= nl2br($texto) ?></p>
                             <?php }else{ ?>  
                                 <p class="text-justify"><?= nl2br($texto) ?></p>
@@ -68,9 +69,8 @@ Banco::desconectar();
                                 
                         <i>Autores:</i>
                         <i><?= $autores ?></i>
+
                     </div>
-
-
 
 
                     <div class="text-right my-3">
