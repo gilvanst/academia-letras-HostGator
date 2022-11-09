@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Nov-2022 às 21:05
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.1.6
+-- Tempo de geração: 09-Nov-2022 às 02:21
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,6 +36,13 @@ CREATE TABLE `academicos` (
   `fotoAcad` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `academicos`
+--
+
+INSERT INTO `academicos` (`idAcad`, `nomeAcad`, `cadeiraAcad`, `posicaoAcad`, `sobreAcad`, `fotoAcad`) VALUES
+(22, 'bolsotsé', '4', 'alguma', 'nazista, terrorista, malabarista, clicista, barista, ateista e tudo com ista', 'bolsotsé0911202212112308.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -51,6 +58,13 @@ CREATE TABLE `eventos` (
   `descricaoEve` varchar(300) NOT NULL,
   `imagemEve` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `eventos`
+--
+
+INSERT INTO `eventos` (`idEve`, `nomeEve`, `localEve`, `dataEve`, `horaEve`, `descricaoEve`, `imagemEve`) VALUES
+(19, 'AADSASDA', 'ASDASDA', '0000-00-00', '03:21:00', '1ASDCAS DADSDSAXDSAXSAZDCA', 'AADSASDA0911202201115900.jpg');
 
 -- --------------------------------------------------------
 
@@ -199,13 +213,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `academicos`
 --
 ALTER TABLE `academicos`
-  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de tabela `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `idEve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idEve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de tabela `historia`

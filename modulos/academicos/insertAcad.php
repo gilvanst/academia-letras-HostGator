@@ -26,7 +26,7 @@ $id = $pdo->lastInsertId();
 Banco::desconectar();
 
 if(!empty($id)){
-    header("Location: academicos.php?idAcad=$id");
+    header("Location: visualizar.php?idAcad=$id");
 }else{
     header('Location: inserir.php');
 }
