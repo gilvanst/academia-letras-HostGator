@@ -53,9 +53,9 @@ foreach (retornaDado($sql) as $row) {
                 <div class="container-fluid">
                     <h1 class="display-4 text-center"><?= $acad['nomeAcad'] ?></h1>
 
-                    <div class="media">
+                    <div class="row-flex">
                         <img src="../../img/<?= $acad['fotoAcad'] ?>" download class=" align-self-start mr-3 rounded" width="200px" height="288px" alt="Capa do livro">
-                        <div class="media-body ">
+                        <div class="media-body  mt-3">
                             <p>nome: <?= $acad['nomeAcad'] ?></p>
                             <p>cadeira:<?= $acad['cadeiraAcad'] ?></p>
                             <p>posicao: <?= $acad['posicaoAcad'] ?></p>
@@ -65,7 +65,8 @@ foreach (retornaDado($sql) as $row) {
                     </div>
 
                     <div class="text-justify mt-5">
-                        <p><?= $acad['sobreAcad'] ?></p>
+                        <p>Sobre:</p>
+                        <i><?= $acad['sobreAcad'] ?></i>
                     </div>
 
 
@@ -74,7 +75,7 @@ foreach (retornaDado($sql) as $row) {
                     <div class="text-right my-3">
                         <a class="btn btn-sm btn-warning" href="alterarAcad.php?idAcad=<?= $acad['idAcad'] ?>">Alterar</a>
                         <a class="btn btn-sm btn-danger" href="deleteAcad.php?idAcad=<?= $acad['idAcad'] ?>." onclick="return confirm('Deseja realmente apagar o registro?')">Excluir</a>
-                        <a class="btn btn-sm btn-primary " href="obrasAcad.php?idAcad=<?= $acad['idAcad'] ?>">Voltar</a>
+                        <a class="btn btn-sm btn-primary " href="academicos.php?idAcad=<?= $acad['idAcad'] ?>">Voltar</a>
                     </div>
                 </div>
                 <!-- End of Main Content -->
