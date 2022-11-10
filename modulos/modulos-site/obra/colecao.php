@@ -48,7 +48,7 @@ include '../../../config.php';
 											</section>
 										</div>
 
-									<?php } ?>
+									<?php } ?> 	
 
 								</div>
 							</div>
