@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Nov-2022 às 20:47
+-- Tempo de geração: 11-Nov-2022 às 20:51
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -141,7 +141,10 @@ CREATE TABLE `publicacoes` (
 
 INSERT INTO `publicacoes` (`IdPub`, `tituloPub`, `autoresPub`, `generoPub`, `textoPub`, `id_usuario`, `poema`) VALUES
 (15, 'O Menino Azul', 'Cecília Meireles', 'Poemas', 'O menino quer um burrinho\r\npara passear.\r\nUm burrinho manso,\r\nque não corra nem pule,\r\nmas que saiba conversar.\r\n\r\nO menino quer um burrinho\r\nque saiba dizer\r\no nome dos rios,\r\ndas montanhas, das flores,\r\n– de tudo o que aparecer.\r\n\r\nO menino quer um burrinho\r\nque saiba inventar histórias bonitas\r\ncom pessoas e bichos\r\ne com barquinhos no mar.\r\n\r\nE os dois sairão pelo mundo\r\nque é como um jardim\r\napenas mais largo\r\ne talvez mais comprido\r\ne que não tenha fim.\r\n\r\n(Quem souber de um burrinho desses,\r\npode escrever\r\npara a Ruas das Casas,\r\nNúmero das Portas,\r\nao Menino Azul que não sabe ler.)', 16, 'Sim'),
-(25, 'agua', 'desconhecido', 'crônicas', 'De água e luz ele faz seu esplendor; seu grande mistério é a simplicidade. Considerei, por fim, que assim é o amor, oh! minha amada; de tudo que ele suscita e esplende e estremece e delira em mim existem apenas meus olhos recebendo a luz de teu olhar. Ele me cobre de glórias e me faz magnífico.', 16, 'Não');
+(25, 'agua', 'desconhecido', 'crônicas', 'De água e luz ele faz seu esplendor; seu grande mistério é a simplicidade. Considerei, por fim, que assim é o amor, oh! minha amada; de tudo que ele suscita e esplende e estremece e delira em mim existem apenas meus olhos recebendo a luz de teu olhar. Ele me cobre de glórias e me faz magnífico.', 16, 'Não'),
+(27, 'Da felicidade', 'Mário Quintana', 'nem sei', 'Quantas vezes a gente, em busca da ventura,\r\nProcede tal e qual o avozinho infeliz:\r\nEm vão, por toda parte, os óculos procura\r\nTendo-os na ponta do nariz!', 15, 'Sim'),
+(28, 'Mitada', 'Jair bolsonaro', 'reflexão', 'Podemos viver sem oxigênio.\r\nMas jamais sem liberdade de expressão!!\r\nPois eu sou IMBROXAVELL!!!', 15, 'Sim'),
+(33, 'saddsa', 'asdda', 'assadsaa', 'adsdsassaads', 15, 'Não');
 
 -- --------------------------------------------------------
 
@@ -232,13 +235,13 @@ ALTER TABLE `historia`
 -- AUTO_INCREMENT de tabela `obra`
 --
 ALTER TABLE `obra`
-  MODIFY `idObra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `idObra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT de tabela `publicacoes`
 --
 ALTER TABLE `publicacoes`
-  MODIFY `IdPub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `IdPub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
