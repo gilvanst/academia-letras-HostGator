@@ -15,7 +15,13 @@ if (!empty($_POST)) {
     $sql = "INSERT INTO publicacoes (tituloPub, autoresPub, generoPub, textoPub, poema, id_usuario) VALUES (?,?,?,?,?,?)";
     $q = $pdo->prepare($sql); 
     $q->execute(array( $titulo, $autores, $genero, $texto, $poema,  $usuario));
+
+    $id = $pdo->lastInsertId();
     Banco::desconectar();
 
-    header("Location:  publicacao.php");
+    if(!empty($id)){
+        header("Location: visualizar.php?IdPub=$id");
+    }else{
+        header('Location: inserir.php');
+    }
 }

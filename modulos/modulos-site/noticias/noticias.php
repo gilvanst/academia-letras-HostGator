@@ -39,10 +39,8 @@ include '../../../config.php';
 										<section class="text-justify">
 											<h3 class="mb-4"><a class="titulo-hover" href="visualizar.php?idEve=<?= $evento['idEve'] ?>">Nome:<?= $evento['nomeEve'] ?></a></h3>
 											<p class="mb-4">Local: <?= $evento['localEve'] ?></p>
-											<p class="mb-4"><?= $evento['dataEve'] ?> às <?= $evento['horaEve'] ?></p>
-											<p class="mb-4">
-												<?= substr($evento['descricaoEve'], 0, 200) ?>...
-											</p>
+											<p class="mb-4">Dia <?= $evento['dataEve'] ?> às <?= $evento['horaEve'] ?></p>
+											<p class="mb-4">Sobre: <?= substr($evento['descricaoEve'], 0, 200) ?></p>
 										</section>
 
 									</div>

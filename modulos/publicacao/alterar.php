@@ -58,20 +58,38 @@ if (empty($_SESSION['usuario'])) {
                     Banco::desconectar();
                     ?>
 
-                    <form action="update.php" method="POST">
+                    <form action="update.php" class="needs-validation" method="POST" novalidate>
                         <div class="form-group">
                             <label for="titulo">Titulo da Publicação</label>
-                            <input class="form-control" type="text" id="titulo" name="tituloPub" value="<?php echo $titulo; ?>">
+                            <input class="form-control" type="text" id="titulo" name="tituloPub" value="<?php echo $titulo; ?>" required>
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                            <div class="invalid-feedback">
+                                campo obrigatório!
+                            </div>
                         </div>
 
                         <div class="form-group ">
                             <label for="autores">Autores</label>
                             <input class="form-control" type="text" id="autores" name="autoresPub" value="<?php echo $autores; ?>">
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                            <div class="invalid-feedback">
+                                campo obrigatório!
+                            </div>
                         </div>
 
                         <div class="form-gorup">
                             <label for="genero">Gênero Textual</label>
                             <input class="form-control" type="text" id="genero" name="generoPub" value="<?php echo $genero; ?>">
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                            <div class="invalid-feedback">
+                                campo obrigatório!
+                            </div>
                         </div>
 
                         <div class="form-group mt-2">
@@ -85,7 +103,13 @@ if (empty($_SESSION['usuario'])) {
 
                         <div class="form-gorup text-justify ">
                             <label for="texto">Texto</label>
-                            <textarea class="form-control" type="text" id="texto" name="textoPub"><?php echo $texto; ?></textarea>
+                            <textarea class="form-control" type="text" id="texto" name="textoPub" required><?php echo $texto; ?></textarea>
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                            <div class="invalid-feedback">
+                                campo obrigatório!
+                            </div>
                         </div>
 
                         <input type="hidden" id="id" name="IdPub" value="<?php echo $id; ?>">

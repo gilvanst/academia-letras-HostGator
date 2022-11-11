@@ -64,7 +64,7 @@
             <h1 class="h4 text-gray-700 mb-2">Esqueceu sua senha?</h1>
             <p class="mb-4">Digite aqui seu email para recuperarmos sua senha!!</p>
         </div>
-        <form action="#" class="user" method="POST">
+        <form action="redefine-senha.php" class="user" method="POST">
             <div class="form-group">
                 <input class="form-control form-control-user" type="text" name="email" placeholder="Insira o endereço de email.." aria-describedby="emailHelp">
 

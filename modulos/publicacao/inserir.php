@@ -43,32 +43,57 @@ if (empty($_SESSION['usuario'])) {
                     <div class="container-fluid">
                         <h1 class="display-4 text-center">Cadastrar Publicação</h1>
 
-                        <form action="insert.php" method="POST">
+                        <form action="insert.php" method="POST" class="needs-validation" novalidate>
 
                             <div class="form-group">
                                 <label for="titulo">Titulo</label>
-                                <input class="form-control" type="text" id="titulo" name="tituloPub">
+                                <input class="form-control" type="text" id="titulo" name="tituloPub" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
+
 
                             <div class="form-group">
                                 <label for="autores">Autores</label>
-                                <input class="form-control" type="text" id="autores" name="autoresPub">
+                                <input class="form-control" type="text" id="autores" name="autoresPub" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="genero">Gênero</label>
-                                <input class="form-control" type="text" id="genero" name="generoPub">
+                                <input class="form-control" type="text" id="genero" name="generoPub" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="poema">É um poema?</label>
                                 <select class="custom-select" name="poema">
-                                    <option >Sim</option>
+                                    <option>Sim</option>
                                     <option selected>Não</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="texto">Texto</label>
-                                <textarea class="form-control" id="texto" name="textoPub"></textarea>
+                                <textarea class="form-control" id="texto" name="textoPub" required></textarea>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="text-right my-3">
@@ -106,6 +131,8 @@ if (empty($_SESSION['usuario'])) {
         <?php include path('template/logout.php'); ?>
 
         <?php include path('template/importacoes-js.php'); ?>
+        
+
     </body>
 
 
