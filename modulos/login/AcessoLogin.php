@@ -1,26 +1,27 @@
 <?php
-session_start();
+    include_once '../../config.php';
 
-include '../../funcoes/conexao.php';
+    // Dados
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-if (empty($_POST['email']) && empty($_POST['senha'])) {
-    header('Location: ../../login.php');
-    exit;
-}
+    // Busca o usuário com email e senha
+    $sql = "SELECT * FROM usuario WHERE email = '$email'";
+    $usuario = retornaDado($sql);
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
-// CRIA A SQL PARA EXECUTAR NO BANCO DE DADOS
-$sql = "SELECT * FROM usuario WHERE email = ? and senha = ?";
-
-$preparacao = $conexaoBanco->prepare($sql);
-
-// FALANDO PRO BANCO QUAL SQL VAMOS EXECUTAR
-$preparacao->execute([$email, $senha]);
-
-// BUSCA OS DADOS E SALVA NA VARIAVEL DADOS
-$usuario = $preparacao->fetch();
-
-$_SESSION['usuario'] = $usuario['id'];
-
-header("Location: ../painel/painel.php");
+    if(!empty($usuario['id'])){
+        // Existe um usuário
+        if($usuario['senha'] != $senha){
+            // Senha ta errada. Volta pro login e destroi a sessão]
+            $mensagem = "Senha não confere!";
+            header('Location: ' . arquivo('login.php?mensagem=' . $mensagem));
+        }else{
+            // Senha ta certa. Salva a sessão e redireciona pra home.
+            $_SESSION['id'] = $usuario['id'];
+            header('Location: ' . arquivo('modulos/painel/painel.php'));
+        }
+    }else{
+        // Não existe um usuário com esse email
+        $mensagem = "Email não existe!";
+        header('Location: ' . arquivo('login.php?mensagem=' . $mensagem));
+    }

@@ -15,7 +15,7 @@
     <link href="js/demo/password.js" rel="stylesheet">
     <link href="css/password.css" rel="stylesheet">
 
-   
+
     <title>Tela De Login</title>
     <style>
         body {
@@ -55,6 +55,15 @@
 
 <body class="bg-gradient-primary">
     <div class="bodyf">
+        <?php
+        if (!empty($_GET['mensagem'])) { ?>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <?= $_GET['mensagem'] ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+        <?php } ?>
 
 
         <div class="text-center text-gray-700">
@@ -67,11 +76,12 @@
             </div>
             <div class="form-group">
                 <label for="Senha" class="text-gray-700">Senha</label>
-                <input class="form-control form-user" type="password" name="senha" minlength="3" placeholder="Digite sua senha"  required>
-                
+                <input class="form-control form-user" type="password" name="senha" minlength="3" placeholder="Digite sua senha" required>
+
             </div>
 
             <input class="inputSubmit btn-user" type="submit" name="submit" value="Entrar">
+
 
         </form>
         <div class="text-center">

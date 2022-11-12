@@ -4,7 +4,7 @@
 <?php
 include '../../../config.php';
 ?>
-
+<link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
 <?php include_once path('template/template-site/head.php'); ?>
 <header id="header">
 	<div class="logo container">
@@ -23,18 +23,25 @@ include '../../../config.php';
 		<!-- Main -->
 		<section id="main">
 			<div class="container">
-				<form action="colecao.php" method="POST" class="form-inline">
-					<input class="form-control" type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
-					<input type="submit" value="Pesquisar">
-				</form>
 
 				<div class="row">
+				
+
+						<form action="colecao.php" method="POST" class="form-inline">
+							
+							<input class="form-control m-2" type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
+							<input type="submit" value="Pesquisar">
+
+						</form>
+
+					
+
 					<div class="col-12">
 						<section class="box features">
 							<div>
 								<div class="row">
 									<?php
-									if(!empty($_POST['pesquisa'])){
+									if (!empty($_POST['pesquisa'])) {
 										$sql = "SELECT 
 													* 
 												FROM 
@@ -46,7 +53,7 @@ include '../../../config.php';
 													OR isbnObra LIKE '%{$_POST['pesquisa']}%'";
 
 										$sql .= " ORDER BY tituloObra ASC";
-									}else{
+									} else {
 										$sql = "SELECT * FROM obra ORDER BY tituloObra ASC";
 									}
 
@@ -68,11 +75,11 @@ include '../../../config.php';
 											</section>
 										</div>
 
-									<?php } ?> 	
+									<?php } ?>
 
 								</div>
 							</div>
-							
+
 						</section>
 					</div>
 				</div>
