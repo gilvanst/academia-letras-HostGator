@@ -9,6 +9,12 @@ if (!empty($_POST)) {
     $texto   = $_POST['textoPub'];
     $poema   = $_POST['poema'];
     $usuario = $_SESSION['usuario'];
+
+    if(empty($titulo)){
+        $mensagem = " campo obrigatório!";
+        header('Location: ' . arquivo('modulos/publicacao/inserir.php?mensagem=' . $mensagem));
+        exit();
+    }
     
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
