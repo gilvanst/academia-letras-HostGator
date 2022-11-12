@@ -23,13 +23,33 @@ include '../../../config.php';
 		<!-- Main -->
 		<section id="main">
 			<div class="container">
+				<form action="colecao.php" method="POST" class="form-inline">
+					<input class="form-control" type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
+					<input type="submit" value="Pesquisar">
+				</form>
+
 				<div class="row">
 					<div class="col-12">
 						<section class="box features">
 							<div>
 								<div class="row">
 									<?php
-									$sql = "SELECT * FROM obra ORDER BY idObra ASC";
+									if(!empty($_POST['pesquisa'])){
+										$sql = "SELECT 
+													* 
+												FROM 
+													obra 
+												WHERE
+													tituloObra LIKE '%{$_POST['pesquisa']}%'
+													OR autoresObra LIKE '%{$_POST['pesquisa']}%'
+													OR sinopseObra LIKE '%{$_POST['pesquisa']}%'
+													OR isbnObra LIKE '%{$_POST['pesquisa']}%'";
+
+										$sql .= " ORDER BY tituloObra ASC";
+									}else{
+										$sql = "SELECT * FROM obra ORDER BY tituloObra ASC";
+									}
+
 									$obras = retornaDados($sql);
 
 									foreach ($obras as $obra) { ?>
