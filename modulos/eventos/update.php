@@ -1,5 +1,6 @@
 <?php
 include '../../config.php';
+verificaAcesso(['administrador']);
 
 
 if (!empty($_POST)) {

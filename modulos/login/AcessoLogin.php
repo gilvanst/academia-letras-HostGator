@@ -6,7 +6,7 @@
     $senha = $_POST['senha'];
 
     // Busca o usuário com email e senha
-    $sql = "SELECT * FROM usuario WHERE email = '$email'";
+    $sql = "SELECT id, email, senha FROM usuario WHERE email = '$email'";
     $usuario = retornaDado($sql);
 
     if(!empty($usuario['id'])){

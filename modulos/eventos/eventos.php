@@ -2,15 +2,12 @@
 <html lang="pt-br">
 
 <?php
-include '../../config.php';
-include_once '../login/sessao.php';
+    include '../../config.php';
 
-if (empty($_SESSION['usuario'])) {
-    header('Location: ' . arquivo('login.php'));
-    exit;
-}
-
+    verificaAcesso(['administrador']);
 ?>
+
+
 
 <?php include_once path('template/head.php'); ?>
 

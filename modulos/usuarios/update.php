@@ -1,5 +1,6 @@
 <?php
 include '../../config.php';
+verificaAcesso();
 
 if (!empty($_POST)) {
     $id = $_POST['id'];

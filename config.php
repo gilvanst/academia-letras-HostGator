@@ -6,6 +6,7 @@
     include_once path('funcoes/conexao.php');
     include_once path('funcoes/banco.php');
     include_once path('funcoes/funcoes.php');
+    include_once path('modulos/login/sessao.php');
 
     session_start();
 
@@ -25,7 +26,7 @@
     {
         // Retorna o usuário logado;
 
-        $id = $_SESSION['usuario'];
+        $id = $_SESSION['id'];
 
         $sql = "SELECT * FROM usuario WHERE id = $id";
         $query = $GLOBALS['conexaoBanco']->query($sql);

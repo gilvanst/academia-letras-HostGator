@@ -1,5 +1,6 @@
 <?php
     include '../../config.php';
+    verificaAcesso();
    
     $nome       = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $email      = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);

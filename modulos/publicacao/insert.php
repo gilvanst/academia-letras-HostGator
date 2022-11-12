@@ -1,6 +1,6 @@
 <?php
 include '../../config.php';
-
+verificaAcesso();
 
 if (!empty($_POST)) {
     $titulo  = $_POST['tituloPub'];

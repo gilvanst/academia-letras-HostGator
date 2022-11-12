@@ -3,12 +3,7 @@
 
 <?php
 include '../../config.php';
-include_once '../login/sessao.php';
-
-if (empty($_SESSION['usuario'])) {
-    header('Location: ' . arquivo('login.php'));
-    exit;
-}
+verificaAcesso(['administrador']);
 
 if (!empty($_GET['idEve'])) {
     $id = $_GET['idEve'];

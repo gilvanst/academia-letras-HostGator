@@ -28,10 +28,16 @@ include '../../../config.php';
 				
 
 						<form action="colecao.php" method="POST" class="form-inline">
-							
-							<input class="form-control m-2" type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
-							<input type="submit" value="Pesquisar">
+							<div class="row">
+								<div class="col">
 
+									<input class="form-control  " type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
+								</div>
+								<div class="col">
+
+									<input type="submit"  value="Pesquisar">
+								</div>
+							</div>
 						</form>
 
 					

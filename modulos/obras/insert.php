@@ -1,5 +1,6 @@
 <?php
 include '../../config.php';
+verificaAcesso();
 
 $pasta_upload = '../../img/'; // ESPECIFICANDO O LOCAL EM QUE AS IMAGENS VÃO SER SALVAR
 $extensao = substr($_FILES['imagem']['name'], -4); // PEGANDO A EXTESÃO DA IMAGEM

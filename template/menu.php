@@ -6,12 +6,16 @@
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?= arquivo('modulos/academicos/academicos.php') ?>">Acadêmicos</a>
+           
+                <a class="collapse-item" href="<?= arquivo('modulos/academicos/academicos.php') ?>">Acadêmicos</a>
+           
             <a class="collapse-item" href="<?= arquivo('modulos/eventos/eventos.php')?>">Eventos</a>
             <a class="collapse-item" href="<?= arquivo('modulos/historia/historia.php')?>">Nossa história</a>
             <a class="collapse-item" href="<?= arquivo('modulos/obras/obras.php')?>">Obra</a>
             <a class="collapse-item" href="<?= arquivo('modulos/publicacao/publicacao.php') ?>">Publicações</a>
+            <?php if(podeMostrar(['administrador'])){ ?>
             <a class="collapse-item" href="<?= arquivo('modulos/usuarios/usuarios.php')?>">Usuários</a>
+            <?php } ?>
         </div>
     </div>
 </li>

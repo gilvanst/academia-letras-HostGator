@@ -4,7 +4,10 @@
 <?php
 
 include '../../config.php';
-include_once '../login/sessao.php';
+ '../login/sessao.php';
+
+verificaAcesso();
+
 if (!empty($_GET['idObra'])) {
     $id = $_GET['idObra'];
 }

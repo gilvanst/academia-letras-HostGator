@@ -1,6 +1,8 @@
 <?php
 include '../../config.php';
 
+verificaAcesso(['administrador, autor']);
+
 if (!empty($_GET)) {
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
