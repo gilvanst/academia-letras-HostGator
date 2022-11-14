@@ -16,6 +16,32 @@ $data = $_POST['dataEve'];
 $hora = $_POST['horaEve'];
 $descricao = $_POST['descricaoEve'];
 
+if(empty($nome)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/eventos/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($local)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/eventos/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($data)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/eventos/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($hora)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/eventos/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($descricao)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/eventos/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+
 $pdo = Banco::conectar();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

@@ -160,8 +160,6 @@ include 'config.php';
 			<div class="row gtr-200">
 				<?php include_once path('template/template-site/contato.php'); ?>
 
-
-
 			</div>
 
 		</div>

@@ -2,9 +2,9 @@
 <html lang="pt-br">
 
 <?php
-    include '../../config.php';
-    
-    verificaAcesso(['administrador']);
+include '../../config.php';
+
+verificaAcesso(['administrador']);
 ?>
 
 <?php include_once path('template/head.php'); ?>
@@ -38,38 +38,69 @@
                     <div class="container-fluid">
                         <h1 class="display-4 text-center">Cadastrar evento</h1>
 
-                        <form action="insert.php" enctype="multipart/form-data" method="POST">
+                        <form action="insert.php" enctype="multipart/form-data" method="POST" class="needs-validation" novalidate>
 
                             <div class="form-group ">
                                 <label for="imagem">Capa da obra</label>
-                                <input type="file" class="form-control-file" id="imagem" name="imagemEve">
+                                <input type="file" class="form-control-file" id="imagem" name="imagemEve" required>
+
                             </div>
 
                             <div class="form-group">
                                 <label for="nome">Nome</label>
-                                <input class="form-control" type="text" id="nome" name="nomeEve">
+                                <input class="form-control" type="text" id="nome" name="nomeEve" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="local">Local</label>
-                                <input class="form-control" type="text" id="local" name="localEve">
+                                <input class="form-control" type="text" id="local" name="localEve" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="data">Data</label>
-                                    <input class="form-control" type="date" id="data" name="dataEve">
+                                    <input class="form-control" type="date" id="data" name="dataEve" required>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        campo obrigatório!
+                                    </div>
                                 </div>
 
 
                                 <div class="form-group col-md-6">
                                     <label for="hora">Hora</label>
-                                    <input class="form-control" type="time" id="hora" name="horaEve">
+                                    <input class="form-control" type="time" id="hora" name="horaEve" required>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        campo obrigatório!
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="descricao">Descrição</label>
-                                <input class="form-control" type="text" id="descricao" name="descricaoEve">
+                                <input class="form-control" type="text" id="descricao" name="descricaoEve" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="text-right my-3">

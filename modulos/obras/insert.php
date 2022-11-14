@@ -27,6 +27,47 @@ $link = $_POST['linkObra'];
 $genero = $_POST['generoObra'];
 $usuario = $_SESSION['usuario'];
 
+if(empty($titulo)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/obras/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($autores)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/obras/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($sinopse)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/obras/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($isbn)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/obras/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($ano)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/obras/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($paginas)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/obras/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($link)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/obras/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+if(empty($genero)){
+    $mensagem = " campo obrigatório!";
+    header('Location: ' . arquivo('modulos/obras/inserir.php?mensagem=' . $mensagem));
+    exit();
+}
+
 $pdo = Banco::conectar();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

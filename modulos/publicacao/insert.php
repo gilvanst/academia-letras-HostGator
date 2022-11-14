@@ -15,6 +15,28 @@ if (!empty($_POST)) {
         header('Location: ' . arquivo('modulos/publicacao/inserir.php?mensagem=' . $mensagem));
         exit();
     }
+    if(empty($autores)){
+        $mensagem = " campo obrigatório!";
+        header('Location: ' . arquivo('modulos/publicacao/inserir.php?mensagem=' . $mensagem));
+        exit();
+    }
+    if(empty($genero)){
+        $mensagem = " campo obrigatório!";
+        header('Location: ' . arquivo('modulos/publicacao/inserir.php?mensagem=' . $mensagem));
+        exit();
+    }
+    if(empty($texto)){
+        $mensagem = " campo obrigatório!";
+        header('Location: ' . arquivo('modulos/publicacao/inserir.php?mensagem=' . $mensagem));
+        exit();
+    }
+    if(empty($poema)){
+        $mensagem = " campo obrigatório!";
+        header('Location: ' . arquivo('modulos/publicacao/inserir.php?mensagem=' . $mensagem));
+        exit();
+    }
+    
+    
     
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

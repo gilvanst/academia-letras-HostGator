@@ -13,7 +13,7 @@
     $usuarioEmail = retornaDado($sqlEmail);
 
     if (!empty($usuarioEmail['id']) ) {
-        header("Location: inserir.php?msg=Email já existe porra! Bota outro seu burro!&email={$email}");
+        header("Location: inserir.php?msg=Email já cadastrado! Por favor, coloque outro.&email={$email}");
         exit();
     }
      /* Fim da verificação*/
@@ -27,10 +27,35 @@
 
         /*Verificando se as senhas são iguais e criando uma frase de verificação*/
         if ($senha != $csenha) {
-            header("Location: inserir.php?msg=As senhas não estão iguais! Acéfalo.&nome={$nome}");
+            header("Location: inserir.php?msg=Senhas precisam estar iguais!&nome={$nome}");
             exit();
         }
         /*fim da verificação*/
+        if(empty($nome)){
+            $mensagem = " campo obrigatório!";
+            header('Location: ' . arquivo('modulos/usuarios/inserir.php?mensagem=' . $mensagem));
+            exit();
+        }
+        if(empty($email)){
+            $mensagem = " campo obrigatório!";
+            header('Location: ' . arquivo('modulos/usuarios/inserir.php?mensagem=' . $mensagem));
+            exit();
+        }
+        if(empty($telefone)){
+            $mensagem = " campo obrigatório!";
+            header('Location: ' . arquivo('modulos/usuarios/inserir.php?mensagem=' . $mensagem));
+            exit();
+        }
+        if(empty($senha)){
+            $mensagem = " campo obrigatório!";
+            header('Location: ' . arquivo('modulos/usuarios/inserir.php?mensagem=' . $mensagem));
+            exit();
+        }
+        if(empty($csenha)){
+            $mensagem = " campo obrigatório!";
+            header('Location: ' . arquivo('modulos/usuarios/inserir.php?mensagem=' . $mensagem));
+            exit();
+        }
 
         $pdo = Banco::conectar();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

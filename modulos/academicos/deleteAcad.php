@@ -1,7 +1,7 @@
 <?php
 include '../../config.php';
 
-verificaAcesso(['administrador, autor']);
+verificaAcesso();
 
 if (!empty($_GET)) {
     $pdo = Banco::conectar();

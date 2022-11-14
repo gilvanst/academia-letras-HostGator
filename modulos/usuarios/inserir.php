@@ -38,12 +38,12 @@ verificaAcesso();
                     <?php if (!empty($_GET['msg'])) { ?>
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
                             <?= $_GET['msg'] ?>
-                            <strong></strong> 
+                            <strong></strong>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        
+
                     <?php } ?>
                     <!-- Fim da verificação-->
 
@@ -51,30 +51,60 @@ verificaAcesso();
                     <div class="container-fluid">
                         <h1 class="display-4 text-center">Alterar Cadastro</h1>
 
-                        <form action="insert.php" method="POST">
+                        <form action="insert.php" method="POST" class="needs-validation" novalidate>
 
                             <div class="form-group">
                                 <label for="nome">Nome</label>
-                                <input class="form-control" type="text" id="nome" name="nome">
+                                <input class="form-control" type="text" id="nome" name="nome" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input class="form-control" type="email" id="email" name="email">
+                                <input class="form-control" type="email" id="email" name="email" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="telefone">Telefone</label>
-                                <input class="form-control" type="tel" id="telefone" name="telefone">
+                                <input class="form-control" type="tel" id="telefone" name="telefone" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="senha">Senha</label>
-                                <input class="form-control" type="password" id="senha" name="senha">
+                                <input class="form-control" type="password" id="senha" name="senha" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="senha">Confirme a senha</label>
-                                <input class="form-control" type="password" id="csenha" name="csenha">
+                                <input class="form-control" type="password" id="csenha" name="csenha" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="text-right my-3">

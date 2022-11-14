@@ -38,38 +38,74 @@ verificaAcesso();
                     <div class="container-fluid">
                         <h1 class="display-4 text-center">Cadastrar Publicação</h1>
 
-                        <form action="insert.php" method="POST" enctype="multipart/form-data">
+                        <form action="insert.php" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
 
                             <div class="form-group">
                                 <label for="titulo">Titulo</label>
-                                <input class="form-control" type="text" id="titulo" name="tituloObra">
+                                <input class="form-control" type="text" id="titulo" name="tituloObra" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="autores">Autores</label>
-                                <input class="form-control" type="text" id="autores" name="autoresObra">
+                                <input class="form-control" type="text" id="autores" name="autoresObra" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="genero">Gênero</label>
-                                <input class="form-control" type="text" id="genero" name="generoObra">
+                                <input class="form-control" type="text" id="genero" name="generoObra" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="isbn">Isbn</label>
-                                <input class="form-control" type="number" id="isbn" name="isbnObra">
+                                <input class="form-control" type="number" id="isbn" name="isbnObra" required>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
 
                             <div class="form-row">
 
                                 <div class="form-group col-md-6">
                                     <label for="ano">Ano de publicação</label>
-                                    <input class="form-control" type="number" id="ano" name="anoObra">
+                                    <input class="form-control" type="number" id="ano" name="anoObra" required>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        campo obrigatório!
+                                    </div>
                                 </div>
-                                
+
                                 <div class="form-group col-md-6">
                                     <label for="paginas">Quantidade de páginas</label>
-                                    <input class="form-control" type="number" id="paginas" name="paginasObra">
+                                    <input class="form-control" type="number" id="paginas" name="paginasObra" required>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        campo obrigatório!
+                                    </div>
                                 </div>
 
                             </div>
@@ -86,15 +122,21 @@ verificaAcesso();
                                 </div>
 
                             </div>
-                                
+
                             <div class="form-group">
                                 <label for="link">Link da obra</label>
                                 <input class="form-control" type="url" id="link" name="linkObra">
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="sinopse">Sinopse</label>
-                                <textarea class="form-control" id="sinopse" name="sinopseObra"></textarea>
+                                <textarea class="form-control" id="sinopse" name="sinopseObra" required></textarea>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
                             </div>
                             <div class="text-right my-3">
                                 <input class="btn btn-primary" type="submit" value="Inserir">

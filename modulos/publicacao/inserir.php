@@ -49,7 +49,7 @@ verificaAcesso();
                                 <div class="invalid-feedback">
                                     campo obrigatório!
                                 </div>
-                            </div>
+                            </div> 
 
 
                             <div class="form-group">

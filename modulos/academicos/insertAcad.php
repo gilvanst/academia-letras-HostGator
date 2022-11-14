@@ -15,6 +15,27 @@
     $posicao = $_POST['posicaoAcad'];
     $sobre = $_POST['sobreAcad'];
 
+    if(empty($nome)){
+        $mensagem = " campo obrigatório!";
+        header('Location: ' . arquivo('modulos/academicos/inserir.php?mensagem=' . $mensagem));
+        exit();
+    }
+    if(empty($cadeira)){
+        $mensagem = " campo obrigatório!";
+        header('Location: ' . arquivo('modulos/academicos/inserir.php?mensagem=' . $mensagem));
+        exit();
+    }
+    if(empty($posicao)){
+        $mensagem = " campo obrigatório!";
+        header('Location: ' . arquivo('modulos/academicos/inserir.php?mensagem=' . $mensagem));
+        exit();
+    }
+    if(empty($sobre)){
+        $mensagem = " campo obrigatório!";
+        header('Location: ' . arquivo('modulos/academicos/inserir.php?mensagem=' . $mensagem));
+        exit();
+    }
+
 
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
