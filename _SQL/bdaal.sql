@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Nov-2022 às 02:30
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.0.13
+-- Tempo de geração: 14-Nov-2022 às 20:58
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,8 +41,7 @@ CREATE TABLE `academicos` (
 --
 
 INSERT INTO `academicos` (`idAcad`, `nomeAcad`, `cadeiraAcad`, `posicaoAcad`, `sobreAcad`, `fotoAcad`) VALUES
-(22, 'bolsotsé', '4', 'alguma', 'nazista, terrorista, malabarista, clicista, barista, ateista e tudo com ista', 'bolsotsé0911202212112308.jpg'),
-(23, 'Vovô lee', '2', 'rei do mundo', 'simplesmente o cara mais foda, amo ele ', 'Vovô lee0911202206112032.jpg');
+(23, '', '', 'rei do mundo', 'simplesmente o cara mais foda, amo ele ', 'Vovô lee0911202206112032.jpg');
 
 -- --------------------------------------------------------
 
@@ -65,7 +64,8 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`idEve`, `nomeEve`, `localEve`, `dataEve`, `horaEve`, `descricaoEve`, `imagemEve`) VALUES
-(19, 'AADSASDA', 'ASDASDA', '0000-00-00', '03:21:00', '1ASDCAS DADSDSAXDSAXSAZDCA', 'AADSASDA0911202201115900.jpg');
+(19, 'AADSASDA', 'ASDASDA', '0000-00-00', '03:21:00', '1ASDCAS DADSDSAXDSAXSAZDCA', 'AADSASDA0911202201115900.jpg'),
+(20, 'festa', 'sei la', '3233-03-22', '03:32:00', 'blabla.klklskalkd', 'festa1411202207115432.jpg');
 
 -- --------------------------------------------------------
 
@@ -157,17 +157,18 @@ CREATE TABLE `usuario` (
   `nome` varchar(150) NOT NULL,
   `email` varchar(100) NOT NULL,
   `telefone` bigint(20) NOT NULL,
-  `senha` varchar(20) NOT NULL
+  `senha` varchar(20) NOT NULL,
+  `tipo` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nome`, `email`, `telefone`, `senha`) VALUES
-(15, 'adm', 'adm@adm', 123, '123'),
-(16, 'adm', 'adm1@adm', 123, '123'),
-(23, 'gilvan', 'adm5@adm', 123, '123');
+INSERT INTO `usuario` (`id`, `nome`, `email`, `telefone`, `senha`, `tipo`) VALUES
+(15, 'adm', 'adm@adm', 123, '123', 'administrador'),
+(16, 'adm', 'adm1@adm', 123, '123', 'autor'),
+(23, 'gilvan', 'adm5@adm', 123, '123', 'autor');
 
 --
 -- Índices para tabelas despejadas
@@ -217,13 +218,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `academicos`
 --
 ALTER TABLE `academicos`
-  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de tabela `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `idEve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `idEve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de tabela `historia`
@@ -247,7 +248,7 @@ ALTER TABLE `publicacoes`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
