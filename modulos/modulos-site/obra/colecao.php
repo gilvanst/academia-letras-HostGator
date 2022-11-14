@@ -21,8 +21,10 @@ include '../../../config.php';
 
 		<?php include_once path('template/template-site/navbar.php'); ?>
 		<!-- Main -->
+		
 		<section id="main">
 			<div class="container">
+				
 
 				<div class="row">
 				
@@ -44,7 +46,9 @@ include '../../../config.php';
 
 					<div class="col-12">
 						<section class="box features">
+							
 							<div>
+								
 								<div class="row">
 									<?php
 									if (!empty($_POST['pesquisa'])) {
@@ -62,6 +66,7 @@ include '../../../config.php';
 									} else {
 										$sql = "SELECT * FROM obra ORDER BY tituloObra ASC";
 									}
+									
 
 									$obras = retornaDados($sql);
 
@@ -79,12 +84,17 @@ include '../../../config.php';
 													<?= substr($obra['sinopseObra'], 0, 200) ?>...
 												</p>
 											</section>
+											
 										</div>
+										
 
 									<?php } ?>
+									
+									
 
 								</div>
 							</div>
+							
 
 						</section>
 					</div>

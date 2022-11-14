@@ -83,6 +83,101 @@ include 'config.php';
 					</div>
 					</div>
 					<div class="col-12">
+
+						<!-- Blog -->
+						<section class="box blog">
+							<h2 class="major"><span>noticias e eventos</span></h2>
+							<div>
+								<div class="row">
+									<div class="col-9 col-12-medium">
+										<div class="content">
+											<?php
+											$sql = "SELECT * FROM eventos ORDER BY idEve DESC LIMIT 1";
+											$eventos = retornaDados($sql);
+
+
+											foreach ($eventos as $evento) { ?>
+												<!-- Featured Post -->
+												<article class="box post">
+													<header>
+														<h3><a href="#"><?=$evento['nomeEve'] ?></a></h3>
+														<p>With a smaller subtitle that attempts to elaborate</p>
+														<ul class="meta">
+															<li class="icon fa-clock"><?=$evento['dataEve']?></li>
+															<li class="icon fa-comments"><?=$evento['horaEve']?></a></li>
+														</ul>
+													</header>
+													<a href="#" class="image featured"><img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" alt="evento" /></a>
+													<p>
+														<?=$evento['descricaoEve']?>
+													</p>
+													<a href="#" class="button">Continue Reading</a>
+												</article>
+
+										</div>
+									</div>
+									<div class="col-3 col-12-medium">
+										<div class="sidebar">
+
+											<!-- Archives -->
+											<ul class="divided">
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">A Subheading</a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock">6 hours ago</li>
+															<li class="icon fa-comments"><a href="#">34</a></li>
+														</ul>
+													</article>
+												</li>
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">Another Subheading</a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock">9 hours ago</li>
+															<li class="icon fa-comments"><a href="#">27</a></li>
+														</ul>
+													</article>
+												</li>
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">And Another</a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock">Yesterday</li>
+															<li class="icon fa-comments"><a href="#">184</a></li>
+														</ul>
+													</article>
+												</li>
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">And Another</a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock">2 days ago</li>
+															<li class="icon fa-comments"><a href="#">286</a></li>
+														</ul>
+													</article>
+												</li>
+												<li>
+													<article class="box post-summary">
+														<h3><a href="#">And One More</a></h3>
+														<ul class="meta">
+															<li class="icon fa-clock">3 days ago</li>
+															<li class="icon fa-comments"><a href="#">8,086</a></li>
+														</ul>
+													</article>
+												</li>
+											</ul>
+											<a href="#" class="button alt">Archives</a>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					<?php } ?>
+
+					</div>
+					<div class="col-12">
 						<section class="box features">
 							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/publicacao/publicacao.php") ?>"><span>Publicações</span></a></h2>
 							<div>
@@ -122,32 +217,39 @@ include 'config.php';
 							<div>
 								<div class="row">
 									<?php
-									$sql = "SELECT * FROM eventos ORDER BY idEve DESC LIMIT 1";
+									$sql = "SELECT * FROM eventos ORDER BY idEve DESC LIMIT 4";
 									$eventos = retornaDados($sql);
 
 									foreach ($eventos as $evento) { ?>
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
-											<section class="box feature">
-												<h3><a class="titulo-hover" href="#"><?= $evento['nomeEve'] ?></a></h3>
-												<h3><?= $evento['localEve'] ?></h3>
-												<h3><?= $evento['dataEve'] ?>/<?= $evento['horaEve'] ?></h3>
-												<p>
-													<?= substr($evento['descricaoEve'], 0, 200) ?>...
-												</p>
-											</section>
-										</div>
+											<div class="container-fluid">
+												<div class="row">
 
-									<?php } ?>
-								</div>
-							</div>
+													<section class="">
+														<img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" style="width:300px; height:auto;">
+														<h3 class="mb-4">Nome: <a class="titulo-hover" href="<?= arquivo('modulos/modulos-site/noticias/noticias.php') ?>"><?= $evento['nomeEve'] ?></a></h3>
+														<p class="mb-4">Local: <?= $evento['localEve'] ?></p>
+														<p class="mb-4">data: <?= $evento['dataEve'] ?>/<?= $evento['horaEve'] ?></p>
+														<p class="mb-4">
+															sobre: <?= substr($evento['descricaoEve'], 0, 200) ?>...
+														</p>
+												</div>
+											</div>
+						</section>
 					</div>
+
+				<?php } ?>
 				</div>
 				<div class="text-right">
 					<a class="button " href="<?= arquivo('modulos/modulos-site/noticias/noticias.php') ?>">Ver mais</a>
 
 				</div>
-		</section>
+			</div>
+	</div>
+	</div>
+
+	</section>
 
 	</div>
 	</div>
