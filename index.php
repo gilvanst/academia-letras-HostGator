@@ -51,7 +51,7 @@ include 'config.php';
 
 						<!-- Blog -->
 						<section class="box blog">
-							<h2 class="major"><span>noticias e eventos</span></h2>
+							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/noticias/noticias.php") ?>"><span>notícias e eventos</span></a></h2>
 							<div>
 								<div class="row">
 									<div class="col-9 col-12-medium">
