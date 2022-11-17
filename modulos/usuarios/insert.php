@@ -23,6 +23,7 @@
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
         $senha = $_POST['senha'];
+        $tipo = $_POST['tipo'];
         $csenha   = $_POST['csenha']; /* Variavel criada para verficação de senha*/
 
         /*Verificando se as senhas são iguais e criando uma frase de verificação*/
@@ -59,9 +60,9 @@
 
         $pdo = Banco::conectar();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO usuario (nome, email, telefone, senha) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO usuario (nome, email, telefone, senha ,tipo ) VALUES (?,?,?,?,?)";
         $q = $pdo->prepare($sql);
-        $q->execute(array($nome, $email, $telefone, $senha));
+        $q->execute(array($nome, $email, $telefone, $senha, $tipo));
         Banco::desconectar();
 
         header("Location:  usuarios.php");

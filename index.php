@@ -47,41 +47,6 @@ include 'config.php';
 					<?php } ?>
 
 					<!-- Features -->
-					<section class="box features">
-						<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>"><span>Coleção</span></a></h2>
-						<div>
-							<div class="row">
-								<?php
-								$sql = "SELECT * FROM obra ORDER BY idObra DESC LIMIT 4";
-								$obras = retornaDados($sql);
-
-								foreach ($obras as $obra) { ?>
-									<div class="col-3 col-6-medium col-12-small">
-										<!-- Feature -->
-										<section class="box feature">
-											<a href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>" class="image featured">
-												<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
-											</a>
-
-											<h3><a class="titulo-hover" href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
-
-											<p>
-												<?= substr($obra['sinopseObra'], 0, 200) ?>...
-											</p>
-										</section>
-
-									</div>
-
-								<?php } ?>
-
-							</div>
-						</div>
-					</section>
-					<div class="text-right">
-						<a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Ver mais</a>
-
-					</div>
-					</div>
 					<div class="col-12">
 
 						<!-- Blog -->
@@ -100,16 +65,16 @@ include 'config.php';
 												<!-- Featured Post -->
 												<article class="box post">
 													<header>
-														<h3><a href="#"><?=$evento['nomeEve'] ?></a></h3>
+														<h3><a href="#"><?= $evento['nomeEve'] ?></a></h3>
 														<p>With a smaller subtitle that attempts to elaborate</p>
 														<ul class="meta">
-															<li class="icon fa-clock"><?=$evento['dataEve']?></li>
-															<li class="icon fa-comments"><?=$evento['horaEve']?></a></li>
+															<li class="icon fa-clock"><?= $evento['dataEve'] ?></li>
+															<li class="icon fa-comments"><?= $evento['horaEve'] ?></a></li>
 														</ul>
 													</header>
 													<a href="#" class="image featured"><img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" alt="evento" /></a>
 													<p>
-														<?=$evento['descricaoEve']?>
+														<?= $evento['descricaoEve'] ?>
 													</p>
 													<a href="#" class="button">Continue Reading</a>
 												</article>
@@ -177,6 +142,41 @@ include 'config.php';
 					<?php } ?>
 
 					</div>
+					<section class="box features">
+						<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>"><span>Coleção</span></a></h2>
+						<div>
+							<div class="row">
+								<?php
+								$sql = "SELECT * FROM obra ORDER BY idObra DESC LIMIT 4";
+								$obras = retornaDados($sql);
+
+								foreach ($obras as $obra) { ?>
+									<div class="col-3 col-6-medium col-12-small">
+										<!-- Feature -->
+										<section class="box feature">
+											<a href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>" class="image featured">
+												<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
+											</a>
+
+											<h3><a class="titulo-hover" href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
+
+											<p>
+												<?= substr($obra['sinopseObra'], 0, 200) ?>...
+											</p>
+										</section>
+
+									</div>
+
+								<?php } ?>
+
+							</div>
+						</div>
+					</section>
+					<div class="text-right">
+						<a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Ver mais</a>
+
+					</div>
+					</div>
 					<div class="col-12">
 						<section class="box features">
 							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/publicacao/publicacao.php") ?>"><span>Publicações</span></a></h2>
@@ -210,41 +210,9 @@ include 'config.php';
 
 						</div>
 					</div>
-					<!-- Blog -->
-					<div class="col-12">
-						<section class="box blog">
-							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/noticias/noticias.php") ?>"><span>Notícias</span></a></h2>
-							<div>
-								<div class="row">
-									<?php
-									$sql = "SELECT * FROM eventos ORDER BY idEve DESC LIMIT 4";
-									$eventos = retornaDados($sql);
-
-									foreach ($eventos as $evento) { ?>
-										<div class="col-3 col-6-medium col-12-small">
-											<!-- Feature -->
-											<div class="container-fluid">
-												<div class="row">
-
-													<section class="">
-														<img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" style="width:300px; height:auto;">
-														<h3 class="mb-4">Nome: <a class="titulo-hover" href="<?= arquivo('modulos/modulos-site/noticias/noticias.php') ?>"><?= $evento['nomeEve'] ?></a></h3>
-														<p class="mb-4">Local: <?= $evento['localEve'] ?></p>
-														<p class="mb-4">data: <?= $evento['dataEve'] ?>/<?= $evento['horaEve'] ?></p>
-														<p class="mb-4">
-															sobre: <?= substr($evento['descricaoEve'], 0, 200) ?>...
-														</p>
-												</div>
-											</div>
-						</section>
-					</div>
-
-				<?php } ?>
+					
 				</div>
-				<div class="text-right">
-					<a class="button " href="<?= arquivo('modulos/modulos-site/noticias/noticias.php') ?>">Ver mais</a>
 
-				</div>
 			</div>
 	</div>
 	</div>

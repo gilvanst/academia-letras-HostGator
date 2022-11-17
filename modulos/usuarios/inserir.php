@@ -63,6 +63,20 @@ verificaAcesso();
                                     campo obrigatório!
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="poema">Tipo de usúario</label>
+                                <select class="custom-select" name="tipo" required>
+                                    <option>Administrador</option>
+                                    <option selected>autor</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    Tudo certo!
+                                </div>
+                                <div class="invalid-feedback">
+                                    campo obrigatório!
+                                </div>
+                                
+                            </div>
 
                             <div class="form-group">
                                 <label for="email">Email</label>

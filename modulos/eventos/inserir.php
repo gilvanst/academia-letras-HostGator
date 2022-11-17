@@ -41,7 +41,7 @@ verificaAcesso(['administrador']);
                         <form action="insert.php" enctype="multipart/form-data" method="POST" class="needs-validation" novalidate>
 
                             <div class="form-group ">
-                                <label for="imagem">Capa da obra</label>
+                                <label for="imagem">foto do evento</label>
                                 <input type="file" class="form-control-file" id="imagem" name="imagemEve" required>
 
                             </div>
