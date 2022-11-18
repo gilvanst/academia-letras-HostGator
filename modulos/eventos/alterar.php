@@ -3,7 +3,7 @@
 
 <?php
         include '../../config.php';
-        verificaAcesso(['administrador']);
+        verificaAcesso();
 
         if (!empty($_GET['idEve'])) {
             $id = $_GET['idEve'];

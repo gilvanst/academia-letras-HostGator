@@ -4,7 +4,7 @@
 <?php
 include '../../config.php';
 
-verificaAcesso(['administrador']);
+verificaAcesso();
 ?>
 
 <?php include_once path('template/head.php'); ?>

@@ -66,7 +66,6 @@ include 'config.php';
 												<article class="box post">
 													<header>
 														<h3><a href="#"><?= $evento['nomeEve'] ?></a></h3>
-														<p>With a smaller subtitle that attempts to elaborate</p>
 														<ul class="meta">
 															<li class="icon fa-clock"><?= $evento['dataEve'] ?></li>
 															<li class="icon fa-comments"><?= $evento['horaEve'] ?></a></li>
@@ -76,7 +75,8 @@ include 'config.php';
 													<p>
 														<?= $evento['descricaoEve'] ?>
 													</p>
-													<a href="#" class="button">Continue Reading</a>
+													<div class="text-right"></div>
+													<a href="#" class="button">Ver mais</a>
 												</article>
 
 										</div>
