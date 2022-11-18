@@ -14,44 +14,82 @@ include '../../../config.php';
 </header>
 <html>
 
-<body class="homepage is-preload">
+<body class="is-preload">
 	<div id="page-wrapper">
 
 		<?php include_once path('template/template-site/navbar.php'); ?>
-
 		<!-- Main -->
+		
 		<section id="main">
 			<div class="container">
+				
+
 				<div class="row">
-				<div class="col-12">
+				
+
+						<form action="publicacao.php" method="POST" class="form-inline">
+							<div class="row">
+								<div class="col">
+
+									<input class="form-control  " type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
+								</div>
+								<div class="col">
+
+									<input type="submit"  value="Pesquisar">
+								</div>
+							</div>
+						</form>
+
+					
+
+					<div class="col-12">
 						<section class="box features">
+							
 							<div>
+								
 								<div class="row">
-								<?php
-										$sql = "SELECT * FROM publicacoes ORDER BY IdPub ASC ";
-										$publicacoes = retornaDados($sql);
+									<?php
+									if (!empty($_POST['pesquisa'])) {
+										$sql = "SELECT 
+													* 
+												FROM 
+													publicacoes 
+												WHERE
+													tituloPub LIKE '%{$_POST['pesquisa']}%'
+													OR autoresPub LIKE '%{$_POST['pesquisa']}%'
+													OR generoPub LIKE '%{$_POST['pesquisa']}%'";
 
-										foreach($publicacoes as $publicacao)
-										{ ?>
-											<div class="col-3 col-6-medium col-12-small">
-												<!-- Feature -->
-												<section class="box feature">
-													<h3><a class="titulo-hover" href="visualizar.php?IdPub=<?=$publicacao['IdPub']?>">
-													<?= $publicacao['tituloPub'] ?></a></h3>
+										$sql .= " ORDER BY tituloPub ASC";
+									} else {
+										$sql = "SELECT * FROM publicacoes ORDER BY tituloPub ASC";
+									}
+									
 
-													<p>
-														<?= substr($publicacao['textoPub'], 0, 200) ?>...
-													</p>
-												</section>
-											</div>
+									$publicacoes = retornaDados($sql);
 
-										<?php } ?>
+									foreach ($publicacoes as $publicacao) { ?>
+										<div class="col-3 col-6-medium col-12-small">
+											<!-- Feature -->
+											<section class="box feature">
+												<h3><a class="titulo-hover" href="#"><?= $publicacao['tituloPub'] ?></a></h3>
+
+												<p>
+													<?= substr($publicacao['textoPub'], 0, 200) ?>...
+												</p>
+											</section>
+										</div>
+										
+
+									<?php } ?>
+									
+									
 
 								</div>
 							</div>
+							
+
 						</section>
 					</div>
-					
 				</div>
 			</div>
 		</section>
@@ -60,9 +98,9 @@ include '../../../config.php';
 		<footer id="footer">
 			<div class="container">
 				<div class="row gtr-200">
-				<?php include_once path('template/template-site/contato.php'); ?>
-					
-				</div>		
+					<?php include_once path('template/template-site/contato.php'); ?>
+
+				</div>
 
 			</div>
 		</footer>
