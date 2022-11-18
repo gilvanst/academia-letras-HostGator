@@ -14,6 +14,7 @@
             <a class="collapse-item" href="<?= arquivo('modulos/obras/obras.php')?>">Obra</a>
             <a class="collapse-item" href="<?= arquivo('modulos/publicacao/publicacao.php') ?>">Publicações</a>
             <a class="collapse-item" href="<?= arquivo('modulos/revista/revista.php') ?>">Revista Plural</a>
+            <a class="collapse-item" href="<?= arquivo('modulos/videos/videos.php') ?>">Videos</a>
             <?php if(podeMostrar(['administrador'])){ ?>
             <a class="collapse-item" href="<?= arquivo('modulos/usuarios/usuarios.php')?>">Usuários</a>
             <?php } ?>
