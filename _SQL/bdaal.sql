@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Nov-2022 às 20:33
+-- Tempo de geração: 18-Nov-2022 às 21:44
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -148,6 +148,26 @@ INSERT INTO `publicacoes` (`IdPub`, `tituloPub`, `autoresPub`, `generoPub`, `tex
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `revista`
+--
+
+CREATE TABLE `revista` (
+  `id` int(11) NOT NULL,
+  `edicao` varchar(30) NOT NULL,
+  `ano` varchar(5) NOT NULL,
+  `pdf` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `revista`
+--
+
+INSERT INTO `revista` (`id`, `edicao`, `ano`, `pdf`) VALUES
+(3, '12', '2022', '121811202207114609.pdf');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `usuario`
 --
 
@@ -168,6 +188,27 @@ INSERT INTO `usuario` (`id`, `nome`, `email`, `telefone`, `senha`, `tipo`) VALUE
 (15, 'adm', 'adm@adm', 123, '123', 'administrador'),
 (16, 'adm', 'adm1@adm', 123, '123', 'autor'),
 (23, 'gilvan', 'adm5@adm', 123, '123', 'autor');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `videos`
+--
+
+CREATE TABLE `videos` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(200) NOT NULL,
+  `sobre` text NOT NULL,
+  `link` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `videos`
+--
+
+INSERT INTO `videos` (`id`, `nome`, `sobre`, `link`) VALUES
+(1, 'jogue na minha', 'jogue na minha papai', 'https://youtu.be/AlVl7VM6wLU'),
+(2, 'jair bolsonaro', 'eu so querooo', 'https://youtu.be/wAJgfGkZ3Kg');
 
 --
 -- Índices para tabelas despejadas
@@ -204,9 +245,21 @@ ALTER TABLE `publicacoes`
   ADD PRIMARY KEY (`IdPub`);
 
 --
+-- Índices para tabela `revista`
+--
+ALTER TABLE `revista`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `usuario`
 --
 ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `videos`
+--
+ALTER TABLE `videos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -244,10 +297,22 @@ ALTER TABLE `publicacoes`
   MODIFY `IdPub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
+-- AUTO_INCREMENT de tabela `revista`
+--
+ALTER TABLE `revista`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT de tabela `videos`
+--
+ALTER TABLE `videos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
