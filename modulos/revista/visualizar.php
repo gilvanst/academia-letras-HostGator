@@ -46,8 +46,7 @@ foreach (retornaDado($sql) as $row) {
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <h1 class="display-4 text-center">Revista Plural <?=$revista['ano']?></h1>
-
-                    <img src="../../pdf/<?= $revista['pdf'] ?>"  class=" align-self-start mr-3 rounded" width="200px" height="288px" >
+                    <iframe src="../../pdf/<?= $revista['pdf'] ?> "  width="100%" height="500px" frameborder="0" dowload></iframe>
 
                     <div class="text-left my-3 ">
                         <p>edição: <?= $revista['edicao']?></p>

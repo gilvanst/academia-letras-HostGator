@@ -71,12 +71,12 @@ include 'config.php';
 															<li class="icon fa-comments"><?= $evento['horaEve'] ?></a></li>
 														</ul>
 													</header>
-													<a href="#" class="image featured"><img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" alt="evento" /></a>
+													<a href="modulos/modulos-site/noticias/visualizar.php?idEve=<?=$evento['idEve']?>" class="image featured"><img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" alt="evento" /></a>
 													<p>
 														<?= $evento['descricaoEve'] ?>
 													</p>
 													<div class="text-right"></div>
-													<a href="#" class="button">Ver mais</a>
+													<a href="modulos/modulos-site/noticias/noticias.php" class="button">Ver mais</a>
 												</article>
 
 										</div>
