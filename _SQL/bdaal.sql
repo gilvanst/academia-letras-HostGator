@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Nov-2022 às 02:31
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.0.13
+-- Tempo de geração: 22-Nov-2022 às 21:36
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -163,7 +163,8 @@ CREATE TABLE `revista` (
 --
 
 INSERT INTO `revista` (`id`, `edicao`, `ano`, `pdf`) VALUES
-(3, '12', '2022', '121811202207114609.pdf');
+(3, '12', '2022', '121811202207114609.pdf'),
+(4, '11', '2021', '112211202207114528.pdf');
 
 -- --------------------------------------------------------
 
@@ -300,7 +301,7 @@ ALTER TABLE `publicacoes`
 -- AUTO_INCREMENT de tabela `revista`
 --
 ALTER TABLE `revista`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
