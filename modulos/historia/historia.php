@@ -38,13 +38,16 @@ verificaAcesso();
                         <h1 class="display-4 text-center">Nossa história</h1>
 
                         <div class="text-justify"><?= $row['texto'] ?></div>
+                        
+                        <div class="text-right my-3">
+                            <a class="btn btn-sm btn-warning" href="alterar.php?idHis=<?= $row['idHis'] ?>">Alterar</a>
+                        </div>
                     </div>
 
                 <?php }
 
                 Banco::desconectar();
                 ?>
-
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">

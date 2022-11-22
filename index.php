@@ -81,14 +81,14 @@ include 'config.php';
 
 										</div>
 									</div>
-									<div class="col-3 col-12-medium">
+									<div class="col-3 col-12-medium mt-3">
 										<div class="sidebar">
 
 											<!-- Archives -->
 											<ul class="divided">
 												<li>
 													<article class="box post-summary">
-														<h3><a href="#">A Subheading</a></h3>
+														<h3><a href="<?= arquivo('modulos/modulos-site/revista/revista.php')?>">Revista Plural</a></h3>
 														<ul class="meta">
 															<li class="icon fa-clock">6 hours ago</li>
 															<li class="icon fa-comments"><a href="#">34</a></li>
@@ -97,7 +97,7 @@ include 'config.php';
 												</li>
 												<li>
 													<article class="box post-summary">
-														<h3><a href="#">Another Subheading</a></h3>
+														<h3><a href="<?= arquivo('modulos/modulos-site/videos/videos.php')?>">Nossos Videos</a></h3>
 														<ul class="meta">
 															<li class="icon fa-clock">9 hours ago</li>
 															<li class="icon fa-comments"><a href="#">27</a></li>
@@ -132,7 +132,7 @@ include 'config.php';
 													</article>
 												</li>
 											</ul>
-											<a href="#" class="button alt">Archives</a>
+											
 
 										</div>
 									</div>

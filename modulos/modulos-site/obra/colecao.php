@@ -25,22 +25,11 @@ include '../../../config.php';
 		<section id="main">
 			<div class="container">
 
-
 				<div class="row">
-					<form action="colecao.php"  method="POST" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-						<div class="input-group">
-							<input type="text" class="form-control bg-light border-0 small" placeholder="Procurar por......" aria-label="Search" aria-describedby="basic-addon2"
-							name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
-							<div class="input-group-append">
-								<input class="btn btn-primary" type="submit">
-									<i class="fas fa-search fa-sm"></i>
-								</input>
-							</div>
-						</div>
-					</form> 
 
 
-					<!--<form action="colecao.php" method="POST" class="form-inline">
+
+					<form action="colecao.php" method="POST" class="form-inline">
 						<div class="row">
 							<div class="col">
 
@@ -51,11 +40,11 @@ include '../../../config.php';
 								<input type="submit" value="Pesquisar">
 							</div>
 						</div>
-					</form>-->
+					</form>
 
 
 
-					<div class="col-12">
+					<div class="col-12 	">
 						<section class="box features">
 
 							<div>
@@ -111,18 +100,19 @@ include '../../../config.php';
 					</div>
 				</div>
 			</div>
-		</section>
+	</div>
+	</section>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="container">
-				<div class="row gtr-200">
-					<?php include_once path('template/template-site/contato.php'); ?>
-
-				</div>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<div class="row gtr-200">
+				<?php include_once path('template/template-site/contato.php'); ?>
 
 			</div>
-		</footer>
+
+		</div>
+	</footer>
 
 	</div>
 

@@ -95,7 +95,7 @@ verificaAcesso();
 
                         <div class="text-right my-3">
                             <input class="btn btn-primary" type="submit" value="Alterar">
-                            <a class="btn btn-info" href="usuarios.php">Voltar</a>
+                            <a class="btn btn-info" href="../perfil/perfil.php?id=<?= $id?>">Voltar</a>
                         </div>
                     </form>
 
