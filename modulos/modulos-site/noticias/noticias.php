@@ -37,10 +37,9 @@ include '../../../config.php';
 											<!-- Feature -->
 											<div class="container-fluid">
 												<div class="row">
-
-													<section class="">
+													<section class="box feature">
 														<img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" style="width:300px; height:auto;">
-														<h3 class="mb-4">Nome: <a class="titulo-hover" href="<?= arquivo('modulos/modulos-site/noticias/noticias.php')?>"><?= $evento['nomeEve'] ?></a></h3>
+														<h3><a class="titulo-hover" href="visualizar.php?idEve=<?= $evento['idEve'] ?>"><?= $evento['nomeEve'] ?></a></h3>
 														<p class="mb-4">Local: <?= $evento['localEve'] ?></p>
 														<p class="mb-4">data: <?= $evento['dataEve'] ?>/<?= $evento['horaEve'] ?></p>
 														<p class="mb-4">

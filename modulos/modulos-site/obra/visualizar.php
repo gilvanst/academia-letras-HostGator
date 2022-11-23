@@ -36,7 +36,7 @@
             <header id="header">
                 <div class="logo container">
                     <div>
-                        <h1><?= $obra['tituloObra'] ?></h1>
+                    <h1> <a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>" class="button2">  <?= $obra['tituloObra'] ?></a></h1>
                         <p></p>
                     </div>
                 </div>
@@ -87,6 +87,11 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="text-right">
+                             <a class="button " href="<?= arquivo('modulos/modulos-site/obra/colecao.php') ?>">Voltar</a>
+
+                        </div>
+
                     </section>
 
                     <!-- Footer -->
