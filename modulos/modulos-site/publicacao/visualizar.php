@@ -6,7 +6,7 @@ include '../../../config.php';
 if (!empty($_GET['IdPub'])) {
     $id = $_GET['IdPub'];
 }
-$sql = 'SELECT * FROM publicacoes  where IdPub= ' . $id . '';
+$sql = 'SELECT * FROM publicacoes  where idPub= ' . $id .'';
 $publicacao = retornaDado($sql);
 
 
@@ -27,8 +27,8 @@ foreach (retornaDado($sql) as $row) {
 <header id="header">
     <div class="logo container">
         <div>
-            <h1><?= $publicacao['tituloPub'] ?></h1>
-            <p></p>
+        <h1> <a href="<?= arquivo("modulos/modulos-site/publicacao/publicacao.php") ?>" class="button2">  <?= $publicacao['tituloPub'] ?></a></h1>
+                    <p></p>
         </div>
     </div>
 </header>
@@ -60,6 +60,10 @@ foreach (retornaDado($sql) as $row) {
                     </div>
                 </div>
             </div>
+            <div class="text-right">
+                <a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Voltar</a>
+
+             </div>
         </section>
 
         <!-- Footer -->
