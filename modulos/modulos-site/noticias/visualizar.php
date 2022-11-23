@@ -28,14 +28,14 @@ foreach (retornaDado($sql) as $row) {
 <?php include_once path('template/template-site/head.php'); ?>
 
 
-    <header id="header">
-        <div class="logo container">
-            <div>
-                <h1><?= $evento['nomeEve'] ?></h1>
-                <p></p>
+        <header id="header">
+            <div class="logo container">
+                <div>
+                    <h1> <a href="<?= arquivo("modulos/modulos-site/noticias/noticias.php") ?>" class="button2">  <?= $evento['nomeEve'] ?></a></h1>
+                    <p></p>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
 
     <body class="is-preload">
@@ -71,6 +71,9 @@ foreach (retornaDado($sql) as $row) {
                             </section>
                         </div>
                     </div>
+                </div>
+                <div class="text-right">
+                    <a class="button" href="<?= arquivo('modulos/modulos-site/noticias/noticias.php') ?>">Voltar</a>
                 </div>
             </section>
 
