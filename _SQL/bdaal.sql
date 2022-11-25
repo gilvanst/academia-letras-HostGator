@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Nov-2022 às 21:36
+-- Tempo de geração: 25-Nov-2022 às 21:35
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -41,7 +41,7 @@ CREATE TABLE `academicos` (
 --
 
 INSERT INTO `academicos` (`idAcad`, `nomeAcad`, `cadeiraAcad`, `posicaoAcad`, `sobreAcad`, `fotoAcad`) VALUES
-(23, '', '', 'rei do mundo', 'simplesmente o cara mais foda, amo ele ', 'Vovô lee0911202206112032.jpg');
+(23, '', '', 'rei do mundo', 'simplesmente o cara mais foda, amo ele ', '2511202207113741.jpg');
 
 -- --------------------------------------------------------
 
@@ -84,6 +84,28 @@ CREATE TABLE `historia` (
 
 INSERT INTO `historia` (`idHis`, `texto`) VALUES
 (1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quo incidunt, aliquam odio accusantium repellendus reiciendis minima tempora eveniet qui illum nostrum eos labore laudantium vel ducimus expedita! Consequuntur, cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quo incidunt, aliquam odio accusantium repellendus reiciendis minima tempora eveniet qui illum nostrum eos labore laudantium vel ducimus expedita! Consequuntur, cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quo incidunt, aliquam odio accusantium repellendus reiciendis minima tempora eveniet qui illum nostrum eos labore laudantium vel ducimus expedita! Consequuntur, cumque!');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `memorial`
+--
+
+CREATE TABLE `memorial` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(150) NOT NULL,
+  `cadeira` varchar(10) NOT NULL,
+  `posicao` varchar(50) NOT NULL,
+  `sobre` text NOT NULL,
+  `foto` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `memorial`
+--
+
+INSERT INTO `memorial` (`id`, `nome`, `cadeira`, `posicao`, `sobre`, `foto`) VALUES
+(1, 'Josisvaldo Santos', '4', 'Patrono', '', 'Josisvaldo Santos2511202208113257.jpg');
 
 -- --------------------------------------------------------
 
@@ -208,8 +230,7 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `nome`, `sobre`, `link`) VALUES
-(1, 'jogue na minha', 'jogue na minha papai', 'https://youtu.be/AlVl7VM6wLU'),
-(2, 'jair bolsonaro', 'eu so querooo', 'https://youtu.be/wAJgfGkZ3Kg');
+(3, 'fut', 'dasljdslsajdsa', 'https://www.youtube.com/watch?v=ntKeSghZyag&ab_channel=iLance7i');
 
 --
 -- Índices para tabelas despejadas
@@ -232,6 +253,12 @@ ALTER TABLE `eventos`
 --
 ALTER TABLE `historia`
   ADD PRIMARY KEY (`idHis`);
+
+--
+-- Índices para tabela `memorial`
+--
+ALTER TABLE `memorial`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `obra`
@@ -286,6 +313,12 @@ ALTER TABLE `historia`
   MODIFY `idHis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT de tabela `memorial`
+--
+ALTER TABLE `memorial`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de tabela `obra`
 --
 ALTER TABLE `obra`
@@ -313,7 +346,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
