@@ -16,7 +16,7 @@ $pagina_atual = $pagina_atual[count($pagina_atual) - 1];
 				<li><a href="<?= arquivo('modulos/modulos-site/historia/historia.php') ?>">Nossa história</a></li>
 				<li><a href="<?= arquivo('modulos/modulos-site/membros/membros.php') ?>">Membros</a></li>
 
-				<li><a href="<?= arquivo('modulos/modulos-site/linha-tempo/linha.tempo.php') ?>">Linha do tempo</a></li>
+				<li><a href="<?= arquivo('modulos/modulos-site/memorial/memorial.php') ?>">Memorial</a></li>
 			</ul>
 		</li>
 

@@ -6,6 +6,22 @@ include '../../config.php';
 
     verificaAcesso();
 
+    if (!empty($_GET['id'])) {
+        $id = $_GET['id'];
+    }
+    
+    $pdo = Banco::conectar();
+    $sql = 'SELECT * FROM memorial where id = ' . $id . '';
+    
+    foreach ($pdo->query($sql) as $row) {
+        $id      = $row['id'];
+        $nome    = $row['nome'];
+        $cadeira = $row['cadeira'];
+        $posicao = $row['posicao'];
+        $sobre   = $row['sobre'];
+        $foto    = $row['foto'];
+    }
+    Banco::desconectar();
 ?>
 
 <?php include_once path('template/head.php'); ?>
@@ -35,56 +51,40 @@ include '../../config.php';
                     <h1 class="display-4 text-center">Alterar Cadastro</h1>
 
 
-                    <?php
-                    if (!empty($_GET['idAcad'])) {
-                        $id = $_GET['idAcad'];
-                    }
+                   
+                   
 
-                    $pdo = Banco::conectar();
-                    $sql = 'SELECT * FROM academicos where idAcad = ' . $id . '';
-
-                    foreach ($pdo->query($sql) as $row) {
-                        $id      = $row['idAcad'];
-                        $nome    = $row['nomeAcad'];
-                        $cadeira = $row['cadeiraAcad'];
-                        $posicao = $row['posicaoAcad'];
-                        $sobre   = $row['sobreAcad'];
-                        $foto    = $row['fotoAcad'];
-                    }
-                    Banco::desconectar();
-                    ?>
-
-                    <form action="updateAcad.php" enctype="multipart/form-data" method="POST">
+                    <form action="update.php" enctype="multipart/form-data" method="POST">
 
                         <div class="form-group">
                             <label for="foto">Foto</label><br>
-                            <input class="form-control-file" type="file" id="file" name="fotoAcad" value="<?php echo $foto; ?>">
+                            <input class="form-control-file" type="file" id="file" name="foto"><?=$row['foto']?>
                         </div>
 
                         <div class="form-group">
                             <label for="nome">Nome</label><br>
-                            <input class="form-control" type="text" id="nome" name="nomeAcad" value="<?php echo $nome; ?>">
+                            <input class="form-control" type="text" id="nome" name="nome" value="<?php echo $row['nome']?>">
                         </div>
 
                         <div class="form-group ">
                             <label for="cadeira">Cadeira</label><br>
-                            <input class="form-control" type="number" id="cadeira" name="cadeiraAcad" value="<?php echo $cadeira; ?>">
+                            <input class="form-control" type="number" id="cadeira" name="cadeira" value="<?php echo $row['cadeira']?>">
                         </div>
 
                         <div class="form-gorup">
                             <label for="posicao">Posição</label><br>
-                            <input class="form-control" type="text" id="posicao" name="posicaoAcad" value="<?php echo $posicao; ?>">
+                            <input class="form-control" type="text" id="posicao" name="posicao" value="<?php echo $row['posicao']?>">
                         </div>
                         <div class="form-gorup">
                             <label for="sobre">Informações sobre o acadêmico</label>
-                            <textarea class="form-control" type="text" id="sobre" name="sobreAcad"><?php echo $sobre; ?></textarea>
+                            <textarea class="form-control" type="text" id="sobre" name="sobre" value="<?php echo $row['sobre']?>"></textarea>
                         </div>
 
-                        <input type="hidden" id="id" name="idAcad" value="<?php echo $id; ?>">
+                        <input type="hidden" id="id" name="id" value="<?php echo $row['id'];?>">
 
                         <div class="text-right my-3">
                             <input class="btn btn-primary" type="submit" value="Alterar">
-                            <a class="btn btn-info" href="academicos.php">Voltar</a>
+                            <a class="btn btn-info" href="memorial.php">Voltar</a>
                         </div>
                     </form>
 
