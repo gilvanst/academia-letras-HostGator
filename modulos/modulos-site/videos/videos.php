@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <?php
 include '../../../config.php';
-?>
 
-<?php include_once path('template/template-site/head.php'); ?>
+include_once path('template/template-site/head.php');
+?>
 <header id="header">
     <div class="logo container">
         <div>
@@ -25,11 +25,19 @@ include '../../../config.php';
 
 
                 <div class="row">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wAJgfGkZ3Kg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <?php
 
+                    
+                    $sql = "SELECT * FROM videos ORDER BY id ASC ";
 
+                    $videos = retornaDados($sql);
+                    
+
+                    foreach ($videos as $video) { ?>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= url($video['link']) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
+        <?php } ?>
         </section>
 
         <!-- Footer -->

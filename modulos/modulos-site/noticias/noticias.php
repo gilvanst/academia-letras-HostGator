@@ -29,7 +29,7 @@ include '../../../config.php';
 							<div>
 								<div class="row">
 									<?php
-									$sql = "SELECT * FROM eventos ORDER BY idEve DESC LIMIT 4";
+									$sql = "SELECT * FROM eventos ORDER BY idEve DESC ";
 									$eventos = retornaDados($sql);
 
 									foreach ($eventos as $evento) { ?>
