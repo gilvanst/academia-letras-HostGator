@@ -5,24 +5,12 @@ verificaAcesso();
 
 $nome = $_POST['nome'];
 $sobre = $_POST['sobre'];
-
 $link = $_POST['link'];
-
-if(empty($nome)){
-    $mensagem = " campo obrigatório!";
-    header('Location: ' . arquivo('modulos/eventos/inserir.php?mensagem=' . $mensagem));
-    exit();
-}
-if(empty($sobre)){
-    $mensagem = " campo obrigatório!";
-    header('Location: ' . arquivo('modulos/eventos/inserir.php?mensagem=' . $mensagem));
-    exit();
-}
 if(empty($link)){
-    $mensagem = " campo obrigatório!";
-    header('Location: ' . arquivo('modulos/eventos/inserir.php?mensagem=' . $mensagem));
-    exit();
-}
+    url($link);
+    print_r($link);
+}   
+
 $pdo = Banco::conectar();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

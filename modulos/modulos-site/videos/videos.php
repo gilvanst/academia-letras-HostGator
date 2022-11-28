@@ -8,7 +8,7 @@ include_once path('template/template-site/head.php');
     <div class="logo container">
         <div>
             <h1><a href="<?= arquivo('index.php') ?>" id="logo"></a></h1>
-            <p> publicações</p>
+            <p> Galeria de videos</p>
         </div>
     </div>
 </header>
