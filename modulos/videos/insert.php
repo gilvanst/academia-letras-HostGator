@@ -5,6 +5,7 @@ verificaAcesso();
 
 $nome = $_POST['nome'];
 $sobre = $_POST['sobre'];
+
 $link = $_POST['link'];
 
 if(empty($nome)){
