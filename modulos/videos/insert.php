@@ -5,11 +5,9 @@ verificaAcesso();
 
 $nome = $_POST['nome'];
 $sobre = $_POST['sobre'];
+
 $link = $_POST['link'];
-if(empty($link)){
-    url($link);
-    print_r($link);
-}   
+
 
 $pdo = Banco::conectar();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
