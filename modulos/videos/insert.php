@@ -1,27 +1,24 @@
 <?php
-include '../../config.php';
-verificaAcesso();
+    include '../../config.php';
+    verificaAcesso();
 
+    $nome = $_POST['nome'];
+    $sobre = $_POST['sobre'];
+    $link = $_POST['link'];
 
-$nome = $_POST['nome'];
-$sobre = $_POST['sobre'];
+    $pdo = Banco::conectar();
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$link = $_POST['link'];
+    $sql = "INSERT INTO  videos  (nome, sobre, link) VALUES (?, ?, ?)";
+    $q = $pdo->prepare($sql);
+    $q->execute(array( $nome, $sobre, $link));
 
+    $id = $pdo->lastInsertId();
 
-$pdo = Banco::conectar();
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    Banco::desconectar();
 
-$sql = "INSERT INTO  videos  (nome, sobre, link) VALUES (?,?,?)";
-$q = $pdo->prepare($sql);
-$q->execute(array( $nome, $sobre, $link));
-
-$id = $pdo->lastInsertId();
-
-Banco::desconectar();
-
-if(!empty($id)){
-    header("Location: visualizar.php?id=$id");
-}else{
-    header('Location: inserir.php');
-}
+    if(!empty($id)){
+        header("Location: visualizar.php?id=$id");
+    }else{
+        header('Location: inserir.php');
+    }

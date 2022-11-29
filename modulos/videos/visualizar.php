@@ -47,7 +47,7 @@ foreach (retornaDado($sql) as $row) {
                 <div class="container-fluid">
                     <h1 class="display-4 text-center"> <?=$video['nome']?></h1>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= url($video['link'])?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="<?= getEmbedLink($video['link']) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     <div class="text-left my-3 ">
                         <p>edição: <?= $video['sobre']?></p>
