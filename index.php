@@ -162,14 +162,14 @@ include 'config.php';
 							<div>
 								<div class="row">
 									<?php
-									$sql = "SELECT * FROM publicacoes ORDER BY idPub DESC LIMIT 4";
+									$sql = "SELECT * FROM publicacoes ORDER BY IdPub DESC LIMIT 4";
 									$publicacoes = retornaDados($sql);
 
 									foreach ($publicacoes as $publicacao) { ?>
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
 											<section class="box feature">
-												<h3><a class="titulo-hover" href="#"><?= $publicacao['tituloPub'] ?></a></h3>
+												<h3><a class="titulo-hover" href="modulos/modulos-site/publicacao/visualizar.php?IdPub=<?=$publicacao['IdPub']?>"><?= $publicacao['tituloPub'] ?></a></h3>
 
 												<p>
 													<?= substr($publicacao['textoPub'], 0, 200) ?>...

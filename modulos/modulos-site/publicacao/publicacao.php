@@ -22,26 +22,24 @@ include '../../../config.php';
 		
 		<section id="main">
 			<div class="container">
-				
-
 				<div class="row">
-				
-
-						<form action="publicacao.php" method="POST" class="form-inline">
-							<div class="row">
-								<div class="col">
-
-									<input class="form-control  " type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
-								</div>
-								<div class="col">
-
-									<input type="submit"  value="Pesquisar">
-								</div>
+					<form action="publicacao.php" method="POST" class="form-inline">
+						<div class="row">
+							<div class="col">
+								
+								<input type="submit"  value="Pesquisar">
 							</div>
-						</form>
+							<div class="col">
+	
+								<input class="form-control  " type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
+							</div>
+						</div>
+					</form>
+				
 
 					
-
+					
+					
 					<div class="col-12">
 						<section class="box features">
 							

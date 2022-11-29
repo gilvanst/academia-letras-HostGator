@@ -33,11 +33,11 @@ include '../../../config.php';
 						<div class="row">
 							<div class="col">
 
-								<input class="form-control  " type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
+								<input type="submit" value="Pesquisar">
 							</div>
 							<div class="col">
 
-								<input type="submit" value="Pesquisar">
+								<input class="form-control  " type="text" name="pesquisa" value="<?= empty($_POST['pesquisa']) ? '' : $_POST['pesquisa'] ?>">
 							</div>
 						</div>
 					</form>
