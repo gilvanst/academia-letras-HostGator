@@ -50,7 +50,7 @@ verificaAcesso();
                                     campo obrigatório!
                                 </div>
                             </div> 
-
+ 
 
                             <div class="form-group">
                                 <label for="autores">Autores</label>

@@ -151,7 +151,7 @@ include 'config.php';
 							</div>
 						</section>
 						<div class="text-right">
-							<a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Ver mais</a>
+							<a class="button " href="<?= arquivo('modulos/modulos-site/obra/colecao.php') ?>">Ver mais</a>
 
 						</div>
 					</div>

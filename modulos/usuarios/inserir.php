@@ -49,7 +49,7 @@ verificaAcesso();
 
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
-                        <h1 class="display-4 text-center">Alterar Cadastro</h1>
+                        <h1 class="display-4 text-center">Cadastrar usuario</h1>
 
                         <form action="insert.php" method="POST" class="needs-validation" novalidate>
 

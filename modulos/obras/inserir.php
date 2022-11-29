@@ -4,7 +4,9 @@
 <?php
 include '../../config.php';
 verificaAcesso();
-
+if (!empty($_GET['idObra'])) {
+    $id = $_GET['idObra'];
+}
 ?>
 
 <?php include_once path('template/head.php'); ?>
@@ -36,7 +38,7 @@ verificaAcesso();
 
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
-                        <h1 class="display-4 text-center">Cadastrar Publicação</h1>
+                        <h1 class="display-4 text-center">Cadastrar Obra</h1>
 
                         <form action="insert.php" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
 

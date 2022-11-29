@@ -4,7 +4,7 @@
 <?php
 include '../../config.php';
 
-    verificaAcesso();
+verificaAcesso();
 
 
 ?>
@@ -37,9 +37,9 @@ include '../../config.php';
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="display-4 text-center">Alterar Cadastro</h1>
+                    <h1 class="display-4 text-center">Cadastrar</h1>
 
-                    <form action="insertAcad.php" enctype="multipart/form-data" method="POST">
+                    <form action="insertAcad.php" enctype="multipart/form-data" method="POST" class="needs-validation" novalidate>
                         <div class="form-group col-md-6">
                             <label for="image">Foto</label>
                             <input type="file" class="form-control-file" id="image" name="fotoAcad">
@@ -47,21 +47,45 @@ include '../../config.php';
 
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input class="form-control" type="text" id="nome" name="nomeAcad">
+                            <input class="form-control" type="text" id="nome" name="nomeAcad" required>
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                            <div class="invalid-feedback">
+                                campo obrigatório!
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label for="cadeira">Cadeira</label>
-                            <input class="form-control" type="number" id="cadeira" name="cadeiraAcad">
+                            <input class="form-control" type="number" id="cadeira" name="cadeiraAcad" required>
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                            <div class="invalid-feedback">
+                                campo obrigatório!
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label for="posicao">Posição</label>
-                            <input class="form-control" type="text" id="posicao" name="posicaoAcad">
+                            <input class="form-control" type="text" id="posicao" name="posicaoAcad" required>
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                            <div class="invalid-feedback">
+                                campo obrigatório!
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="sobre">sobre o acadêmico</label>
-                            <textarea class="form-control" type="text" id="sobre" name="sobreAcad"></textarea>
+                            <textarea class="form-control" type="text" id="sobre" name="sobreAcad" required></textarea>
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                            <div class="invalid-feedback">
+                                campo obrigatório!
+                            </div>
                         </div>
 
                         <div class="text-right my-3">
