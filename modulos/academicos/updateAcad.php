@@ -56,5 +56,5 @@ if (!empty($_POST)) {
 
     Banco::desconectar();
 
-    header("Location: academicos.php?idAcad=$id");
+    header("Location: visualizar.php?idAcad=$id");
 }
