@@ -71,7 +71,7 @@ include 'config.php';
 															<li class="icon fa-comments"><?= $evento['horaEve'] ?></a></li>
 														</ul>
 													</header>
-													<a href="modulos/modulos-site/noticias/visualizar.php?idEve=<?=$evento['idEve']?>" class="image featured"><img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" alt="evento" /></a>
+													<a href="modulos/modulos-site/noticias/visualizar.php?idEve=<?= $evento['idEve'] ?>" class="image featured"><img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" alt="evento" /></a>
 													<p>
 														<?= $evento['descricaoEve'] ?>
 													</p>
@@ -88,7 +88,7 @@ include 'config.php';
 											<ul class="divided">
 												<li>
 													<article class="box post-summary">
-														<h3><a href="<?= arquivo('modulos/modulos-site/revista/revista.php')?>">Revista Plural</a></h3>
+														<h3><a href="<?= arquivo('modulos/modulos-site/revista/revista.php') ?>">Revista Plural</a></h3>
 														<ul class="meta">
 															<li class="icon fa-clock">6 hours ago</li>
 															<li class="icon fa-comments"><a href="#">34</a></li>
@@ -97,60 +97,63 @@ include 'config.php';
 												</li>
 												<li>
 													<article class="box post-summary">
-														<h3><a href="<?= arquivo('modulos/modulos-site/videos/videos.php')?>">Nossos Videos</a></h3>
+														<h3><a href="<?= arquivo('modulos/modulos-site/videos/videos.php') ?>">Nossos Videos</a></h3>
 														<ul class="meta">
 															<li class="icon fa-clock">9 hours ago</li>
 															<li class="icon fa-comments"><a href="#">27</a></li>
 														</ul>
 													</article>
 												</li>
-												
-												
-												
+
+
+
 											</ul>
-											
+
 
 										</div>
 									</div>
+									<?php } ?>
 								</div>
 							</div>
 						</section>
-					<?php } ?>
 
 					</div>
-					<section class="box features">
-						<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>"><span>Coleção</span></a></h2>
-						<div>
-							<div class="row">
-								<?php
-								$sql = "SELECT * FROM obra ORDER BY idObra DESC LIMIT 4";
-								$obras = retornaDados($sql);
+					<div class="col-12">
 
-								foreach ($obras as $obra) { ?>
-									<div class="col-3 col-6-medium col-12-small">
-										<!-- Feature -->
-										<section class="box feature">
-											<a href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>" class="image featured">
-												<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
-											</a>
+						<section class="box features">
+							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>"><span>Coleção</span></a></h2>
+							<div>
+								<div class="row">
+									<?php
+									$sql = "SELECT * FROM obra ORDER BY idObra DESC LIMIT 4";
+									$obras = retornaDados($sql);
 
-											<h3><a class="titulo-hover" href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
+									foreach ($obras as $obra) { ?>
+										<div class="col-3 col-6-medium col-12-small">
+											<!-- Feature -->
+											<section class="box feature">
+												<a href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>" class="image featured">
+													<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
+												</a>
 
-											<p>
-												<?= substr($obra['sinopseObra'], 0, 200) ?>...
-											</p>
-										</section>
+												<h3><a class="titulo-hover" href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
 
-									</div>
+												<p>
+													<?= substr($obra['sinopseObra'], 0, 200) ?>...
+												</p>
+											</section>
 
-								<?php } ?>
+										</div>
 
+									<?php } ?>
+
+								</div>
 							</div>
-						</div>
-					</section>
-					<div class="text-right">
-						<a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Ver mais</a>
+						</section>
+						<div class="text-right">
+							<a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Ver mais</a>
 
+						</div>
 					</div>
 					</div>
 					<div class="col-12">
@@ -186,7 +189,7 @@ include 'config.php';
 
 						</div>
 					</div>
-					
+
 				</div>
 
 			</div>
