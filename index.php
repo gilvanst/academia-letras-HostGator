@@ -104,33 +104,9 @@ include 'config.php';
 														</ul>
 													</article>
 												</li>
-												<li>
-													<article class="box post-summary">
-														<h3><a href="#">And Another</a></h3>
-														<ul class="meta">
-															<li class="icon fa-clock">Yesterday</li>
-															<li class="icon fa-comments"><a href="#">184</a></li>
-														</ul>
-													</article>
-												</li>
-												<li>
-													<article class="box post-summary">
-														<h3><a href="#">And Another</a></h3>
-														<ul class="meta">
-															<li class="icon fa-clock">2 days ago</li>
-															<li class="icon fa-comments"><a href="#">286</a></li>
-														</ul>
-													</article>
-												</li>
-												<li>
-													<article class="box post-summary">
-														<h3><a href="#">And One More</a></h3>
-														<ul class="meta">
-															<li class="icon fa-clock">3 days ago</li>
-															<li class="icon fa-comments"><a href="#">8,086</a></li>
-														</ul>
-													</article>
-												</li>
+												
+												
+												
 											</ul>
 											
 
