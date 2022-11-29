@@ -34,7 +34,7 @@ include_once path('template/template-site/head.php');
                     
 
                     foreach ($videos as $video) { ?>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= url($video['link']) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="<?= getEmbedLink($video['link']) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         <?php } ?>

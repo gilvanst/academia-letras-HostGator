@@ -34,17 +34,14 @@ function usuario()
     return $query->fetch();
 }
 
-function url()
+function getYoutubeCode($link)
 {
-    if (!empty($_GET['id'])) {
-        $id = $_GET['id'];
-    }
-    
-    $sql = 'SELECT * FROM videos where id= ' . $id . ' ';
-    $video = retornaDado($sql);
+    preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $link, $match);
+    return $match[1];
+}
 
-    $url = $video['link'];
-    parse_str(parse_url($url, PHP_URL_QUERY), $my_array_of_vars);
-    echo $my_array_of_vars['v'];
-    // Output: C4kxS1ksqtw
+function getEmbedLink($url)
+{
+    $code = getYoutubeCode($url);
+    return "https://www.youtube.com/embed/$code";
 }
