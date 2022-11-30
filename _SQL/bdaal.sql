@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Nov-2022 às 20:29
+-- Tempo de geração: 30-Nov-2022 às 21:05
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -41,7 +41,10 @@ CREATE TABLE `academicos` (
 --
 
 INSERT INTO `academicos` (`idAcad`, `nomeAcad`, `cadeiraAcad`, `posicaoAcad`, `sobreAcad`, `fotoAcad`) VALUES
-(27, 'dsas', '242', '23', 'dfsvsc', 'dsas2911202208112302.jpg');
+(28, 'José', '2', 'patrono', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'José3011202206115851.jpg'),
+(29, 'maria', '2', 'teste', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'maria3011202207110127jpeg'),
+(30, 'Joana Santos', '3', 'patrono', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'Joana Santos3011202207110947.png'),
+(31, 'Pedro', '4', 'patrono', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'Pedro3011202207111220.jpg');
 
 -- --------------------------------------------------------
 
@@ -58,6 +61,14 @@ CREATE TABLE `eventos` (
   `descricaoEve` varchar(300) NOT NULL,
   `imagemEve` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `eventos`
+--
+
+INSERT INTO `eventos` (`idEve`, `nomeEve`, `localEve`, `dataEve`, `horaEve`, `descricaoEve`, `imagemEve`) VALUES
+(22, 'Apresentação do tcc ETEC', 'Etec Araçatuba', '2022-11-30', '19:00:00', 'Apresentação dos TCCs de ensino técnico ', '3011202208111536.jpg'),
+(23, 'Apresentação', 'Etec Araçatuba', '2022-11-30', '19:10:00', 'Apresentação dos TCCs', '3011202208115819.jpg');
 
 -- --------------------------------------------------------
 
@@ -92,6 +103,14 @@ CREATE TABLE `memorial` (
   `foto` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `memorial`
+--
+
+INSERT INTO `memorial` (`id`, `nome`, `cadeira`, `posicao`, `sobre`, `foto`) VALUES
+(3, 'Fernando Pessoa', '3', 'patrono', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\n', 'Fernando Pessoa3011202207111628.jpg'),
+(4, 'Machado De Assis', '5', 'algo', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\n', 'Machado De Assis3011202207111742.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -109,9 +128,18 @@ CREATE TABLE `obra` (
   `paginasObra` varchar(5) NOT NULL,
   `pdfObra` varchar(200) NOT NULL,
   `linkObra` varchar(200) NOT NULL,
-  `generoObra` varchar(20) NOT NULL,
-  `id_usuario` int(11) NOT NULL
+  `generoObra` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `obra`
+--
+
+INSERT INTO `obra` (`idObra`, `tituloObra`, `autoresObra`, `sinopseObra`, `imagemObra`, `isbnObra`, `anoObra`, `paginasObra`, `pdfObra`, `linkObra`, `generoObra`) VALUES
+(102, 'As vantagens de ser invisível', 'Stephen Chbosky', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\n', 'As vantagens de ser invisível3011202207114942.jpg', '6555320699', '2004', '204', 'As vantagens de ser invisível3011202207114942.pdf', 'https://www.amazon.com.br/VANTAGENS-SER-INVIS%C3%8DVEL-NOVA-EDI%C3%87%C3%83O/dp/6555320699', 'Romance'),
+(103, 'Por lugares incríveis', 'Jenifer niven', 'Violet Markey tinha uma vida perfeita, mas todos os seus planos deixam de fazer sentido quando ela e a irmã sofrem um acidente de carro e apenas Violet sobrevive. Sentindo-se culpada pelo que aconteceu, a garota se afasta de todos e tenta descobrir como seguir em frente. Theodore Finch é o esquisito da escola, perseguido pelos valentões e chamado de “aberração” por onde passa. Para piorar, é obrigado a lidar com longos períodos de depressão, o pai violento e a apatia do resto da família. Enquanto Violet conta os dias para o fim das aulas, quando poderá ir embora da cidadezinha onde mora, Finch pesquisa diferentes métodos de suicídio e imagina se conseguiria levar algum deles adiante. Em uma dessas tentativas, ele vai parar no alto da torre da escola e, para sua surpresa, encontra Violet, também prestes a pular. Um ajuda o outro a sair dali, e essa dupla improvável se une para fazer um trabalho de geografia: conhecer lugares incríveis do estado onde moram. Ao lado de Finch, Violet para de contar os dias e finalmente passa a vivê-los. O garoto, por sua vez, encontra alguém com quem pode ser ele mesmo, e torce para que consiga se manter desperto.\r\n\r\n“Me apaixonei por Violet e Finch antes mesmo de se apaixonarem um pelo outro. A jornada deles é adorável e inteligente e corajosa. Vai partir seu coração e relembrar o que significa estar vivo.” ― Jennifer E. Smith, autora de A probabilidade estatística do amor à primeira vista', 'Por lugares incríveis3011202207115915.jpg', '8565765571', '2003', '255', 'Por lugares incríveis3011202207115915.pdf', 'https://www.amazon.com.br/Por-lugares-incr%C3%ADveis-Jennifer-Niven/dp/8565765571/ref=d_pd_sbs_sccl_2_3/136-5443657-3885262?pd_rd_w=XtXLR&content-id=amzn1.sym.f14d3066-f640-490b-be63-642232e30730&pf_r', 'Romance'),
+(104, 'Memórias póstumas de brás cubas', 'Machado de Assis', 'Não tive filhos, não transmiti a nenhuma criatura o legado da nossa miséria. Com essas palavras, o narrador de Memórias Póstumas de Brás Cubas resume a sua vida. O tom assumido na obra, bem como as técnicas empregadas na composição romanesca, são alguns dos fatores que justificam o lugar de Machado de Assis entre os maiores escritores do século XIX. Neste romance repleto de digressões filosóficas, o escritor se vale da posição privilegiada de Brás Cubas, que, como defunto autor, narra as suas desventuras e revela as contradições da sociedade brasileira do século XIX, por meio de uma análise aprofundada de seus personagens.', 'Memórias póstumas de brás cubas3011202208110318.jpg', '8594318618', '1881', '192', '', 'https://www.amazon.com.br/Mem%C3%B3rias-P%C3%B3stumas-Cubas-Machado-Assis/dp/8594318618/ref=asc_df_8594318618/?tag=googleshopp00-20&linkCode=df0&hvadid=379725131710&hvpos=&hvnetw=g&hvrand=123738544643', 'Literatura Clássica'),
+(105, 'O pequeno príncipe', 'Saint-Exupéry', 'Nesta clássica história que marcou gerações de leitores em todo o mundo, um piloto cai com seu avião no deserto do Saara e encontra um pequeno príncipe, que o leva a uma jornada filosófica e poética através de planetas que encerram a solidão humana. A edição conta com a clássica tradução do poeta imortal dom Marcos Barbosa, e é a versão mais consagrada da obra, publicada no Brasil desde 1952.\r\n', 'O pequeno príncipe3011202208110713.jpg', '8778784887487', '8595081514', '96', 'O pequeno príncipe3011202208110713.pdf', 'https://www.amazon.com.br/pequeno-pr%C3%ADncipe-Antoine-Saint-Exup%C3%A9ry/dp/8595081514', 'Conto de fadas');
 
 -- --------------------------------------------------------
 
@@ -136,9 +164,7 @@ CREATE TABLE `publicacoes` (
 INSERT INTO `publicacoes` (`IdPub`, `tituloPub`, `autoresPub`, `generoPub`, `textoPub`, `id_usuario`, `poema`) VALUES
 (15, 'O Menino Azul', 'Cecília Meireles', 'Poemas', 'O menino quer um burrinho\r\npara passear.\r\nUm burrinho manso,\r\nque não corra nem pule,\r\nmas que saiba conversar.\r\n\r\nO menino quer um burrinho\r\nque saiba dizer\r\no nome dos rios,\r\ndas montanhas, das flores,\r\n– de tudo o que aparecer.\r\n\r\nO menino quer um burrinho\r\nque saiba inventar histórias bonitas\r\ncom pessoas e bichos\r\ne com barquinhos no mar.\r\n\r\nE os dois sairão pelo mundo\r\nque é como um jardim\r\napenas mais largo\r\ne talvez mais comprido\r\ne que não tenha fim.\r\n\r\n(Quem souber de um burrinho desses,\r\npode escrever\r\npara a Ruas das Casas,\r\nNúmero das Portas,\r\nao Menino Azul que não sabe ler.)', 16, 'Sim'),
 (25, 'agua', 'desconhecido', 'crônicas', 'De água e luz ele faz seu esplendor; seu grande mistério é a simplicidade. Considerei, por fim, que assim é o amor, oh! minha amada; de tudo que ele suscita e esplende e estremece e delira em mim existem apenas meus olhos recebendo a luz de teu olhar. Ele me cobre de glórias e me faz magnífico.', 16, 'Não'),
-(27, 'Da felicidade', 'Mário Quintana', 'nem sei', 'Quantas vezes a gente, em busca da ventura,\r\nProcede tal e qual o avozinho infeliz:\r\nEm vão, por toda parte, os óculos procura\r\nTendo-os na ponta do nariz!', 15, 'Sim'),
-(28, 'Mitada', 'Jair bolsonaro', 'reflexão', 'Podemos viver sem oxigênio.\r\nMas jamais sem liberdade de expressão!!\r\nPois eu sou IMBROXAVELL!!!', 15, 'Sim'),
-(33, 'saddsa', 'asdda', 'assadsaa', 'adsdsassaads', 15, 'Não');
+(27, 'Da felicidade', 'Mário Quintana', 'nem sei', 'Quantas vezes a gente, em busca da ventura,\r\nProcede tal e qual o avozinho infeliz:\r\nEm vão, por toda parte, os óculos procura\r\nTendo-os na ponta do nariz!', 15, 'Sim');
 
 -- --------------------------------------------------------
 
@@ -152,6 +178,13 @@ CREATE TABLE `revista` (
   `ano` varchar(5) NOT NULL,
   `pdf` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `revista`
+--
+
+INSERT INTO `revista` (`id`, `edicao`, `ano`, `pdf`) VALUES
+(6, '1', '2022', '13011202208111321.pdf');
 
 -- --------------------------------------------------------
 
@@ -195,9 +228,9 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `nome`, `sobre`, `link`) VALUES
-(3, 'fut', 'dasljdslsajdsa', 'https://www.youtube.com/watch?v=ntKeSghZyag&ab_channel=iLance7i'),
-(4, 'Joji - 1AM FREESTYLE', 'melhor musica do album SMITHEREENS', 'https://www.youtube.com/watch?v=QTxMAycHnos&ab_channel=Joji'),
-(5, 'Joji - Nectar (Full Album)', 'album lindo', 'https://www.youtube.com/watch?v=5eDk-kTE9DI&ab_channel=SOULDEEP');
+(13, 'Sessão solene da AAL - 2022', 'Sessão Solene em comemoração aos 30 anos da Academia Araçatubense de Letras', 'https://www.youtube.com/watch?v=RqIk4o8u5Ek'),
+(14, 'A importância da literatura', 'Sessão Solene em comemoração aos 30 anos da Academia Araçatubense de Letras', 'https://www.youtube.com/watch?v=gbN0IjXQh1A'),
+(15, 'A quinta história (Clarice Lispector)', 'Neste vídeo, o acadêmico Carlos Eduardo Brefore Pinheiro analisa o conto \"A Quinta História\", de Clarice Lispector, constante na obra \"A Legião Estrangeira\".', 'https://www.youtube.com/watch?v=PMQbR27zxiU');
 
 --
 -- Índices para tabelas despejadas
@@ -265,13 +298,13 @@ ALTER TABLE `videos`
 -- AUTO_INCREMENT de tabela `academicos`
 --
 ALTER TABLE `academicos`
-  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `idAcad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de tabela `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `idEve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `idEve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de tabela `historia`
@@ -283,25 +316,25 @@ ALTER TABLE `historia`
 -- AUTO_INCREMENT de tabela `memorial`
 --
 ALTER TABLE `memorial`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `obra`
 --
 ALTER TABLE `obra`
-  MODIFY `idObra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `idObra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- AUTO_INCREMENT de tabela `publicacoes`
 --
 ALTER TABLE `publicacoes`
-  MODIFY `IdPub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `IdPub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de tabela `revista`
 --
 ALTER TABLE `revista`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
@@ -313,7 +346,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
