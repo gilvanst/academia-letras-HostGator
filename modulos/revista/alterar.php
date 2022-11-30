@@ -66,7 +66,7 @@
                         </div>
 
 
-                        <input type="hidden" id="id" name="idEve" value="<?php echo $row['id']; ?>">
+                        <input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>">
 
                         <div class="text-right my-3">
                             <input class="btn btn-primary" type="submit" value="Alterar">
