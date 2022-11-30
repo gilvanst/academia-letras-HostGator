@@ -59,7 +59,7 @@ Banco::desconectar();
 
 
 
-                    <form action="update.php" method="POST">
+                    <form action="update.php" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="titulo">Titulo</label>
                             <input class="form-control" type="text" id="titulo" name="tituloObra" value="<?php echo $row['tituloObra']; ?>">
@@ -95,7 +95,7 @@ Banco::desconectar();
                         <div class="form-row">
                             <div class="form-gorup col-md-6">
                                 <label for="imagem">Capa do livro</label>
-                                <input class="form-control-file" type="file" id="imagem" name="imagemObra" value="<?php echo $row['imagemObra']; ?>">
+                                <input class="form-control-file" type="file" id="imagem" name="imagem" value="<?php echo $row['imagemObra']; ?>">
                             </div>
 
                             <div class="form-gorup col-md-6">

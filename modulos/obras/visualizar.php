@@ -62,7 +62,7 @@ foreach (retornaDado($sql) as $row) {
                             <p>Páginas: <?= $obra['paginasObra'] ?></p>
                             <p>Autores: <?= $obra['autoresObra'] ?></p>
                             <p>Arquivo para leitura: <a href="../../pdf/<?= $obra['pdfObra'] ?>" download> <?= $obra['pdfObra'] ?></a></p>
-                            <p>Link para compra: <a href="<?= $obra['linkObra'] ?>"><?= $obra['linkObra'] ?></a></p>
+                            <p>Link para compra: <a href="<?= $obra['linkObra'] ?>"><?= substr($obra['linkObra'], 0, 50 ) ?>...</a></p>
                             <p>isbn: <?= $obra['isbnObra'] ?></p>
 
 

@@ -14,8 +14,32 @@ if (!empty($_POST)) {
     $genero  = $_POST['generoObra'];
 
     // Imagem e PDF
-    $imagem  = $_POST['imagemObra'];
-    $pdf     = $_POST['pdfObra'];
+    $imagem  = '' ;
+    $pdf     = '';
+
+    if (!empty($_FILES['imagem'])) {
+        $pasta_upload = '../../img/'; // ESPECIFICANDO O LOCAL EM QUE AS IMAGENS VÃO SER SALVAR
+        $extensao = substr($_FILES['imagem']['name'], -4); // PEGANDO A EXTESÃO DA IMAGEM
+        $nome_imagem = $_POST['tituloObra'] . date('dmYhmis') . $extensao; // JUNTA O NOME DO TITULO COM A EXTENSÃO
+        $imagem_final = $pasta_upload . $nome_imagem;
+
+        $imagem = move_uploaded_file($_FILES['imagem']['tmp_name'], $imagem_final) ? $nome_imagem : '';
+
+        $obra = retornaDado("SELECT imagemObra FROM obra WHERE idObra = $id");
+        apagaArquivo($obra['imagem']);
+    }
+
+    if (!empty($_FILES['pdfObra'])) {
+        $pasta_upload = '../../pdf/'; // ESPECIFICANDO O LOCAL EM QUE OS ARQUIVOS PDF VÃO SER SALVAS
+        $extensao = substr($_FILES['pdfObra']['name'], -4); // PEGANDO A EXTESÃO DO ARQUIVO
+        $nome_pdf = $_POST['tituloObra'] . date('dmYhmis') . $extensao; // JUNTA O NOME DO TITULO COM A EXTENSÃO
+        $pdf_final = $pasta_upload . $nome_pdf;
+
+        $imagem = move_uploaded_file($_FILES['pdfObra']['tmp_name'], $imagem_final) ? $nome_imagem : '';
+
+        $obra = retornaDado("SELECT pdfObra FROM obra WHERE idObra = $id");
+        apagaArquivo($obra['pdfObra']);
+    }
 
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -23,14 +47,14 @@ if (!empty($_POST)) {
             tituloObra = :titulo, 
             sinopseObra = :sinopse,";
 
-    if(!empty($imagem)){
+    if (!empty($imagem)) {
         $sql .= "imagemObra = :imagem, ";
     }
 
-    if(!empty($pdf)){
+    if (!empty($pdf)) {
         $sql .= "pdfObra = :pdf ,";
     }
-            
+
     $sql .= "isbnObra = :isbn, 
             anoObra = :ano, 
             paginasObra = :paginas, 
@@ -52,11 +76,11 @@ if (!empty($_POST)) {
         ':id' => $id
     ];
 
-    if(!empty($imagem)){
-       $dados[':imagem'] = $imagem;
+    if (!empty($imagem)) {
+        $dados[':imagem'] = $imagem;
     }
 
-    if(!empty($pdf)){
+    if (!empty($pdf)) {
         $dados[':pdf'] = $pdf;
     }
 

@@ -63,10 +63,9 @@ verificaAcesso();
                                         <tbody>
                                             <?php
                                             $pdo = Banco::conectar();
-                                            $id_usuario = usuario()['id'];
                                            
                                             
-                                            $sql = "SELECT * FROM  obra WHERE id_usuario = $id_usuario ";
+                                            $sql = "SELECT * FROM  obra  ";
                                             foreach ($pdo->query($sql) as $row) { ?>
                                                 <tr>
                                                     <th scope="row"><?= $row['idObra'] ?></th>
