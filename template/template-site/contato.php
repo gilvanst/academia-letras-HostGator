@@ -17,16 +17,16 @@
 <div class="col-12">
 
     <!-- Contact -->
-    <section>
-										<h2 class="major"><span>Redes Sociais</span></h2>
-										<ul class="contact">
-											<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-											<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-											<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-											<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
-											<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
-										</ul>
-									</section>
+    <!--<section>
+        <h2 class="major"><span>Redes Sociais</span></h2>
+        <ul class="contact">
+            <li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+            <li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+            <li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+            <li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+            <li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+        </ul>
+    </section>-->
 
     <!-- Copyright -->
     <div id="copyright">
@@ -39,7 +39,7 @@
         <footer>
 
             <span>Academia Araçatubense De Letras &copy; 2022</span>
-        </<footer>
+            </<footer>
 
 
     </div>

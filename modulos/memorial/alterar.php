@@ -77,7 +77,7 @@ include '../../config.php';
                         </div>
                         <div class="form-gorup">
                             <label for="sobre">Informações sobre o acadêmico</label>
-                            <textarea class="form-control" type="text" id="sobre" name="sobre" value="<?php echo $row['sobre']?>"></textarea>
+                            <textarea class="form-control" type="text" id="sobre" name="sobre" value="<?php echo $row['sobre']?>"><?= $row['sobre']?></textarea>
                         </div>
 
                         <input type="hidden" id="id" name="id" value="<?php echo $row['id'];?>">

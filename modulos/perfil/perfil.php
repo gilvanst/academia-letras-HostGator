@@ -50,6 +50,7 @@ $perfil = retornaDado($sql);
                                                 <img class="img-profile rounded-circle mb-3 col-6" src="<?= arquivo('img/undraw_profile.svg') ?>">
                                             </div>
                                             
+                                            
                                             <h4 class="text-center mb-0"><?= $perfil['tipo'] ?></h4>
                                             <h4 class="text-center mb-0"><?= $perfil['nome'] ?></h4>
                                             <p class="text-small text-muted text-center"><?= $perfil['email'] ?> - <?= $perfil['telefone'] ?></p>

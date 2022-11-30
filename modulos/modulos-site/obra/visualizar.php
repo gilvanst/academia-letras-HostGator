@@ -86,10 +86,10 @@
                                     </section>
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-right">
-                             <a class="button " href="<?= arquivo('modulos/modulos-site/obra/colecao.php') ?>">Voltar</a>
-
+                            <div class="text-right">
+                                 <a class="button " href="<?= arquivo('modulos/modulos-site/obra/colecao.php') ?>">Voltar</a>
+    
+                            </div>
                         </div>
 
                     </section>

@@ -13,7 +13,7 @@
 
 <!-- Page level custom scripts -->
 <script src="<?= arquivo("/js/demo/chart-area-demo.js") ?>"></script>
-<script src="<?= arquivo("/js/demo/chart-pie-demo.js") ?>"></script>
+<script src="<?= arquivo("/js/demo/chart-pie-demo.js") ?>"></script>    
 
 <script>
     // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.

@@ -59,11 +59,11 @@ foreach (retornaDado($sql) as $row) {
 
                     </div>
                 </div>
+                <div class="text-right">
+                    <a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Voltar</a>
+    
+                 </div>
             </div>
-            <div class="text-right">
-                <a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Voltar</a>
-
-             </div>
         </section>
 
         <!-- Footer -->

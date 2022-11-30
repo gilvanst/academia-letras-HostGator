@@ -31,7 +31,7 @@ foreach (retornaDado($sql) as $row) {
     <header id="header">
         <div class="logo container">
             <div>
-                <h1><?= $membro['nomeAcad'] ?></h1>
+                <h1>acadêmico</h1>
                 <p></p>
             </div>
         </div>
@@ -52,16 +52,19 @@ foreach (retornaDado($sql) as $row) {
                                     <div class="row">
 
                                         <div class="container-fluid ">
-                                        <img src="<?= arquivo('img/' . $membro['fotoAcad']) ?>" class="img-fluid" alt="Imagem responsiva">
                                             <div class="media">
+                                                <img src="<?= arquivo('img/' . $membro['fotoAcad']) ?>" class="img-fluid mr-3" alt="Imagem responsiva" width="200px" height="288px">
                                                 <div class="media-body">
-                                                    <p class="mb-4">Acadêmico: <?= $membro['nomeAcad'] ?></p>
+                                                    <p class="mb-4">Nome: <?= $membro['nomeAcad'] ?></p>
                                                     <p class="mb-4">Posição: <?= $membro['posicaoAcad'] ?></p>
                                                     <p class="mb-4">Cadeira: <?= $membro['cadeiraAcad'] ?></p>
-                                                    <p class="mb-4">Sobre: <?= $membro['sobreAcad'] ?></p>
-                                            
+                                                    
                                                 </div>
+                                                
+                                            </div>
+                                            <div class="mt-4">
 
+                                                <p class="mb-4">Sobre: <?= $membro['sobreAcad'] ?></p>
                                             </div>
                                         </div>
 
