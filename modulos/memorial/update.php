@@ -41,7 +41,7 @@ if (!empty($_POST)) {
     $q   = $pdo->prepare($sql);
 
     $dados = [
-        ':nome' => $nome  ,
+        ':nome' => $nome,
         ':sobre' => $sobre,
         ':cadeira' => $cadeira,
         ':posicao' => $posicao,

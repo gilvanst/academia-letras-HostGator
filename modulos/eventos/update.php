@@ -26,7 +26,7 @@ if (!empty($_POST)) {
         apagaArquivo($academico['imagemEve']);
     }
 
-
+ 
 
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

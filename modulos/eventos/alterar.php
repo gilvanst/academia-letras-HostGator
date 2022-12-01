@@ -23,7 +23,7 @@
     Banco::desconectar();
 
 
-?>
+?> 
 
 <?php include_once path('template/head.php'); ?>
 
