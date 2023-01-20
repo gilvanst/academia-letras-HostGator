@@ -45,7 +45,7 @@
     </div>
     <div id="copyright">
         <ul class="menu">
-            <li>Desenvolvido por:<a href="https://www.linkedin.com/in/gilvan-santos-a70600219/">Gilvan Santos</a></li>
+            <li>Desenvolvido por:<a href="https://www.linkedin.com/in/gilvan-santos-a70600219/"> Gilvan Santos</a></li>
         </ul>
     </div>
 </div>
