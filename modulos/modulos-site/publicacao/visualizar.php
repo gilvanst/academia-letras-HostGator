@@ -53,7 +53,7 @@ foreach (retornaDado($sql) as $row) {
                             <?php } ?>  
                                 
                         <i>Autores:</i>
-                        <i><?= $publicacao['generoPub'] ?></i>
+                        <i><?= $publicacao['autoresPub'] ?></i>
 
                     </div>
 
