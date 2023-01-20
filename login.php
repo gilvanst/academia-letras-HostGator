@@ -84,10 +84,10 @@
 
 
         </form>
-        <div class="text-center">
+        <!--<div class="text-center">
             <a class="small" href="redefinir.php">Esqueceu a senha?</a>
 
-        </div>
+        </div>-->
     </div>
 
 </body>

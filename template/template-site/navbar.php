@@ -24,7 +24,7 @@ $pagina_atual = $pagina_atual[count($pagina_atual) - 1];
 		<li class="<?= $pagina_atual == 'colecao.php' ? 'current' : '' ?>"><a href="<?= arquivo('modulos/modulos-site/obra/colecao.php') ?>">obras</a></li>
 		<li class="<?= $pagina_atual == 'publicacao.php' ? 'current' : '' ?>"><a href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">publicações</a></li>
 		<li class="<?= $pagina_atual == 'noticias.php' ? 'current' : '' ?>">
-			<a href="<?= arquivo('modulos/modulos-site/noticias/noticias.php') ?>">notícias e eventos</a>
+			<a href="<?= arquivo('modulos/modulos-site/noticias/noticias.php') ?>">Eventos</a>
 			<ul>
 				<li><a href="<?= arquivo('modulos/modulos-site/videos/videos.php') ?>">Videos</a></li>
 			</ul>
