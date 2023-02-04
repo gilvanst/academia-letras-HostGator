@@ -32,7 +32,22 @@ include 'config.php';
 		<section id="main">
 			<div class="container">
 				<div class="row gtr-200">
-					
+					<div class="col-12">
+
+						<article class="box page-content">
+
+							<?php
+							$sql = "SELECT * FROM historia ORDER BY idHis ";
+							$historias = retornaDados($sql);
+
+							foreach ($historias as $historia) { ?>
+								<section>
+									<h3><a href="<?= arquivo("modulos/modulos-site/historia/historia.php") ?>" class="button2">Quem somos?</a></h3>
+									<p> <?= substr($historia['texto'], 0, 500) ?>...</p>
+								</section>
+
+						</article>
+					<?php } ?>
 
 					<!-- Features -->
 					<div class="col-12">
@@ -100,7 +115,7 @@ include 'config.php';
 
 										</div>
 									</div>
-								<?php } ?>
+									<?php } ?>
 								</div>
 							</div>
 						</section>
@@ -157,7 +172,7 @@ include 'config.php';
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
 											<section class="box feature">
-												<h3><a class="titulo-hover" href="modulos/modulos-site/publicacao/visualizar.php?IdPub=<?= $publicacao['IdPub'] ?>"><?= $publicacao['tituloPub'] ?></a></h3>
+												<h3><a class="titulo-hover" href="modulos/modulos-site/publicacao/visualizar.php?IdPub=<?=$publicacao['IdPub']?>"><?= $publicacao['tituloPub'] ?></a></h3>
 
 												<p>
 													<?= substr($publicacao['textoPub'], 0, 200) ?>...
