@@ -1,7 +1,8 @@
-<!DOCTYPE HTML>
+
 <?php
 include '../../../config.php';
 ?>
+<!DOCTYPE HTML>
 
 <?php include_once path('template/template-site/head.php'); ?>
 <header id="header">

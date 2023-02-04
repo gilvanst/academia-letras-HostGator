@@ -1,7 +1,8 @@
 <?php
+session_start();
     include '../../config.php';
     
-    session_start();
+    
 
     unset($_SESSION['usuario']);
 

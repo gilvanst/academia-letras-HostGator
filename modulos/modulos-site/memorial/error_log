@@ -1,0 +1,1 @@
+[26-Jan-2023 16:51:02 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11

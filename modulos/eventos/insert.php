@@ -1,10 +1,11 @@
 <?php
+session_start();
 include '../../config.php';
 verificaAcesso();
 
 $pasta_upload = '../../img/'; // ESPECIFICANDO O LOCAL EM QUE AS IMAGENS VÃO SER SALVAR
 $extensao = substr($_FILES['imagemEve']['name'], -4); // PEGANDO A EXTESÃO DA IMAGEM
-$nome_imagem = $_POST['tituloEve'] . date('dmYhmis') . $extensao; // JUNTA O NOME DO TITULO COM A EXTENSÃO
+$nome_imagem = $_POST['nomeEve'] . date('dmYhmis') . $extensao; // JUNTA O NOME DO TITULO COM A EXTENSÃO
 $imagem_final = $pasta_upload . $nome_imagem;
 
 

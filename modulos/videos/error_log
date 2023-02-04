@@ -1,0 +1,25 @@
+[30-Jan-2023 17:05:12 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/modulos/videos/videos.php on line 3
+[30-Jan-2023 17:05:12 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/videos/videos.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 6
+[30-Jan-2023 17:13:52 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/modulos/videos/alterar.php on line 3
+[30-Jan-2023 17:13:52 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/videos/alterar.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 6
+[30-Jan-2023 17:26:16 America/Fortaleza] PHP Warning:  Undefined variable $id in /home2/aracal41/public_html/modulos/videos/visualizar.php on line 10
+[30-Jan-2023 17:26:16 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM v...')
+#1 /home2/aracal41/public_html/modulos/videos/visualizar.php(11): retornaDado('SELECT * FROM v...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[30-Jan-2023 17:26:40 America/Fortaleza] PHP Warning:  Undefined variable $id in /home2/aracal41/public_html/modulos/videos/visualizar.php on line 10
+[30-Jan-2023 17:26:40 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM v...')
+#1 /home2/aracal41/public_html/modulos/videos/visualizar.php(11): retornaDado('SELECT * FROM v...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[30-Jan-2023 17:30:41 America/Fortaleza] PHP Warning:  Undefined variable $id in /home2/aracal41/public_html/modulos/videos/visualizar.php on line 10
+[30-Jan-2023 17:30:41 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM v...')
+#1 /home2/aracal41/public_html/modulos/videos/visualizar.php(11): retornaDado('SELECT * FROM v...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17

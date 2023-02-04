@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
+session_start();
 include '../../config.php';
 
     verificaAcesso();
@@ -23,6 +21,10 @@ include '../../config.php';
     }
     Banco::desconectar();
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
 
 <?php include_once path('template/head.php'); ?>
 

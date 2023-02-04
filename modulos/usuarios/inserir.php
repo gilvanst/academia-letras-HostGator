@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
+session_start();
 include '../../config.php';
 verificaAcesso();
 
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <?php include_once path('template/head.php'); ?>
 
@@ -66,7 +66,7 @@ verificaAcesso();
                             <div class="form-group">
                                 <label for="poema">Tipo de usúario</label>
                                 <select class="custom-select" name="tipo" required>
-                                    <option>Administrador</option>
+                                    <option>administrador</option>
                                     <option selected>autor</option>
                                 </select>
                                 <div class="valid-feedback">

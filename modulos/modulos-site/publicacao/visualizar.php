@@ -1,4 +1,4 @@
-<html>
+
 <?php
 include '../../../config.php';
 
@@ -19,6 +19,7 @@ foreach (retornaDado($sql) as $row) {
     $poema = $publicacao['poema'];
 }
 ?>
+<html>
 <link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
 
 <?php include_once path('template/template-site/head.php'); ?>

@@ -2,11 +2,10 @@
 
 class Banco
 {
-    private static $dbNome = 'bdaal';
-    private static $dbHost = '127.0.0.1';
-    //private static $dbHost = 'localhost';
-    private static $dbUsuario = 'root';
-    private static $dbSenha = '';
+    private static $dbNome = 'aracal41_bdaal';
+    private static $dbHost = 'localhost';
+    private static $dbUsuario = 'aracal41_gilvan';
+    private static $dbSenha = 'junior003';
 
 
     private static $cont = null;

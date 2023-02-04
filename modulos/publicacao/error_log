@@ -1,0 +1,21 @@
+[30-Jan-2023 16:48:11 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/modulos/publicacao/publicacao.php on line 4
+[30-Jan-2023 16:48:11 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/publicacao/publicacao.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 6
+[30-Jan-2023 16:48:36 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/modulos/publicacao/visualizar.php on line 3
+[30-Jan-2023 16:48:36 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/publicacao/visualizar.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 6
+[30-Jan-2023 16:49:18 America/Fortaleza] PHP Warning:  Undefined array key "usuario" in /home2/aracal41/public_html/modulos/publicacao/insert.php on line 12
+[30-Jan-2023 16:49:18 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_usuario' cannot be null in /home2/aracal41/public_html/modulos/publicacao/insert.php:46
+Stack trace:
+#0 /home2/aracal41/public_html/modulos/publicacao/insert.php(46): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home2/aracal41/public_html/modulos/publicacao/insert.php on line 46
+[30-Jan-2023 16:50:30 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home2/aracal41/public_html/modulos/publicacao/insert.php:46
+Stack trace:
+#0 /home2/aracal41/public_html/modulos/publicacao/insert.php(46): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home2/aracal41/public_html/modulos/publicacao/insert.php on line 46
+[30-Jan-2023 16:54:16 America/Fortaleza] PHP Warning:  Undefined array key "usuario" in /home2/aracal41/public_html/modulos/publicacao/insert.php on line 12
+[30-Jan-2023 16:54:16 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_usuario' cannot be null in /home2/aracal41/public_html/modulos/publicacao/insert.php:46
+Stack trace:
+#0 /home2/aracal41/public_html/modulos/publicacao/insert.php(46): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home2/aracal41/public_html/modulos/publicacao/insert.php on line 46

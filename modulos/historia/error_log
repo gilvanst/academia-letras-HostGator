@@ -1,0 +1,12 @@
+[30-Jan-2023 16:37:38 America/Fortaleza] PHP Warning:  Undefined array key "idHis" in /home2/aracal41/public_html/modulos/historia/update.php on line 7
+[30-Jan-2023 16:37:38 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/historia/update.php:7) in /home2/aracal41/public_html/modulos/historia/update.php on line 17
+[30-Jan-2023 16:39:01 America/Fortaleza] PHP Warning:  Undefined array key "id" in /home2/aracal41/public_html/modulos/historia/update.php on line 7
+[30-Jan-2023 16:39:01 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/historia/update.php:7) in /home2/aracal41/public_html/modulos/historia/update.php on line 17
+[30-Jan-2023 16:39:53 America/Fortaleza] PHP Warning:  Undefined array key "idHis" in /home2/aracal41/public_html/modulos/historia/update.php on line 7
+[30-Jan-2023 16:39:53 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/historia/update.php:7) in /home2/aracal41/public_html/modulos/historia/update.php on line 17
+[30-Jan-2023 16:40:33 America/Fortaleza] PHP Warning:  Undefined array key "idHis" in /home2/aracal41/public_html/modulos/historia/update.php on line 7
+[30-Jan-2023 16:40:33 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/historia/update.php:7) in /home2/aracal41/public_html/modulos/historia/update.php on line 17
+[30-Jan-2023 16:41:54 America/Fortaleza] PHP Warning:  Undefined array key "idHis" in /home2/aracal41/public_html/modulos/historia/update.php on line 7
+[30-Jan-2023 16:41:54 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/historia/update.php:7) in /home2/aracal41/public_html/modulos/historia/update.php on line 17
+[30-Jan-2023 16:44:25 America/Fortaleza] PHP Warning:  Undefined array key "idHis" in /home2/aracal41/public_html/modulos/historia/update.php on line 7
+[30-Jan-2023 16:44:25 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/historia/update.php:7) in /home2/aracal41/public_html/modulos/historia/update.php on line 17

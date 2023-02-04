@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
 <?php
 include '../../../config.php';
 ?>
+<!DOCTYPE HTML>
 <link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
 
 <?php include_once path('template/template-site/head.php'); ?>
@@ -48,10 +48,12 @@ include '../../../config.php';
 												</section>
 											</div>
 										</div>
+										<?php } ?>
 					</section>
+					
 				</div>
 
-			<?php } ?>
+			
 			</div>
 	</div>
 	</div>

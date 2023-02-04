@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
+session_start();
+
 
 include '../../config.php';
- '../login/sessao.php';
+
 
 verificaAcesso();
 
 if (!empty($_GET['idObra'])) {
     $id = $_GET['idObra'];
 }
+
 
 $pdo = Banco::conectar();
 $sql = 'SELECT * FROM obra where idObra =  ' . $id . '';
@@ -30,7 +30,8 @@ foreach ($pdo->query($sql) as $row) {
 }
 Banco::desconectar();
 ?>
-
+<!DOCTYPE html>
+<html lang="pt-br">
 <?php include_once path('template/head.php'); ?>
 
 

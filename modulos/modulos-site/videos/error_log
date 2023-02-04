@@ -1,0 +1,7 @@
+[24-Jan-2023 20:26:02 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[25-Jan-2023 15:21:58 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 16:48:20 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 17:15:02 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 17:15:08 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 17:15:26 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 17:23:15 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11

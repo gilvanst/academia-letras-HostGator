@@ -1,7 +1,7 @@
 <?php
-    $tabela = "bdaal";
-    $usuario = "root";
-    $senha = "";
+    $tabela = "aracal41_bdaal";
+    $usuario = "aracal41_gilvan";
+    $senha = "junior003";
     $host = "localhost";
 
     $conexaoBanco = new PDO("mysql:host={$host};dbname={$tabela};charset=utf8", $usuario, $senha);

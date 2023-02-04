@@ -1,0 +1,99 @@
+[24-Jan-2023 20:23:50 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[24-Jan-2023 20:23:50 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[24-Jan-2023 20:29:14 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[24-Jan-2023 20:29:14 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[24-Jan-2023 20:29:43 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[24-Jan-2023 20:29:43 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[24-Jan-2023 20:29:45 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[24-Jan-2023 20:29:45 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[24-Jan-2023 20:29:49 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[24-Jan-2023 20:29:49 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[24-Jan-2023 20:29:52 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[24-Jan-2023 20:29:52 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[24-Jan-2023 21:52:36 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[24-Jan-2023 21:52:37 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[24-Jan-2023 22:06:51 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[24-Jan-2023 22:06:51 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[25-Jan-2023 12:17:25 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[25-Jan-2023 12:17:25 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[26-Jan-2023 16:38:48 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 16:38:48 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[26-Jan-2023 16:39:06 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 16:39:06 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[26-Jan-2023 16:39:27 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 16:39:27 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[26-Jan-2023 16:56:09 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 16:56:09 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[26-Jan-2023 16:59:23 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[26-Jan-2023 17:01:00 America/Fortaleza] PHP Warning:  Undefined global variable $_SESSION in /home2/aracal41/public_html/config.php on line 29
+[26-Jan-2023 17:01:00 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/aracal41/public_html/config.php on line 29
+[26-Jan-2023 17:01:00 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home2/aracal41/public_html/config.php:32
+Stack trace:
+#0 /home2/aracal41/public_html/config.php(32): PDO->query('SELECT * FROM u...')
+#1 /home2/aracal41/public_html/modulos/login/sessao.php(23): usuario()
+#2 /home2/aracal41/public_html/template/menu.php(19): podeMostrar(Array)
+#3 /home2/aracal41/public_html/template/sidebar.php(20): include_once('/home2/aracal41...')
+#4 /home2/aracal41/public_html/modulos/painel/painel.php(16): include_once('/home2/aracal41...')
+#5 {main}
+  thrown in /home2/aracal41/public_html/config.php on line 32
+[26-Jan-2023 17:01:03 America/Fortaleza] PHP Warning:  Undefined global variable $_SESSION in /home2/aracal41/public_html/config.php on line 29
+[26-Jan-2023 17:01:03 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/aracal41/public_html/config.php on line 29
+[26-Jan-2023 17:01:03 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home2/aracal41/public_html/config.php:32
+Stack trace:
+#0 /home2/aracal41/public_html/config.php(32): PDO->query('SELECT * FROM u...')
+#1 /home2/aracal41/public_html/modulos/login/sessao.php(23): usuario()
+#2 /home2/aracal41/public_html/template/menu.php(19): podeMostrar(Array)
+#3 /home2/aracal41/public_html/template/sidebar.php(20): include_once('/home2/aracal41...')
+#4 /home2/aracal41/public_html/modulos/painel/painel.php(16): include_once('/home2/aracal41...')
+#5 {main}
+  thrown in /home2/aracal41/public_html/config.php on line 32
+[26-Jan-2023 17:01:18 America/Fortaleza] PHP Warning:  Undefined global variable $_SESSION in /home2/aracal41/public_html/config.php on line 29
+[26-Jan-2023 17:01:18 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/aracal41/public_html/config.php on line 29
+[26-Jan-2023 17:01:18 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home2/aracal41/public_html/config.php:32
+Stack trace:
+#0 /home2/aracal41/public_html/config.php(32): PDO->query('SELECT * FROM u...')
+#1 /home2/aracal41/public_html/modulos/login/sessao.php(23): usuario()
+#2 /home2/aracal41/public_html/template/menu.php(19): podeMostrar(Array)
+#3 /home2/aracal41/public_html/template/sidebar.php(20): include_once('/home2/aracal41...')
+#4 /home2/aracal41/public_html/modulos/painel/painel.php(16): include_once('/home2/aracal41...')
+#5 {main}
+  thrown in /home2/aracal41/public_html/config.php on line 32
+[26-Jan-2023 17:01:22 America/Fortaleza] PHP Warning:  Undefined global variable $_SESSION in /home2/aracal41/public_html/config.php on line 29
+[26-Jan-2023 17:01:22 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/aracal41/public_html/config.php on line 29
+[26-Jan-2023 17:01:22 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home2/aracal41/public_html/config.php:32
+Stack trace:
+#0 /home2/aracal41/public_html/config.php(32): PDO->query('SELECT * FROM u...')
+#1 /home2/aracal41/public_html/modulos/login/sessao.php(23): usuario()
+#2 /home2/aracal41/public_html/template/menu.php(19): podeMostrar(Array)
+#3 /home2/aracal41/public_html/template/sidebar.php(20): include_once('/home2/aracal41...')
+#4 /home2/aracal41/public_html/modulos/painel/painel.php(16): include_once('/home2/aracal41...')
+#5 {main}
+  thrown in /home2/aracal41/public_html/config.php on line 32
+[26-Jan-2023 17:02:56 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
+[26-Jan-2023 17:02:56 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[27-Jan-2023 13:37:02 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[27-Jan-2023 13:37:02 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[27-Jan-2023 13:37:54 America/Fortaleza] PHP Warning:  Undefined global variable $_SESSION in /home2/aracal41/public_html/config.php on line 30
+[27-Jan-2023 13:37:54 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type null in /home2/aracal41/public_html/config.php on line 30
+[27-Jan-2023 13:37:54 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home2/aracal41/public_html/config.php:33
+Stack trace:
+#0 /home2/aracal41/public_html/config.php(33): PDO->query('SELECT * FROM u...')
+#1 /home2/aracal41/public_html/modulos/login/sessao.php(23): usuario()
+#2 /home2/aracal41/public_html/template/menu.php(19): podeMostrar(Array)
+#3 /home2/aracal41/public_html/template/sidebar.php(20): include_once('/home2/aracal41...')
+#4 /home2/aracal41/public_html/modulos/painel/painel.php(16): include_once('/home2/aracal41...')
+#5 {main}
+  thrown in /home2/aracal41/public_html/config.php on line 33
+[27-Jan-2023 13:38:11 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/aracal41/public_html/modulos/painel/painel.php:1) in /home2/aracal41/public_html/modulos/login/sessao.php on line 5
+[30-Jan-2023 15:54:21 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to undefined function verificaAcesso() in /home2/aracal41/public_html/modulos/painel/painel.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/aracal41/public_html/modulos/painel/painel.php on line 3
+[30-Jan-2023 15:54:21 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to undefined function verificaAcesso() in /home2/aracal41/public_html/modulos/painel/painel.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/aracal41/public_html/modulos/painel/painel.php on line 3
+[30-Jan-2023 16:06:50 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to undefined function verificaAcesso() in /home2/aracal41/public_html/modulos/painel/painel.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/aracal41/public_html/modulos/painel/painel.php on line 3

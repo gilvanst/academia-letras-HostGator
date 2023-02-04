@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
+session_start();
     include '../../config.php';
     verificaAcesso();
 ?>
-
+<!DOCTYPE html>
+<html lang="pt-br">
 <?php include_once path('template/head.php'); ?>
 
 
@@ -62,9 +61,9 @@
                                         <tbody>
                                             <?php
                                             $pdo = Banco::conectar();
-                                            $id_usuario = usuario()['id'];
+                                            
 
-                                            $sql = "SELECT * FROM  publicacoes WHERE id_usuario = $id_usuario";
+                                            $sql = "SELECT * FROM  publicacoes ";
 
                                             foreach ($pdo->query($sql) as $row) { ?>
                                                 <tr>

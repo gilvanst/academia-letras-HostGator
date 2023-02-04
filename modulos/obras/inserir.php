@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
+session_start();
 include '../../config.php';
 verificaAcesso();
 if (!empty($_GET['idObra'])) {
     $id = $_GET['idObra'];
 }
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <?php include_once path('template/head.php'); ?>
 

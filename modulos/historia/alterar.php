@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
+session_start();
 include '../../config.php';
 verificaAcesso();
 
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
 
 <?php include_once path('template/head.php'); ?>
 
@@ -64,7 +66,7 @@ verificaAcesso();
                             </div>
                         </div>
 
-                        <input type="hidden" id="id" name="IdPub" value="<?php echo $id; ?>">
+                        <input type="hidden" id="id" name="idHis" value="<?php echo $id; ?>">
 
                         <div class="text-right my-3">
                             <input class="btn btn-primary" type="submit" value="Alterar">

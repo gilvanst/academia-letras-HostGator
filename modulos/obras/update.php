@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../../config.php';
 verificaAcesso();
 
@@ -26,7 +27,7 @@ if (!empty($_POST)) {
         $imagem = move_uploaded_file($_FILES['imagem']['tmp_name'], $imagem_final) ? $nome_imagem : '';
 
         $obra = retornaDado("SELECT imagemObra FROM obra WHERE idObra = $id");
-        apagaArquivo($obra['imagem']);
+        apagaArquivo($obra['imagemObra']);
     }
 
     if (!empty($_FILES['pdfObra'])) {

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
+session_start();
 include '../../config.php';
 verificaAcesso();
 
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <?php include_once path('template/head.php'); ?>
 
@@ -95,7 +95,7 @@ verificaAcesso();
 
                         <div class="text-right my-3">
                             <input class="btn btn-primary" type="submit" value="Alterar">
-                            <a class="btn btn-info" href="../perfil/perfil.php?id=<?= $id?>">Voltar</a>
+                            
                         </div>
                     </form>
 

@@ -1,9 +1,12 @@
-<!DOCTYPE HTML>
+
 <?php
 include '../../../config.php';
 
-include_once path('template/template-site/head.php');
+
+
 ?>
+<!DOCTYPE HTML>
+<?php include_once path('template/template-site/head.php'); ?>
 <header id="header">
     <div class="logo container">
         <div>

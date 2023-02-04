@@ -1,6 +1,4 @@
-        <!DOCTYPE HTML>
 
-        <html>
         <?php
         include '../../../config.php';
         
@@ -28,6 +26,9 @@
             $genero = $obra['generoObra']; 
         } 
         ?>
+                <!DOCTYPE HTML>
+
+        <html>
         <link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
 
         <?php include_once path('template/template-site/head.php'); ?>

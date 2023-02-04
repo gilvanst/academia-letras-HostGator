@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../../config.php';
 verificaAcesso();
 
@@ -8,8 +9,7 @@ if (!empty($_POST)) {
     $genero  = $_POST['generoPub'];
     $texto   = $_POST['textoPub'];
     $poema   = $_POST['poema'];
-    $usuario = $_SESSION['usuario'];
-
+ 
     if(empty($titulo)){
         $mensagem = " campo obrigatório!";
         header('Location: ' . arquivo('modulos/publicacao/inserir.php?mensagem=' . $mensagem));
@@ -40,9 +40,9 @@ if (!empty($_POST)) {
     
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO publicacoes (tituloPub, autoresPub, generoPub, textoPub, poema, id_usuario) VALUES (?,?,?,?,?,?)";
+    $sql = "INSERT INTO publicacoes (tituloPub, autoresPub, generoPub, textoPub, poema) VALUES (?,?,?,?,?)";
     $q = $pdo->prepare($sql); 
-    $q->execute(array( $titulo, $autores, $genero, $texto, $poema,  $usuario));
+    $q->execute(array( $titulo, $autores, $genero, $texto, $poema));
 
     $id = $pdo->lastInsertId();
     Banco::desconectar();

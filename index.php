@@ -1,8 +1,11 @@
+<?php
+
+include 'config.php';
+
+
+?>
 <!DOCTYPE HTML>
 <html>
-<?php
-include 'config.php';
-?>
 <link href="<?= arquivo("css/sb-admin-2.min.css") ?>" rel="stylesheet">
 
 <?php include_once path('template/template-site/head.php'); ?>
@@ -112,7 +115,7 @@ include 'config.php';
 
 										</div>
 									</div>
-									<?php } ?>
+								<?php } ?>
 								</div>
 							</div>
 						</section>
@@ -169,7 +172,7 @@ include 'config.php';
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
 											<section class="box feature">
-												<h3><a class="titulo-hover" href="modulos/modulos-site/publicacao/visualizar.php?IdPub=<?=$publicacao['IdPub']?>"><?= $publicacao['tituloPub'] ?></a></h3>
+												<h3><a class="titulo-hover" href="modulos/modulos-site/publicacao/visualizar.php?IdPub=<?= $publicacao['IdPub'] ?>"><?= $publicacao['tituloPub'] ?></a></h3>
 
 												<p>
 													<?= substr($publicacao['textoPub'], 0, 200) ?>...

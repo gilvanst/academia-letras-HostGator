@@ -1,11 +1,12 @@
+<?php
+    session_start();
+    
+    include '../../config.php';
+    
+     verificaAcesso();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<?php
-    include '../../config.php';
-
-    verificaAcesso();
-?>
 
 <?php include_once path('template/head.php'); ?>
 

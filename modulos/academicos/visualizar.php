@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
+session_start();
+
 include '../../config.php';
 
     verificaAcesso();
+    
 
 
 if (!empty($_GET['idAcad'])) {
     $id = $_GET['idAcad'];
 }
+
 
 $sql = 'SELECT * FROM academicos where idAcad= ' . $id . ' ';
 $acad = retornaDado($sql);
@@ -23,6 +24,8 @@ foreach (retornaDado($sql) as $row) {
     $foto = $acad['fotoAcad'];
 }
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <?php include_once path('template/head.php'); ?>
 

@@ -1,4 +1,5 @@
 <?php
+
     function verificaAcesso($tipos = [])
     {
         if (empty($_SESSION['id'])) {

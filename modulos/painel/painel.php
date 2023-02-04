@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
+session_start();
 include_once '../../config.php';
 verificaAcesso();
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
 
 <?php include_once path('template/head.php'); ?>
 
