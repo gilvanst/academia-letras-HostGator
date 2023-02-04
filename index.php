@@ -32,22 +32,7 @@ include 'config.php';
 		<section id="main">
 			<div class="container">
 				<div class="row gtr-200">
-					<div class="col-12">
-
-						<article class="box page-content">
-
-							<?php
-							$sql = "SELECT * FROM historia ORDER BY idHis ";
-							$historias = retornaDados($sql);
-
-							foreach ($historias as $historia) { ?>
-								<section>
-									<h3><a href="<?= arquivo("modulos/modulos-site/historia/historia.php") ?>" class="button2">Quem somos?</a></h3>
-									<p> <?= substr($historia['texto'], 0, 500) ?>...</p>
-								</section>
-
-						</article>
-					<?php } ?>
+					
 
 					<!-- Features -->
 					<div class="col-12">
