@@ -13,7 +13,7 @@ include 'config.php';
 	<div class="logo container">
 		<div>
 			<h1><a href="<?= arquivo('index.php') ?>" id="logo"></a></h1>
-			<p> Academia Araçatubense de Letras</p>
+			<p> Academia Araçatubense de Letro</p>
 		</div>
 	</div>
 </header>
