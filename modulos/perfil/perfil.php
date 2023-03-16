@@ -9,6 +9,15 @@ if (!empty($_GET['id'])) {
 $sql = 'SELECT * FROM usuario where id ';
 $perfil = retornaDado($sql);
 
+foreach (retornaDado($sql) as $row) {
+    $id = $perfil['id'];
+    $tipo = $perfil['tipo'];
+    $nome = $perfil['nome'];
+    $email = $perfil['email'];
+    $telefone = $perfil['telefone'];
+ 
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

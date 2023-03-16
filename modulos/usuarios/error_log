@@ -1,0 +1,2 @@
+[06-Mar-2023 12:51:56 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home2/aracal41/public_html/modulos/login/sessao.php on line 29
+[06-Mar-2023 12:51:56 America/Fortaleza] PHP Warning:  Trying to access array offset on value of type bool in /home2/aracal41/public_html/template/navbar.php on line 18

@@ -45,7 +45,7 @@
     </div>
     <div id="copyright">
         <ul class="menu">
-            <li>Desenvolvido por:<a href="https://www.linkedin.com/in/gilvan-santos-a70600219/"> Gilvan Santos</a></li>
+            <li>Desenvolvedores:<a href="https://www.linkedin.com/in/gilvan-santos-a70600219/"> Gilvan Santos</a></li><li><a href="https://www.linkedin.com/in/patr%C3%ADcia-gon%C3%A7alves-pires-04a000218/">Patrícia Gonçalves</a></li>
         </ul>
     </div>
 </div>

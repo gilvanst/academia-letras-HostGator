@@ -1,3 +1,4 @@
+
 <?php
 
 include 'config.php';
@@ -43,7 +44,7 @@ include 'config.php';
 							foreach ($historias as $historia) { ?>
 								<section>
 									<h3><a href="<?= arquivo("modulos/modulos-site/historia/historia.php") ?>" class="button2">Quem somos?</a></h3>
-									<p> <?= substr($historia['texto'], 0, 500) ?>...</p>
+									<p> <?= substr($historia['texto'], 0, 499) ?>...</p>
 								</section>
 
 						</article>
